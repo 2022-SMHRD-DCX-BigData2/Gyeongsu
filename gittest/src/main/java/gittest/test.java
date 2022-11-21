@@ -6,7 +6,7 @@ public class test {
 
 		System.out.println("팀장 커밋!!");
 		System.out.println("지연 씀");
-		
+		System.out.println("서정서정^오^");
 		
 	}
 
