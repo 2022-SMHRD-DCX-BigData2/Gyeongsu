@@ -1,14 +1,6 @@
-@import url(bootstrap.css);
-@import url(bootstrap.min.css);
 
-@import url(bootstrap.rtl.css);
-@import url(bootstrap-grid.css);
-@import url(bootstrap-grid.rtl.css);
-@import url(bootstrap-grid.rtl.min.css);
-@import url(bootstrap-utilities.css);
-@import url(bootstrap-utilities.rtl.css);
-@import url(bootstrap-reboot.css);
-@import url(bootstrap-reboot.rtl.min.css);
+
+
 
 html {
   margin-left: 10%;
@@ -94,7 +86,7 @@ ul li {
   margin-right: 6%;
 }
 
-input[type=text] {
+input[type=text]{
 
   height: 45px;
   padding: 0 50px 0 20px;
@@ -102,7 +94,20 @@ input[type=text] {
   border-radius: 45px;
   background-color: #eee;
 }
-
+input[type=password]{	
+  height: 45px;
+  padding: 0 50px 0 20px;
+  border: 0;
+  border-radius: 45px;
+  background-color: #eee;
+}
+.password{
+	  height: 45px;
+  padding: 0 50px 0 20px;
+  border: 0;
+  border-radius: 45px;
+  background-color: #eee;
+}
 .topMenu {
   height: 40px;
   display: flex;
