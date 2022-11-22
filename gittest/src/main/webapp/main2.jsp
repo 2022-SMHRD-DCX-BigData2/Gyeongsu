@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<%@page import="project.domain.UserMember"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%
+	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
+
+%>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,6 +42,11 @@
                 </div>
                 <form action="JoinCon" method="post">
                 <div class="modal-body">
+                	<input type="hidden" name="user_no" value="0">
+                	<input type="hidden" name="mbti" placeholder="MBTI를 입력하세요" value="1234">
+					<input type="hidden" name="key_no1" placeholder="키워드1를 입력하세요" value="1">
+					<input type="hidden" name="key_no2" placeholder="키워드2를 입력하세요" value="2">
+					<input type="hidden" name="key_no3" placeholder="키워드3를 입력하세요" value="3">
                     <p>아이디</p>
                     <input type="text" placeholder="아이디" name="id" />
                     <p>비밀번호</p>
@@ -42,7 +55,7 @@
                     <input type="text" placeholder="닉네임" name="name" />
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" type="submit">다음</button>
+                    <input class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" type="submit" value="다음">
                 </div>
                 </form>
             </div>
@@ -89,8 +102,8 @@
             <input type="password" placeholder="비밀번호" name="pw" />
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" >로그인</button>
+          <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="CLose">
+          <input type="submit" class="btn btn-primary" value="다음">
         </div>
         </form>
       </div>

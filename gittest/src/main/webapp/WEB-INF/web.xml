@@ -4,4 +4,54 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>JoinCon</servlet-name>
+  	<display-name>JoinCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.JoinCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginCon</servlet-name>
+  	<display-name>LoginCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.LoginCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutCon</servlet-name>
+  	<display-name>LogoutCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.LogoutCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateCon</servlet-name>
+  	<display-name>UpdateCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.UpdateCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteCon</servlet-name>
+  	<display-name>DeleteCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.DeleteCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>JoinCon</servlet-name>
+  	<url-pattern>/JoinCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginCon</servlet-name>
+  	<url-pattern>/LoginCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutCon</servlet-name>
+  	<url-pattern>/LogoutCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateCon</servlet-name>
+  	<url-pattern>/UpdateCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteCon</servlet-name>
+  	<url-pattern>/DeleteCon</url-pattern>
+  </servlet-mapping>
 </web-app>
