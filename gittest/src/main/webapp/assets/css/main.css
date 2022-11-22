@@ -1,0 +1,540 @@
+
+html {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80vw;
+  margin-top: 5vh;
+}
+#topleftmenu{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+
+}
+a {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  color: black;
+  
+}
+.footer_inner{
+  display: flex;
+  justify-content: space-between;
+}
+footer{
+  height: 200px;
+  max-height: 200px;
+  min-height: 150px;
+  /* background-color: rgb(255, 255, 255); */
+  color: rgb(0, 0, 0);
+  border-top: solid black 5px;
+}
+a:hover{
+  color: black;
+}
+figure{
+  margin: 0;
+}
+figcaption{
+  text-align: start;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style-type: disc;
+  list-style-type: none;
+}
+
+.top {
+  margin-top: 3%;
+}
+.col-6{
+  padding-top: 14px;
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bi-box-arrow-in-right{
+  font-style: normal;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+.bi-person-plus{
+  font-style: normal;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+.btn{
+  border-radius: 1.5rem;
+  padding-right: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.search-form>form {
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.top_input {
+  margin-right: 6%;
+}
+
+input[type=text] {
+
+  height: 45px;
+  padding: 0 50px 0 20px;
+  border: 0;
+  border-radius: 45px;
+  background-color: #eee;
+}
+
+.topMenu {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+
+  border-bottom: #2d2d2d solid 1px;
+  margin-bottom: 5%;
+
+}
+
+.topMenuLi {
+  height: 30px;
+}
+
+.topMenu ul {
+  /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.topMenu ul li {
+  /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+  color: white;
+  background-color: #2d2d2d;
+  float: left;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+
+}
+
+.menuLink,
+.submenuLink {
+  /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+  text-decoration: none;
+  display: block;
+  width: 109px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menuLink {
+  /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+  color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+
+}
+
+.topMenuLi:hover .menuLink {
+  /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+  /* color: red; */
+  /* background-color: #4d4d4d; */
+  border-bottom: #2d2d2d solid 3px;
+}
+
+.longLink {
+  /* 좀 더 긴 메뉴 스타일 설정 */
+  width: 109px;
+}
+
+.submenuLink {
+  /* 하위 메뉴의 a 태그 스타일 설정 */
+  color: #2d2d2d;
+  background-color: white;
+  /* border: solid 1px black; */
+  /* [변경] 위 칸의 하단 테두리와 아래칸의 상단 테두리가 겹쳐지도록 설덩 */
+}
+
+.submenuLink:not(:first-child) {
+  border: #abe2f7 solid 1px;
+}
+
+.submenu {
+  /* 하위 메뉴 스타일 설정 */
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+  /* 나오는 임펙트 시간 */
+  /* transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    -o-transition: height .2s; */
+  width: 100%;
+  /* [변경] 가로 드랍다운 메뉴의 넓이 */
+}
+
+#myTab {
+  padding-left: 5%;
+}
+
+.submenu li {
+  display: inline-block;
+  /* [변경] 가로로 펼쳐지도록 설정 */
+}
+
+.topMenuLi:hover .submenu {
+  /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+  height: 32px;
+  width: auto;
+  border: solid #2d2d2d 1px;
+
+  /* [변경] 높이를 32px로 설정 */
+}
+
+.submenuLink:hover {
+  /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
+  color: rgb(0, 0, 0);
+  /* background-color: #dddddd; */
+
+}
+
+.main-img {
+  height: 500px;
+  border: 0.5px solid black;
+}
+
+.active ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+
+
+
+.active ul li img {
+  width: 200px;
+  height: 275px;
+  background-color: #4d4d4d;
+}
+
+
+
+
+:root {
+  --tabcolor: rgb(255, 255, 255);
+  --tabtextcolor: #CA9393;
+  --tabactive: rgba(0, 0, 0, 0.438);
+}
+
+.tabsmenu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 5%;
+  min-height: 35px;
+  
+
+}
+
+.tabsmenu li {
+  background-color: var(--tabcolor);
+  color: #2d2d2d;
+  width: 10%;
+  text-align: center;
+
+}
+
+.tabsmenu li.active {
+  /* background-color: var(--tabactive); */
+  color: var(--tabtextcolor);
+}
+
+.tabsmenu li a {
+  padding: 0.5em;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+
+
+}
+
+.tabsmenu li.active a {
+  cursor: default;
+  border-bottom: solid 5px var(--tabtextcolor);
+
+}
+
+.tabselements {
+  border-top: 3px solid var(--tabactive);
+  height: 500px;
+}
+
+.tabselements>section {
+  padding: 1em;
+  display: none;
+  height: 100%;
+}
+.tabselements>section>ul{
+  height: 100%;
+  width: 100%;
+}
+.tabselements>section>ul>li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+.tabselements>section>ul>li>a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tabselements>section.active {
+  display: block;
+}
+
+/* 메인슬라이드 */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  float: none;
+}
+
+.title {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+}
+
+.link,
+.link:visited {
+  display: inline-block;
+  margin: 20px 0;
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover,
+.link:focus {
+  color: #9fd6c2;
+}
+
+/* container - body */
+#container {
+  width: 100%;
+  margin: auto;
+}
+
+.slide_wrap {
+  position: relative;
+  width: 73%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.slide_box {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.slide_content {
+  display: table;
+  float: left;
+  width: 800px;
+  height: 400px;
+}
+
+.slide_content>p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  color: #555;
+}
+
+.slide_content.slide01 {
+  background: #ddbdff;
+}
+
+.slide_content.slide02 {
+  background: #9fd6c2;
+}
+
+.slide_content.slide03 {
+  background: #abe2f7;
+}
+
+.slide_content.slide04 {
+  background: #f08c78;
+}
+
+.slide_content.slide05 {
+  background: #fbdb65;
+}
+
+.slide_btn_box>button {
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  color: #999;
+  background: none;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.slide_btn_box>.slide_btn_prev {
+  left: -70px;
+}
+
+.slide_btn_box>.slide_btn_next {
+  right: -70px;
+}
+
+.slide_pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+}
+
+.slide_pagination .dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #ddd;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.slide_pagination .dot.dot_active {
+  background: #333;
+}
+
+.slide_pagination .dot a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleDark {
+  margin-bottom: 4%;
+}
+.sns{
+  display: flex;
+}
+.sns li a img{
+  width: 34px;
+  height: 34px;
+  margin: 5px;
+}
+.tabs {
+  display: flex;
+}
+.tabs .tab{
+  font-size: 1rem;
+  text-align: center;
+  line-height: 30px;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+  color: rgb(20, 19, 19);
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 2px solid black;
+}
+.tabs .tab2{
+  font-size: 1rem;
+  text-align: center;
+  line-height: 30px;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+  color: rgb(20, 19, 19);
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 2px solid black;
+}
+.content {
+  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+}
+.items {
+  width: 300px;
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+}
+.items::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 90px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+}
+.items:nth-child(2)::before {
+  left: 94px;
+  top: -4px;
+  background-color: rgb(255, 255, 255);
+}
+.items:nth-child(3)::before {
+  left: 188px;
+  top: -4px;
+  background-color: rgb(255, 255, 255);
+}
+.items.active {
+  display: inline-block;
+}
+.tabname{
+  margin-bottom: 10px;
+  color: #abe2f7;
+}
+.tabtext{
+  display: flex;
+}
