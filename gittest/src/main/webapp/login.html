@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
+  <th:block th:fragment="setLogin(login)">
   <body>
     <form action="">
       <h2>Login</h2>
-      <input type="text" placeholder="id" name="id" />
-      <input type="password" placeholder="password" name="pw"/>
-      <input type="submit" value="로그인" />
+      <input type="text" placeholder="E-mail" />
+      <input type="password" placeholder="password" />
+      <input type="submit" value="Login" />
     </form>
-    <script src=""></script>
+    <script src="src/index.js"></script>
   </body>
+</th:block>
 </html>

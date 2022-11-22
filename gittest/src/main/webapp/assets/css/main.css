@@ -1,3 +1,14 @@
+@import url(bootstrap.css);
+@import url(bootstrap.min.css);
+
+@import url(bootstrap.rtl.css);
+@import url(bootstrap-grid.css);
+@import url(bootstrap-grid.rtl.css);
+@import url(bootstrap-grid.rtl.min.css);
+@import url(bootstrap-utilities.css);
+@import url(bootstrap-utilities.rtl.css);
+@import url(bootstrap-reboot.css);
+@import url(bootstrap-reboot.rtl.min.css);
 
 html {
   margin-left: 10%;
@@ -31,7 +42,6 @@ footer{
   min-height: 150px;
   /* background-color: rgb(255, 255, 255); */
   color: rgb(0, 0, 0);
-  border-top: solid black 5px;
 }
 a:hover{
   color: black;
@@ -63,16 +73,11 @@ ul li {
   justify-content: space-around;
   align-items: center;
 }
-.bi-box-arrow-in-right{
-  font-style: normal;
-  font-size: 1.1rem;
+.bi-box-arrow-in-right,.bi-person-plus{
+  font-size: 1.5rem;
   margin-right: 10px;
 }
-.bi-person-plus{
-  font-style: normal;
-  font-size: 1.1rem;
-  margin-right: 10px;
-}
+
 .btn{
   border-radius: 1.5rem;
   padding-right: 1.75rem;
