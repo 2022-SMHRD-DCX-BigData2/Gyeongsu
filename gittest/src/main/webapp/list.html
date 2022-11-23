@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css파일 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script>
+        $(document).ready(function () {
+            $('.menu').menuBar();
+        });
+    </script>
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/contentlist.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 회원가입모달 -->
+    <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">회원가입</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>아이디</p>
+                    <input type="text" placeholder="아이디" name="id" />
+                    <p>비밀번호</p>
+                    <input type="password" placeholder="비밀번호" name="pw" class="password" />
+                    <p>닉네임</p>
+                    <input type="text" placeholder="닉네임" name="name" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal">다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">MBIT</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 회원가입모달끝 -->
+    <!-- 로그인모달 -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">로그인</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>아이디</p>
+                    <input type="text" placeholder="아이디" name="id" />
+                    <p>비밀번호</p>
+                    <input type="password" placeholder="비밀번호" name="pw" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 로그인모달끝 -->
+
+    <header class="">
+        <div class="container text-center ">
+            <div class="row">
+                <div class="col align-self-center">
+                    <a>Main img</a>
+                </div>
+                <div class="col-6 align-self-center">
+                    <form action="" method="post">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+                                    class="bi bi-search"></i></button>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col align-self-center">
+                    <div class="row">
+                        <div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                role="button"><i class="bi bi-box-arrow-in-right"></i>로그인</a></div>
+                        <div class="col"><a id="topleftmenu" data-bs-toggle="modal" href="#exampleModalToggle"
+                                role="button"><i class="bi bi-person-plus"></i>회원가입</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <nav id="" class="top">
+            <!--  상단 메뉴 창  -->
+            <!-- <button type="button" class="" aria-owns="" aria-expanded="" aria-label="전체 메뉴"> -->
+            <!-- </button> -->
+            <ul class="topMenu">
+                <li class="topMenuLi">
+                    <a class="menuLink" href="#">문화체험</a>
+                    <ul class="submenu">
+                        <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
+                        <li class=""><a href="#" class="submenuLink longLink">뮤지컬</a></li>
+                        <li class=""><a href="#" class="submenuLink longLink">콘서트</a></li>
+                        <li class=""><a href="#" class="submenuLink longLink">연극</a></li>
+                        <li class=""><a href="#" class="submenuLink longLink">클래식&오페라</a></li>
+                        <li class=""><a href="#" class="submenuLink longLink">무용&전통예술</a></li>
+                        <li class=""><a href="#" class="submenuLink longLink">전시&행사</a></li>
+                    </ul>
+                </li>
+                <li class="topMenuLi">
+                    <a class="menuLink" href="#">게시판</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenuLink longLink">문의 게시판</a></li>
+                        <li><a href="#" class="submenuLink longLink">건의 게시판</a></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="">
+            <!-- 전체 메뉴창   -->
+
+        </div>
+    </header>
+
+
+
+    <!-- 메인시작 -->
+    <main id="" class="">
+        <h2>통합검색</h2>
+
+
+
+
+        <div class="tabscontainer">
+            <ul class="tabsmenu">
+                <li class="active">
+                    <a href="#tab11">뮤지컬</a>
+                </li>
+                <li>
+                    <a href="#tab12">콘서트</a>
+                </li>
+                <li>
+                    <a href="#tab13">연극</a>
+                </li>
+                <li>
+                    <a href="#tab14">클래식&오페라</a>
+                </li>
+                <li>
+                    <a href="#tab15">무용&전통예술</a>
+                </li>
+                <li>
+                    <a href="#tab16">전시&행사</a>
+                </li>
+            </ul>
+
+            <div class="tabselements">
+                <section id="tab11" class="active">
+                    
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <a href="">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    
+               
+                </section>
+
+
+                <section id="tab12">
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>콘텐츠 이름</p>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section id="tab13">
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section id="tab14">
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section id="tab15">
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section id="tab16">
+                    
+                    <div class="tab-grid">
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div>
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                                <p>아버지와 살면 [부산]</p>
+                            </div>
+                            <div>
+                                <p>공간소극장</p>
+                                <p>전석 30,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!-- 페이지 디자인 시작 -->
+                <div class="row text-center">
+                    <div class="col-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 페이지 디자인 끝 -->
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer class="">
+        <div>
+            <div class="footer_bottom_holder">
+                <div class="container">
+                    <div class="container_inner">
+                        <div class="footer_bottom">
+                            <div class="footer_inner">
+                                <div class="left">
+                                    <dl>
+                                        <dt><strong>올리브</strong></dt>
+                                        <dd>대표자 : 신경수<br>
+                                            개인정보책임관리자 : 신경수<br>
+                                            사업자번호 : 123-45-67890<br>
+                                            <span class="wh">순천점 : </span>전라남도 순천시 중앙로 260<br>
+                                            <span class="wh">FAX : </span>062-123-4567<br>
+                                            <span class="wh">E-Mail : </span>smhrd@smhrd.or.kr<br>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="right">
+                                    <ul class="sns">
+                                        <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
+                                                    src="./images/common/kakao-talk.png"></a></li>
+                                        <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
+                                                target="_blank"><img
+                                                    src="./images/common/naver_icon-icons.com_59879.png"></a></li>
+                                        <li class="youtube"><a
+                                                href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
+                                                target="_blank"><img src="./images/common/youtube.png"></a></li>
+                                        <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
+                                                target="_blank"><img src="./images/common/instagram.png"></a></li>
+                                        <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
+                                                target="_blank"><img src="./images/common/facebook.png"></a></li>
+                                    </ul>
+                                    <ul class="">
+                                        <li class="">
+                                            <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 데이터 크롤링, 추천 알고리즘, 서버 구축)</h6>
+                                        </li>
+                                        <li class="">
+                                            <p>최서정(DB 구축, 데이터 전처리, 키워드 분석)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>이지연(데이터 크롤링, 데이터 전처리, 키워드 분석)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>권호주(웹 기능 구현, 웹 디자인, 데이터 크롤링)</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </div>
+    <script src="./assets/js/test.js">
+        $('.window .close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

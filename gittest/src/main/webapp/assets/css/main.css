@@ -568,7 +568,7 @@ input[type=text],input[type=password] {
   font-size:15px;
   margin: 3px;
   align-items: center;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 .MBTI input[type=radio]+label{
   background-color: #fff;
@@ -599,7 +599,7 @@ input[type=text],input[type=password] {
   font-size:15px;
   margin: 3px;
   align-items: center;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 .MBTI input[type=checkbox]+label{
   background-color: #fff;
@@ -619,4 +619,9 @@ input[type=text],input[type=password] {
   height: 0px;
   border-radius: 4px;
   background-clip: initial;
+}
+
+.information-text>dt{
+  float: left;
+  margin-right: 15px;
 }
