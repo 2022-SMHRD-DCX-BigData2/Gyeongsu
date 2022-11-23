@@ -1,7 +1,12 @@
-
-
-
-
+@font-face {
+  font-family: 'MICEGothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+*{
+  font-family: 'MICEGothic Bold';
+}
 html {
   margin-left: 10%;
   margin-right: 10%;
@@ -86,7 +91,7 @@ ul li {
   margin-right: 6%;
 }
 
-input[type=text]{
+input[type=text],input[type=password] {
 
   height: 45px;
   padding: 0 50px 0 20px;
@@ -94,20 +99,7 @@ input[type=text]{
   border-radius: 45px;
   background-color: #eee;
 }
-input[type=password]{	
-  height: 45px;
-  padding: 0 50px 0 20px;
-  border: 0;
-  border-radius: 45px;
-  background-color: #eee;
-}
-.password{
-	  height: 45px;
-  padding: 0 50px 0 20px;
-  border: 0;
-  border-radius: 45px;
-  background-color: #eee;
-}
+
 .topMenu {
   height: 40px;
   display: flex;
@@ -547,4 +539,84 @@ input[type=password]{
 }
 .tabtext{
   display: flex;
+}
+.row-cols-4,.row-cols-3{
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.MBTI{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MBTI input[type=radio]{
+  display: none;
+  
+}
+.MBTI input[type=radio]+label{
+  display: inline-block;
+  cursor: pointer;
+  height: 32px;
+  width: 51px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight:bold;
+  font-size:15px;
+  margin: 3px;
+  align-items: center;
+  padding-top: 3px;
+}
+.MBTI input[type=radio]+label{
+  background-color: #fff;
+  color: #333;
+}
+.MBTI input[type=radio]:checked+label{
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+
+.MBTI input[type=checkbox]{
+  display: none;
+  
+}
+.MBTI input[type=checkbox]+label{
+  display: inline-block;
+  cursor: pointer;
+  height: 32px;
+  width: 107px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight:bold;
+  font-size:15px;
+  margin: 3px;
+  align-items: center;
+  padding-top: 3px;
+}
+.MBTI input[type=checkbox]+label{
+  background-color: #fff;
+  color: #333;
+}
+.MBTI input[type=checkbox]:checked+label{
+  background-color: #333;
+  color: #fff;
+}
+
+.keyword-box{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.carousel-indicators [data-bs-target]{
+  width: 42px;
+  height: 0px;
+  border-radius: 4px;
+  background-clip: initial;
 }
