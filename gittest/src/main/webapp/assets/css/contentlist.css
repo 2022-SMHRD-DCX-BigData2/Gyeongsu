@@ -91,3 +91,6 @@ padding: 10%;
 .comment{
   height: 100px;
 }
+.comment-text{
+  margin: 1%;
+}

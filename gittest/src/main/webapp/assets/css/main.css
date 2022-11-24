@@ -32,6 +32,9 @@ a {
 .footer_inner{
   display: flex;
   justify-content: space-between;
+  margin-top: 3%;
+  border-top: 1px solid rgb(152, 152, 152);
+  
 }
 footer{
   height: 200px;

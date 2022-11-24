@@ -11,19 +11,7 @@ tabs.forEach((tab) => {
     target.classList.add("active");
   });
 });
-// const tabs2 = document.querySelectorAll("[data-tab-target2]");
-// const tabcon2 = document.querySelectorAll("[data-tab-content2]");
 
-// tabs2.forEach((tab) => {
-//     tab.addEventListener("click", () => {
-//       const target = document.querySelector(tab.dataset.tabTarget);
-//       tabcon2.forEach((tabc_all) => {
-//         tabc_all.classList.remove("active");
-//       });
-  
-//       target.classList.add("active");
-//     });
-//   });
 
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
