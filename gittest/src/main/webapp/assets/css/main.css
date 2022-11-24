@@ -554,11 +554,11 @@ input[type=text],input[type=password] {
   align-items: center;
 }
 
-.MBTI input[type=radio]{
+.MBTI>input[type=radio]{
   display: none;
   
 }
-.MBTI input[type=radio]+label{
+.MBTI>input[type=radio]+label{
   display: inline-block;
   cursor: pointer;
   height: 32px;
@@ -573,11 +573,11 @@ input[type=text],input[type=password] {
   align-items: center;
   padding-top: 4px;
 }
-.MBTI input[type=radio]+label{
+.MBTI>input[type=radio]+label{
   background-color: #fff;
   color: #333;
 }
-.MBTI input[type=radio]:checked+label{
+.MBTI>input[type=radio]:checked+label{
   background-color: #333;
   color: #fff;
 }
@@ -585,11 +585,11 @@ input[type=text],input[type=password] {
 
 
 
-.MBTI input[type=checkbox]{
+.MBTI>input[type=checkbox]{
   display: none;
   
 }
-.MBTI input[type=checkbox]+label{
+.MBTI>input[type=checkbox]+label{
   display: inline-block;
   cursor: pointer;
   height: 32px;
@@ -604,11 +604,11 @@ input[type=text],input[type=password] {
   align-items: center;
   padding-top: 4px;
 }
-.MBTI input[type=checkbox]+label{
+.MBTI>input[type=checkbox]+label{
   background-color: #fff;
   color: #333;
 }
-.MBTI input[type=checkbox]:checked+label{
+.MBTI>input[type=checkbox]:checked+label{
   background-color: #333;
   color: #fff;
 }
