@@ -51,7 +51,7 @@ public class LoginCon extends HttpServlet {
 			
 		}
 		
-		response.sendRedirect("main.html");
+		response.sendRedirect("main2.jsp");
 		
 	}
 

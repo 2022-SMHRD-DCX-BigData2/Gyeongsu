@@ -40,7 +40,7 @@ public class JoinCon extends HttpServlet {
 		// 4. DAO의 명령 후 처리
 		if(cnt >0) {
 			// 성공했으면 -> 성공페이지로 이동O
-			response.sendRedirect("Joinsuccess.html");
+			response.sendRedirect("main2.jsp");
 		} else {
 			// 실패했으면 -> 이동X
 			System.out.println("회원가입 실패!");

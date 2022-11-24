@@ -130,8 +130,25 @@
               </div>
               <div class="col align-self-center">
                   <div class="row">
-                    <div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop" role="button"><i class="bi bi-box-arrow-in-right"></i>로그인</a></div>
-                    <div class="col"><a id="topleftmenu" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="bi bi-person-plus"></i>회원가입</a></div>
+                  <c:choose>
+					<c:when test="${empty loginMember}">
+						<div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop" role="button"><i class="bi bi-box-arrow-in-right"></i>로그인</a></div>
+                    	<div class="col"><a id="topleftmenu" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="bi bi-person-plus"></i>회원가입</a></div>
+					</c:when>
+					
+					<c:otherwise>
+						<header>
+						<c:if test="${loginMember.id eq 'admin'}">
+						
+							<div class="col" align="right"><a href="select.jsp">회원관리</a></div>
+						</c:if>
+						</header>
+						<% if(loginMember != null){ %>
+					<div class="col" align="right"><a href="#"><%= loginMember.getId()%>님</a></div>
+					<%}%>
+						<div class="col" align="right"><a href="LogoutCon">로그아웃</a></div>
+					</c:otherwise>
+				</c:choose>
                   </div>
               </div>
           </div>
