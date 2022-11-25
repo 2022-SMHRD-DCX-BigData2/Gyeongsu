@@ -237,13 +237,17 @@ input[type=text],input[type=password] {
 
 
 .active ul li img {
-  width: 200px;
-  height: 275px;
+  width: 100%;
+  height: 100%;
   background-color: #4d4d4d;
 }
 
-
-
+/*  width: 200px;
+  height: 275px; */
+/* .active a>figure{
+  width: 200px;
+  height: 275px;
+} */
 
 :root {
   --tabcolor: rgb(255, 255, 255);
@@ -293,7 +297,7 @@ input[type=text],input[type=password] {
 
 .tabselements {
   border-top: 3px solid var(--tabactive);
-  height: 500px;
+  height: 100%;
 }
 
 .tabselements>section {
@@ -309,7 +313,6 @@ input[type=text],input[type=password] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
 }
 .tabselements>section>ul>li>a{
   display: flex;
@@ -627,4 +630,10 @@ input[type=text],input[type=password] {
 .information-text>dt{
   float: left;
   margin-right: 15px;
+}
+.grid{
+  row-gap: 3%;
+}
+input[type="checkbox"]:disabled+label{
+  opacity: 0.5;
 }

@@ -28,3 +28,21 @@
         }
     })
 </script>
+<script>
+    //채크박스 개수제한
+    jQuery(document).ready(function($) {
+$("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
+    // var cnt = $("#selCnt").val();
+    if( 3==$("input[name=keyword]:checkbox:checked").length ) {
+        $(":checkbox:not(:checked)").attr("disabled", "disabled");
+    } else {
+        $("input[name=keyword]:checkbox").removeAttr("disabled");
+    }
+});
+
+$("#selCnt").change(function() {
+    $("input[name=keyword]:checkbox").removeAttr("checked");
+    $("input[name=keyword]:checkbox").removeAttr("disabled");
+});
+});
+</script>

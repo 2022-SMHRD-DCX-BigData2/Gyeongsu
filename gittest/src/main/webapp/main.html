@@ -364,7 +364,7 @@
                 <div class="tabselements">
                     <section id="tab11" class="active">
                         <ul class="grid">
-                            <li>
+                            <li class="g-col-lg-4">
                                 <a href="#a">
 
                                     <figure>
@@ -382,7 +382,7 @@
                                     </figure>
                                 </a>
                             </li>
-                            <li>
+                            <li class="g-col-lg-4">
                                 <a href="#a">
 
                                     <figure>
@@ -398,7 +398,7 @@
                                     </figure>
                                 </a>
                             </li>
-                            <li>
+                            <li class="g-col-lg-4">
                                 <a href="#a">
 
                                     <figure>
@@ -414,7 +414,7 @@
                                     </figure>
                                 </a>
                             </li>
-                            <li>
+                            <li class="g-col-lg-4">
                                 <a href="#a">
 
                                     <figure>
@@ -430,7 +430,7 @@
                                     </figure>
                                 </a>
                             </li>
-                            <li>
+                            <li class="g-col-lg-4">
                                 <a href="#a">
 
                                     <figure>
@@ -1517,6 +1517,23 @@
                 $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
             }
         })
+    </script>
+    <script>
+        jQuery(document).ready(function($) {
+    $("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
+        // var cnt = $("#selCnt").val();
+        if( 3==$("input[name=keyword]:checkbox:checked").length ) {
+            $(":checkbox:not(:checked)").attr("disabled", "disabled");
+        } else {
+            $("input[name=keyword]:checkbox").removeAttr("disabled");
+        }
+    });
+ 
+    $("#selCnt").change(function() {
+        $("input[name=keyword]:checkbox").removeAttr("checked");
+        $("input[name=keyword]:checkbox").removeAttr("disabled");
+    });
+});
     </script>
 </body>
 

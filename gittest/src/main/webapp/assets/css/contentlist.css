@@ -54,7 +54,6 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);
 /* grid-template-rows: repeat(5, 300px); */
 /* grid-template-rows: repeat(auto-fill, minmax(20%, auto)); */
-grid-auto-rows: minmax(300px, auto);
 gap: 10px;
 }
 .grid-item{
@@ -65,6 +64,7 @@ text-align: center;
 border: solid 2px rgba(150, 150, 150, 0.627);
 border-radius: 5px;
 height: 100%;
+
 }
 .grid-item p{
 margin-bottom: 0;
@@ -93,4 +93,11 @@ padding: 10%;
 }
 .comment-text{
   margin: 1%;
+}
+.col-2>img{
+  width: 100%;
+
+}
+.information-text{
+  width: 100%;
 }
