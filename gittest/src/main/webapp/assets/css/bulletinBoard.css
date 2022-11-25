@@ -1,0 +1,38 @@
+.board{
+    width: 100%;
+}
+.board>tbody>tr>td{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+.board>tbody>tr:first-child{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.board>tbody>tr>td:not(:first-child){
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+.board>tbody>tr>td:last-child{
+    border-bottom: 1px solid black;
+    
+
+}
+.button-tr{
+    border: hidden;
+}
+#board-button{
+    text-align:right;
+    border: 0;
+   
+    
+}
+
+#board-button>input[type=button]{
+    margin-right: 3%;
+    margin-top:1%;
+    margin-bottom: 1%;
+}

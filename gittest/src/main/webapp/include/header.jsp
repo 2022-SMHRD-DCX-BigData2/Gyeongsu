@@ -231,7 +231,7 @@
                         <div class="container text-center ">
                             <div class="row">
                                 <div class="col align-self-center">
-                                    <a>Main img</a>
+                                    <a href="main.html">Main img</a>
                                 </div>
                                 <div class="col-6 align-self-center">
                                     <form action="" method="post">
@@ -287,20 +287,19 @@
                                     <a class="menuLink" href="#">문화체험</a>
                                     <ul class="submenu">
                                         <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
-                                        <li class=""><a href="#" class="submenuLink longLink">뮤지컬</a></li>
-                                        <li class=""><a href="#" class="submenuLink longLink">콘서트</a></li>
-                                        <li class=""><a href="#" class="submenuLink longLink">연극</a></li>
-                                        <li class=""><a href="#" class="submenuLink longLink">클래식&오페라</a></li>
-                                        <li class=""><a href="#" class="submenuLink longLink">무용&전통예술</a></li>
-                                        <li class=""><a href="#" class="submenuLink longLink">전시&행사</a></li>
+                                        <li class=""><a href="list.html" class="submenuLink longLink">뮤지컬</a></li>
+                                        <li class=""><a href="list.html#tab12" data-toggle="tab" class="submenuLink longLink">콘서트</a></li>
+                                        <li class=""><a href="list.html#tab13" data-toggle="tab" class="submenuLink longLink">연극</a></li>
+                                        <li class=""><a href="list.html#tab14" data-toggle="tab" class="submenuLink longLink">클래식&오페라</a></li>
+                                        <li class=""><a href="list.html#tab15" data-toggle="tab" class="submenuLink longLink">무용&전통예술</a></li>
+                                        <li class=""><a href="list.html#tab16" data-toggle="tab" class="submenuLink longLink">전시&행사</a></li>
                                     </ul>
                                 </li>
                                 <li class="topMenuLi">
                                     <a class="menuLink" href="#">게시판</a>
                                     <ul class="submenu">
-                                        <li><a href="#" class="submenuLink longLink">문의 게시판</a></li>
-                                        <li><a href="#" class="submenuLink longLink">건의 게시판</a></li>
-                                        <li></li>
+                                        <li><a href="bulletinBoard.html" data-toggle="tab" class="submenuLink longLink" >문의 게시판</a></li>
+                                        <li><a href="bulletinBoard.html#tab12" data-toggle="tab" class="submenuLink longLink">건의 게시판</a></li>
                                     </ul>
                                 </li>
                             </ul>

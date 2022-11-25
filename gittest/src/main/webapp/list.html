@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/contentlist.css">
     <title>Document</title>
@@ -275,22 +275,22 @@
         <div class="tabscontainer">
             <ul class="tabsmenu">
                 <li class="active">
-                    <a href="#tab11">뮤지컬</a>
+                    <a href="#tab11"  data-toggle="tab">뮤지컬</a>
+                </li>
+                <li class="">
+                    <a href="#tab12"  data-toggle="tab">콘서트</a>
                 </li>
                 <li>
-                    <a href="#tab12">콘서트</a>
+                    <a href="#tab13"  data-toggle="tab">연극</a>
                 </li>
                 <li>
-                    <a href="#tab13">연극</a>
+                    <a href="#tab14"  data-toggle="tab">클래식&오페라</a>
                 </li>
                 <li>
-                    <a href="#tab14">클래식&오페라</a>
+                    <a href="#tab15"  data-toggle="tab">무용&전통예술</a>
                 </li>
                 <li>
-                    <a href="#tab15">무용&전통예술</a>
-                </li>
-                <li>
-                    <a href="#tab16">전시&행사</a>
+                    <a href="#tab16"  data-toggle="tab">전시&행사</a>
                 </li>
             </ul>
 
@@ -1081,6 +1081,21 @@
             e.preventDefault();
         });
     </script>
+        <script>
+            // 텝매뉴 링크이동
+            $(function () {
+                if (location.hash == "#tab11") {
+                    $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
+                    $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
+                } else if (location.hash == "#tab12") {
+                    $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
+                    $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
+                } else if (location.hash == "#tab13") {
+                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                    $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
+                }
+            })
+        </script>
 </body>
 
 </html>
