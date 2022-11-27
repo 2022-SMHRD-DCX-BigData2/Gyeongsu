@@ -9,7 +9,7 @@
 		세미콜론 적지 않는다, ?바인드 변수와 같은 기능을 하는 것 #{컬럼명=객체의 필드명}
 -->
 	<insert id="insertMember" parameterType="project.domain.UserMember">
-		insert into user_info values (plus_seq.NEXTVAL,#{id},#{pw},#{name},#{mbti},#{key_no1},#{key_no2},#{key_no3})
+		insert into user_info values (plus_seq.NEXTVAL,#{id},#{pw},#{name},#{mbti},#{key_no1},#{key_no2},#{key_no3},#{key_no4})
 	</insert>
 	
 	<select id="selectMember" parameterType="project.domain.UserMember" resultType="project.domain.UserMember">
@@ -17,7 +17,7 @@
 	</select>
 	
 	<update id="updateMember" parameterType="project.domain.UserMember">
-		update user_info set id=#{id}, pw=#{pw}, name=#{name}, mbti=#{mbti}, key_no1=#{key_no1}, key_no2=#{key_no2}, key_no3=#{key_no3} where user_no=#{user_no}
+		update user_info set id=#{id}, pw=#{pw}, name=#{name}, mbti=#{mbti}, key_no1=#{key_no1}, key_no2=#{key_no2}, key_no3=#{key_no3}, key_no4=#{key_no4} where user_no=#{user_no}
 	</update>
 	
 	<select id="selectAll" resultType="project.domain.UserMember">

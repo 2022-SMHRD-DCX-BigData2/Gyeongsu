@@ -2,7 +2,7 @@ package project.domain;
 
 public class UserMember {
 
-	
+
 	private int user_no;
 	private String id;
 	private String pw;
@@ -11,6 +11,7 @@ public class UserMember {
 	private int key_no1;
 	private int key_no2;
 	private int key_no3;
+	private int key_no4;
 	
 	
 	// getter, setter
@@ -63,7 +64,12 @@ public class UserMember {
 	public void setKey_no3(int key_no3) {
 		this.key_no3 = key_no3;
 	}
-
+	public int getKey_no4() {
+		return key_no4;
+	}
+	public void setKey_no4(int key_no4) {
+		this.key_no4 = key_no4;
+	}
 	
 	// 생성자
 	public UserMember() {
@@ -101,7 +107,7 @@ public class UserMember {
 	}
 	
 	public UserMember(int user_no, String id, String pw, String name, String mbti, int key_no1, int key_no2,
-			int key_no3) {
+			int key_no3, int key_no4) {
 		super();
 		this.user_no = user_no;
 		this.id = id;
@@ -111,16 +117,18 @@ public class UserMember {
 		this.key_no1 = key_no1;
 		this.key_no2 = key_no2;
 		this.key_no3 = key_no3;
+		this.key_no4 = key_no4;
 	}
 	
-	public UserMember(int key_no1, int key_no2, int key_no3) {
+	public UserMember(int key_no1, int key_no2, int key_no3, int key_no4) {
 		super();
 		this.key_no1 = key_no1;
 		this.key_no2 = key_no2;
 		this.key_no3 = key_no3;
+		this.key_no4 = key_no4;
 	}
 	
-	public UserMember(String id, String pw, String name, String mbti, int key_no1, int key_no2, int key_no3) {
+	public UserMember(String id, String pw, String name, String mbti, int key_no1, int key_no2, int key_no3, int key_no4) {
 		super();
 		this.id = id;
 		this.pw = pw;
@@ -129,6 +137,7 @@ public class UserMember {
 		this.key_no1 = key_no1;
 		this.key_no2 = key_no2;
 		this.key_no3 = key_no3;
+		this.key_no4 = key_no4;
 	}
 	
 	// 객체에 담긴 정보를 출력해볼 수 있는 메소드
@@ -137,7 +146,7 @@ public class UserMember {
 	@Override
 	public String toString() {
 		return "UserMember [user_no=" + user_no + ", id=" + id + ", pw=" + pw + ", name=" + name + ", mbti=" + mbti
-				+ ", key_no1=" + key_no1 + ", key_no2=" + key_no2 + ", key_no3=" + key_no3 + "]";
+				+ ", key_no1=" + key_no1 + ", key_no2=" + key_no2 + ", key_no3=" + key_no3 + ", key_no4=" + key_no4 + "]";
 	}
 
 	

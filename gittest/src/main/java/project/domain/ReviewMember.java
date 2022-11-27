@@ -2,6 +2,9 @@ package project.domain;
 
 public class ReviewMember {
 
+	
+
+
 	private int review_no;
 	private int activity_no;
 	private int user_no;
@@ -10,7 +13,7 @@ public class ReviewMember {
 	private String review;
 	private int review_type;
 	private int favor;
-	
+	private String mbti;
 	
 	
 	// getter, setter
@@ -95,12 +98,21 @@ public class ReviewMember {
 	}
 	
 	
+	public String getMbti() {
+		return mbti;
+	}
+
+
+	public void setMbti(String mbti) {
+		this.mbti = mbti;
+	}
+	
 	
 	// 생성자
 	
 	// 전체
 	public ReviewMember(int review_no, int activity_no, int user_no, String id, String title, String review,
-			int review_type, int favor) {
+			int review_type, int favor, String mbti) {
 		super();
 		this.review_no = review_no;
 		this.activity_no = activity_no;
@@ -110,11 +122,12 @@ public class ReviewMember {
 		this.review = review;
 		this.review_type = review_type;
 		this.favor = favor;
+		this.mbti = mbti;
 	}
 	
 	// 각각 정보, 아이디, 댓글, 댓글타입, 좋아요
 	public ReviewMember(int review_no, int activity_no, int user_no, String id, String review, int review_type,
-			int favor) {
+			int favor, String mbti) {
 		super();
 		this.review_no = review_no;
 		this.activity_no = activity_no;
@@ -123,11 +136,12 @@ public class ReviewMember {
 		this.review = review;
 		this.review_type = review_type;
 		this.favor = favor;
+		this.mbti = mbti;
 	}
 	
 	// 각각 정보, 아이디, 제목, 댓글, 댓글타입
 	public ReviewMember(int review_no, int user_no, String id, String title, String review,
-			int review_type) {
+			int review_type, String mbti) {
 		super();
 		this.review_no = review_no;
 		this.user_no = user_no;
@@ -135,6 +149,7 @@ public class ReviewMember {
 		this.title = title;
 		this.review = review;
 		this.review_type = review_type;
+		this.mbti = mbti;
 	}
 	
 	// 아무것도 없을때
@@ -148,7 +163,7 @@ public class ReviewMember {
 	public String toString() {
 		return "ReviewMember [review_no=" + review_no + ", activity_no=" + activity_no + ", user_no=" + user_no
 				+ ", id=" + id + ", title=" + title + ", review=" + review + ", review_type=" + review_type + ", favor="
-				+ favor + "]";
+				+ favor + ",  mbti=" + mbti + "]";
 	}
 
 

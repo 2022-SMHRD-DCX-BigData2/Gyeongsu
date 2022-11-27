@@ -34,9 +34,10 @@ public class UpdateCon extends HttpServlet {
 		int key_no1 = Integer.parseInt(request.getParameter("key_no1"));
 		int key_no2 = Integer.parseInt(request.getParameter("key_no2"));
 		int key_no3 = Integer.parseInt(request.getParameter("key_no3"));
+		int key_no4 = Integer.parseInt(request.getParameter("key_no4"));
 		
 		// 받아온 데이터를 Member객체에 담아주기
-		UserMember update = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3);
+		UserMember update = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4);
 		
 		// DAO에 일할 메소드 만들기
 		UserMemberDAO dao = new UserMemberDAO();

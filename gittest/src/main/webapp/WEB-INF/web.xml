@@ -34,6 +34,12 @@
   	<description></description>
   	<servlet-class>project.controller.DeleteCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SelectOneCon</servlet-name>
+  	<display-name>SelectOneCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.SelectOneCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -53,5 +59,9 @@
   <servlet-mapping>
   	<servlet-name>DeleteCon</servlet-name>
   	<url-pattern>/DeleteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectOneCon</servlet-name>
+  	<url-pattern>/SelectOneCon</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,3 +1,23 @@
+<%@page import="project.domain.UserMember"%>
+<%@page import="project.domain.ActivityMember"%>
+<%@page import="project.domain.ReviewMember"%>
+<%@page import="java.util.List"%>
+<%@page import="project.domain.ActivityMemberDAO"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%
+	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
+	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
+	ActivityMember loginActivity = (ActivityMember)session.getAttribute("loginActivity");
+	ActivityMemberDAO dao = new ActivityMemberDAO();
+	List<ActivityMember> actmemberList = dao.selectAllact();
+	Date nowTime = new Date();
+	SimpleDateFormat df = new SimpleDateFormat("yy.MM.dd");
+%>
+
 
 <html lang="en">
 
@@ -36,7 +56,14 @@
                     <h1 class="modal-title fs-5" id="exampleModalToggleLabel">회원가입</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form action="JoinCon" method="post">
                 <div class="modal-body">
+                	<input type="hidden" name="user_no" value="0">
+                	<input type="hidden" name="mbti" placeholder="MBTI를 입력하세요" value="1234">
+					<input type="hidden" name="key_no1" placeholder="키워드1를 입력하세요" value="1">
+					<input type="hidden" name="key_no2" placeholder="키워드2를 입력하세요" value="2">
+					<input type="hidden" name="key_no3" placeholder="키워드3를 입력하세요" value="3">
+					<input type="hidden" name="key_no4" placeholder="키워드4를 입력하세요" value="4">
                     <p>아이디</p>
                     <input type="text" placeholder="아이디" name="id" />
                     <p>비밀번호</p>
@@ -45,8 +72,9 @@
                     <input type="text" placeholder="닉네임" name="name" />
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">다음</button>
+                    <input class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" type="submit" value="다음">
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -189,16 +217,18 @@
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">로그인</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>아이디</p>
-                    <input type="text" placeholder="아이디" name="id" />
-                    <p>비밀번호</p>
-                    <input type="password" placeholder="비밀번호" name="pw" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">로그인</button>
-                </div>
+                <form action="LoginCon" method="post">
+        <div class="modal-body">
+            <p>아이디</p>
+            <input type="text" placeholder="아이디" name="id" />
+            <p>비밀번호</p>
+            <input type="password" placeholder="비밀번호" name="pw" />
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="CLose">
+          <input type="submit" class="btn btn-primary" value="다음">
+        </div>
+        </form>
             </div>
         </div>
     </div>
@@ -223,11 +253,26 @@
                 </div>
                 <div class="col align-self-center">
                     <div class="row">
-                        <div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                                role="button"><i class="bi bi-box-arrow-in-right"></i>로그인</a></div>
-                        <div class="col"><a id="topleftmenu" data-bs-toggle="modal" href="#exampleModalToggle"
-                                role="button"><i class="bi bi-person-plus"></i>회원가입</a></div>
-                    </div>
+                  <c:choose>
+					<c:when test="${empty loginMember}">
+						<div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop" role="button"><i class="bi bi-box-arrow-in-right"></i>로그인</a></div>
+                    	<div class="col"><a id="topleftmenu" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="bi bi-person-plus"></i>회원가입</a></div>
+					</c:when>
+					
+					<c:otherwise>
+						<header>
+						<c:if test="${loginMember.id eq 'admin'}">
+						
+							<div class="col" align="right"><a href="select.jsp">회원관리</a></div>
+						</c:if>
+						</header>
+						<% if(loginMember != null){ %>
+					<div class="col" align="right"><a href="#"><%= loginMember.getId()%>님</a></div>
+					<%}%>
+						<div class="col" align="right"><a href="LogoutCon">로그아웃</a></div>
+					</c:otherwise>
+				</c:choose>
+                  </div>
                 </div>
             </div>
 
@@ -270,24 +315,41 @@
     <!-- 메인시작 -->
     <main id="" class="">
         <div>
-            <h2>뮤지컬</h2>
+            <!-- <h2>뮤지컬</h2> -->
         </div>
         <div class="row">
-            <h3>뮤지컬이름</h3>
-            
-            <div class="hashtag-box">진행중</div>
-    
+            <h3><%=loginActivity.getActivity_title() %></h3>
+            <% 
+            	String startdate = loginActivity.getStart_date();
+            	String finishdate = loginActivity.getFinish_date();
+            	String nowdate = df.format(nowTime);
+            %>
+            <%if(startdate.compareTo(nowdate)>=1){%>
+            	<div class="hashtag-box">예정중</div>
+            	<%-- <% out.print(startdate.compareTo(nowdate));%> --%>
+            <%}else if(startdate.compareTo(nowdate)<=0 && finishdate.compareTo(nowdate)>=0){%>
+            	<div class="hashtag-box">진행중</div>
+            	<%-- <% out.print(startdate.compareTo(nowdate));%>
+            	<% out.print(finishdate.compareTo(nowdate));%> --%>
+    		<%}else if(finishdate.compareTo(nowdate)<=-1){%>
+    			<div class="hashtag-box">완료</div>
+    			<%-- <% out.print(finishdate.compareTo(nowdate));%> --%>
+    		<%}else{%>
+    			<div class="hashtag-box">미정</div>
+    			<%}%>
             <div class = "mt-3"></div>
     
             <div col></div>
-            <div class="hashtag-box">#조용한</div>
-            <div class="hashtag-box">#정숙한</div>
-            <div class="hashtag-box">#평화로운</div>
-            <div class="hashtag-box">#굿잡</div>
+            <div class="hashtag-box">#<%=loginActivity.getKey_no1() %></div>
+            <div class="hashtag-box">#<%=loginActivity.getKey_no2() %></div>
+            <div class="hashtag-box">#<%=loginActivity.getKey_no3() %></div>
+            <div class="hashtag-box">#<%=loginActivity.getKey_no4() %></div>
+            <div class="hashtag-box">#<%=loginActivity.getKey_no5() %></div>
+            
         </div>
         <div class = "mt-3"></div>
         <div class="row align-items-center">
-            <div class="col-2"><img src="https://via.placeholder.com/200x250" alt=""></div>
+            <div class="col-2"><img src="<%=loginActivity.getActivity_pic() %>" alt=""></div>
             <div class="col-8">
                 <dl class="information-text">
                     <dt>기간</dt>

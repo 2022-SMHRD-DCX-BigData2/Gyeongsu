@@ -1,10 +1,16 @@
 <%@page import="project.domain.UserMember"%>
+<%@page import="project.domain.ActivityMember"%>
+<%@page import="project.domain.ReviewMember"%>
+<%@page import="java.util.List"%>
+<%@page import="project.domain.ActivityMemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
-
+	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
+	ActivityMemberDAO dao = new ActivityMemberDAO();
+	List<ActivityMember> actmemberList = dao.selectAllact();
 %>
 
 <html lang="en">
@@ -28,9 +34,11 @@
     
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Document</title>
+    
 </head>
 
 <body>
+
     <!-- 회원가입모달 -->
     <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
         tabindex="-1">
@@ -47,6 +55,7 @@
 					<input type="hidden" name="key_no1" placeholder="키워드1를 입력하세요" value="1">
 					<input type="hidden" name="key_no2" placeholder="키워드2를 입력하세요" value="2">
 					<input type="hidden" name="key_no3" placeholder="키워드3를 입력하세요" value="3">
+					<input type="hidden" name="key_no4" placeholder="키워드4를 입력하세요" value="4">
                     <p>아이디</p>
                     <input type="text" placeholder="아이디" name="id" />
                     <p>비밀번호</p>
@@ -66,7 +75,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">MBIT</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">MBTI</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -236,8 +245,9 @@
               <span class="visually-hidden">Next</span>
           </button>
       </div>
-      <h1>문화체험</h1>
+      <h1>전라남도</h1>
       <div class="tabscontainer">
+      		
           <ul class="tabsmenu">
               <li class="active">
                   <a href="#tab11">공연</a>
@@ -253,25 +263,26 @@
           <div class="tabselements">
               <section id="tab11" class="active">
                   <ul>
+                  <%for(ActivityMember m:actmemberList){ %>
                       <li>
-                          <a href="#a">
-
+                      <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                               <figure>
                                   <div><img
-                                          src="http://ticketimage.interpark.com/rz/image/play/goods/poster/22/22015097_p_s.jpg"
+                                          src="<%=m.getActivity_pic() %>"
                                           alt=""></div>
                                   <figcaption>
-                                      <h3 class="tabname">더토핑</h3>
-                                      <p>20221125~20221127</p>
+                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
                                       <div class="tabtext">
-                                          <p>서울</p>
-                                          <p>세종문화회관</p>
+                                          <!-- <p>서울</p> -->
+                                          <p><%=m.getActivity_place() %></p>
                                       </div>
                                   </figcaption>
                               </figure>
-                          </a>
+                              </a>
                       </li>
-                      <li>
+                      <%} %>
+                      <!-- <li>
                           <a href="#a">
 
                               <figure>
@@ -334,7 +345,7 @@
                                   </figcaption>
                               </figure>
                           </a>
-                      </li>
+                      </li> -->
                   </ul>
               </section>
 
@@ -513,7 +524,7 @@
               </section>
           </div>
       </div>
-
+		
       <h1>야놀자</h1>
       <div class="tabscontainer">
           <ul class="tabsmenu">
@@ -1406,6 +1417,24 @@
             //Cancel the link behavior
             e.preventDefault();
         });
+    </script>
+    <script>
+    // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
+    function savePage(activity_title,activity_no = 0) {
+      // name이 paging인 태그
+      var f = document.saving;
+
+      // form 태그의 하위 태그 값 매개 변수로 대입
+      f.activity_no.value = activity_no;
+      f.activity_title.value = activity_title;
+
+      // input태그의 값들을 전송하는 주소
+      f.action = "SelectOneCon"
+
+      // 전송 방식 : post
+      f.method = "post"
+      f.submit();
+    };
     </script>
 </body>
 

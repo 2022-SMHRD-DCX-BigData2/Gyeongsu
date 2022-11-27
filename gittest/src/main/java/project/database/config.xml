@@ -20,5 +20,6 @@
   </environments>
   <mappers>
     <mapper resource="project/database/UserMapper.xml"/>
+    <mapper resource="project/database/ActivityMapper.xml"/>
   </mappers>
 </configuration>
