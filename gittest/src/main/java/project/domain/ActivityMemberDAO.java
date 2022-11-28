@@ -40,31 +40,31 @@ public class ActivityMemberDAO {
 		return actMemberList;
 	}// 문화 전체 검색 끝!
 			
-			// 문화정보 하나 클릭해서 들어가기 기능 구현 테스트
-			public ActivityMember selectActivity(ActivityMember login) {
-				ActivityMember loginActivity = null;
-				try {
-					// mapper.xml의 id값
-					loginActivity = sqlSession.selectOne("selectjustOne", login);
-					
-					System.out.println("로긴 엑티비티"+ loginActivity);
-					if(loginActivity != null) {
-						// 만약에 내가 원하는 일을 했으면 DB에 반영
-						System.out.println("DAO : 선택 성공!!");
-						sqlSession.commit();
-					} else {
-						// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
-						sqlSession.rollback();
-					}
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				} finally {
-					// 빌렸던 Connection 객체를 반납
-					sqlSession.close();
-				}
-				
-				return loginActivity;
-				
-			}// 정보 선택 끝!!
+	// 문화정보 하나 클릭해서 들어가기 기능 구현 테스트
+	public ActivityMember selectActivity(ActivityMember login) {
+		ActivityMember loginActivity = null;
+		try {
+			// mapper.xml의 id값
+			loginActivity = sqlSession.selectOne("selectjustOne", login);
+			
+			System.out.println("로긴 엑티비티"+ loginActivity);
+			if(loginActivity != null) {
+				// 만약에 내가 원하는 일을 했으면 DB에 반영
+				System.out.println("DAO : 선택 성공!!");
+				sqlSession.commit();
+			} else {
+				// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+				sqlSession.rollback();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 빌렸던 Connection 객체를 반납
+			sqlSession.close();
+		}
+		
+		return loginActivity;
+		
+	}// 정보 선택 끝!!
 }

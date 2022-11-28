@@ -21,5 +21,6 @@
   <mappers>
     <mapper resource="project/database/UserMapper.xml"/>
     <mapper resource="project/database/ActivityMapper.xml"/>
+    <mapper resource="project/database/ReviewMapper.xml"/>
   </mappers>
 </configuration>

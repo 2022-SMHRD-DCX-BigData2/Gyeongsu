@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>project.controller.SelectOneCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ReviewCon</servlet-name>
+  	<display-name>ReviewCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.ReviewCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -63,5 +69,9 @@
   <servlet-mapping>
   	<servlet-name>SelectOneCon</servlet-name>
   	<url-pattern>/SelectOneCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReviewCon</servlet-name>
+  	<url-pattern>/ReviewCon</url-pattern>
   </servlet-mapping>
 </web-app>
