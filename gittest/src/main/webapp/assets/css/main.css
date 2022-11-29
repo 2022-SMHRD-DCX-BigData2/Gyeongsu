@@ -47,7 +47,15 @@ a:hover{
   color: black;
 }
 figure{
+  width: 200px;
+  height: auto;
+  
   margin: 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 figcaption{
   text-align: start;
@@ -316,9 +324,9 @@ input[type=text],input[type=password] {
 }
 .tabselements>section>ul>li>a{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  
   width: 100%;
   height: 100%;
 }
@@ -584,10 +592,6 @@ input[type=text],input[type=password] {
   background-color: #333;
   color: #fff;
 }
-
-
-
-
 .MBTI>input[type=checkbox]{
   display: none;
   
@@ -636,4 +640,25 @@ input[type=text],input[type=password] {
 }
 input[type="checkbox"]:disabled+label{
   opacity: 0.5;
+}
+.modal-body p{
+	margin-bottom:0rem;
+}
+
+select{
+  display: inline-block;
+  cursor: pointer;
+  height: 32px;
+  width: 107px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight:bold;
+  font-size:15px;
+  margin: 3px;
+  align-items: center;
+}
+option{
+  
 }

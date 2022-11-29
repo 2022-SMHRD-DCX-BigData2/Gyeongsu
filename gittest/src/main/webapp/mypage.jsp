@@ -46,6 +46,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/mypage.css">
+    <link rel="stylesheet" href="./assets/css/bulletinBoard.css">
     <title>Document</title>
 </head>
 
@@ -577,6 +578,8 @@
                                     <td>제목</td>
                                     <td>작성일</td>
                                     <td>좋아요</td>
+                                    <td>수정</td>
+                                    <td>삭제</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -584,6 +587,8 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -591,6 +596,8 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -598,20 +605,22 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
                                 <tr class="button-tr">
-                                    <td colspan="6" id="board-button">
+                                    <td colspan="7" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
                                         <input type="button" value="글작성" onclick="location.href='post.html'">
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" class="button-tr">
+                                    <td colspan="7" class="button-tr">
                                         123
                                         <%-- <%	// 페이징  처리
                                             if(count > 0){
@@ -660,7 +669,7 @@
                     </section>
                     <section id="tab13">
                         <div>
-                            <h3>문의글</h3>
+                            <h3>문의사항</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
@@ -668,6 +677,8 @@
                                     <td>제목</td>
                                     <td>작성일</td>
                                     <td>좋아요</td>
+                                    <td>수정</td>
+                                    <td>삭제</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -675,6 +686,8 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -682,6 +695,8 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
@@ -689,20 +704,22 @@
                                     <td><a>그리워하면</a></td>
                                     <td>2022-11-25</td>
                                     <td>30</td>
+                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                                 </tr>
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
                                 <tr class="button-tr">
-                                    <td colspan="6" id="board-button">
+                                    <td colspan="7" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
                                         <input type="button" value="글작성" onclick="location.href='post.html'">
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" class="button-tr">
+                                    <td colspan="7" class="button-tr">
                                         123
                                         <%-- <%	// 페이징  처리
                                             if(count > 0){

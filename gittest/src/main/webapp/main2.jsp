@@ -63,11 +63,32 @@
                     <input type="password" placeholder="비밀번호" name="pw"  class="password"/>
                     <p>닉네임</p>
                     <input type="text" placeholder="닉네임" name="name" />
+                    <div class="row">
+                	<div class="col MBTI"><p>성별</p>
+                            <input type="radio" name="age" value="남" class="box-radio-input" id="age-y"><label
+                            for="age-y">남</label>
+                            <input type="radio" name="age" value="여" class="box-radio-input" id="age-x"><label
+                            for="age-x">여</label>
+                        </div>
+                        <div class="col MBTI">
+                            <p>나이</p>
+                            <select>
+                                <option value="">선택</option>
+                                <option value="age10">10대</option>
+                                <option value="age20">20대</option>
+                                <option value="age30">30대</option>
+                                <option value="age40">40대</option>
+                                <option value="age50">50대</option>
+                                <option value="age60">60대</option>
+                                <option value="age70">70대이상</option>
+                            </select>
+                        </div>
+                	</div>
+                </div> 
 				</form>
-                </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                        data-bs-toggle="modal">다음</button>
+                        data-bs-toggle="modal">완료</button>
                 </div>
             </div>
         </div>
@@ -332,7 +353,7 @@
                     <li class="topMenuLi">
                   <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">공지사항</a></li>
                       <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>

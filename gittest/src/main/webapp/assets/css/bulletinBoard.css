@@ -21,6 +21,9 @@
     
 
 }
+.board>tr{
+    width: 100%;
+}
 .button-tr{
     border: hidden;
 }
