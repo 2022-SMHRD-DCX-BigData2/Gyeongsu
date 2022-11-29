@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<%@page import="project.domain.UserMember"%>
+<%@page import="project.domain.ActivityMember"%>
+<%@page import="project.domain.ReviewMember"%>
+<%@page import="java.util.List"%>
+<%@page import="project.domain.ActivityMemberDAO"%>
+<%@page import="project.domain.ReviewMemberDAO"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%
+	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
+	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
+	ActivityMember loginActivity = (ActivityMember)session.getAttribute("loginActivity");
+	ActivityMemberDAO dao = new ActivityMemberDAO();
+	List<ActivityMember> actmemberList = dao.selectAllact();
+	ReviewMemberDAO dao2 = new ReviewMemberDAO();
+	List<ReviewMember> revMemberList = dao2.selectAllRev();
+	Date nowTime = new Date();
+	SimpleDateFormat df = new SimpleDateFormat("YYYY.MM.dd");
+%>
+
+
 <html lang="en">
 
 <head>
@@ -37,12 +60,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <form action="JoinCon" method="post">
+                	<input type="hidden" name="user_no" value="0">
+                	<input type="hidden" name="mbti" placeholder="MBTI를 입력하세요" value="1234">
+					<input type="hidden" name="key_no1" placeholder="키워드1를 입력하세요" value="1">
+					<input type="hidden" name="key_no2" placeholder="키워드2를 입력하세요" value="2">
+					<input type="hidden" name="key_no3" placeholder="키워드3를 입력하세요" value="3">
+					<input type="hidden" name="key_no4" placeholder="키워드4를 입력하세요" value="4">
+					<input type="hidden" name="gender" value="0">
+					<input type="hidden" name="age" value="0">
                     <p>아이디</p>
                     <input type="text" placeholder="아이디" name="id" />
                     <p>비밀번호</p>
-                    <input type="password" placeholder="비밀번호" name="pw" class="password" />
+                    <input type="password" placeholder="비밀번호" name="pw"  class="password"/>
                     <p>닉네임</p>
                     <input type="text" placeholder="닉네임" name="name" />
+				</form>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
@@ -207,6 +240,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <input class="btn btn-primary" data-bs-toggle="modal" type="submit" value="가입">
                 </div>
             </div>
         </div>
@@ -225,16 +259,18 @@
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">로그인</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>아이디</p>
-                    <input type="text" placeholder="아이디" name="id" />
-                    <p>비밀번호</p>
-                    <input type="password" placeholder="비밀번호" name="pw" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">로그인</button>
-                </div>
+                <form action="LoginCon" method="post">
+        <div class="modal-body">
+            <p>아이디</p>
+            <input type="text" placeholder="아이디" name="id" />
+            <p>비밀번호</p>
+            <input type="password" placeholder="비밀번호" name="pw" />
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="CLose">
+          <input type="submit" class="btn btn-primary" value="다음">
+        </div>
+        </form>
             </div>
         </div>
     </div>
@@ -244,7 +280,7 @@
             <div class="container text-center ">
                 <div class="row">
                     <div class="col align-self-center">
-                        <a>Main img</a>
+                        <a href="main2.jsp"><img src="./images/common/logo.png"></a>
                     </div>
                     <div class="col-6 align-self-center">
                         <form action="" method="post">
@@ -259,6 +295,8 @@
                     </div>
                     <div class="col align-self-center">
                         <div class="row">
+                        <c:choose>
+						<c:when test="${empty loginMember}">
                             <div class="col"><a id="topleftmenu" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                                     role="button"><i class="bi bi-box-arrow-in-right"></i><span
                                         class="d-none d-md-none d-lg-block">로그인</span></a></div>
@@ -266,6 +304,22 @@
                                     role="button"><i class="bi bi-person-plus"></i><span
                                         class="d-none d-md-none d-lg-block">회원가입</span></a></div>
                         </div>
+                        </c:when>
+					
+					<c:otherwise>
+					<header>
+						<c:if test="${loginMember.id eq 'admin'}">
+						
+							<div class="col" align="right"><a href="select.jsp">회원관리</a></div>
+						</c:if>
+						</header>
+						<% if(loginMember != null){ %>
+					<div class="col" align="right"><a href="mypage.jsp"><%= loginMember.getId()%>님</a></div>
+					<%}%>
+					<div class="col" align="right"><a href="LogoutCon">로그아웃</a></div>
+					</c:otherwise>
+				</c:choose>
+                  </div>
                     </div>
                 </div>
 
@@ -275,34 +329,34 @@
                 <!-- <button type="button" class="" aria-owns="" aria-expanded="" aria-label="전체 메뉴"> -->
                 <!-- </button> -->
                 <ul class="topMenu">
-                    <li class="topMenuLi">
-                        <a class="menuLink" href="#">문화체험</a>
+                     <li class="topMenuLi">
+                        <a class="menuLink" href="list.jsp">문화체험</a>
                         <ul class="submenu">
                             <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
-                            <li class=""><a href="#" class="submenuLink longLink">뮤지컬</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">콘서트</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">연극</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">클래식&오페라</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">무용&전통예술</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">전시&행사</a></li>
+                            <li class=""><a href="list.jsp#tab11" class="submenuLink longLink">뮤지컬</a></li>
+                            <li class=""><a href="list.jsp#tab12" class="submenuLink longLink">콘서트</a></li>
+                            <li class=""><a href="list.jsp#tab13" class="submenuLink longLink">연극</a></li>
+                            <li class=""><a href="list.jsp#tab14" class="submenuLink longLink">클래식&오페라</a></li>
+                            <li class=""><a href="list.jsp#tab15" class="submenuLink longLink">무용&전통예술</a></li>
+                            <li class=""><a href="list.jsp#tab16" class="submenuLink longLink">전시&행사</a></li>
                         </ul>
                     </li>
                     <li class="topMenuLi">
-                        <a class="menuLink" href="#">게시판</a>
-                        <ul class="submenu">
-                            <li><a href="#" class="submenuLink longLink">문의 게시판</a></li>
-                            <li><a href="#" class="submenuLink longLink">건의 게시판</a></li>
-                            <li></li>
+                  <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
+                  <ul class="submenu">
+                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
+                      <li></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
+        </header>
             <div id="">
                 <!-- 전체 메뉴창   -->
 
             </div>
 
-        </header>
 
 
 
@@ -559,7 +613,7 @@
                                 <tr>
                                     <td colspan="6" class="button-tr">
                                         123
-                                        <!-- <%	// 페이징  처리
+                                        <%-- <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
                                                 int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
@@ -598,7 +652,7 @@
                                         <%			
                                                 }
                                             }
-                                        %> -->
+                                        %> --%>
                                     </td>
                                 </tr>
                             </table>
@@ -650,7 +704,7 @@
                                 <tr>
                                     <td colspan="6" class="button-tr">
                                         123
-                                        <!-- <%	// 페이징  처리
+                                        <%-- <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
                                                 int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
@@ -689,7 +743,7 @@
                                         <%			
                                                 }
                                             }
-                                        %> -->
+                                        %> --%>
                                     </td>
                                 </tr>
                             </table>
@@ -699,93 +753,8 @@
             </div>
 
         </main>
-        <footer class="">
-            <div>
-                <div class="footer_bottom_holder">
-                    <div class="container">
-                        <div class="container_inner">
-                            <div class="footer_bottom">
-                                <div class="footer_inner">
-                                    <div class="left">
-                                        <dl>
-                                            <dt><strong>올리브</strong></dt>
-                                            <dd>대표자 : 신경수<br>
-                                                개인정보책임관리자 : 신경수<br>
-                                                사업자번호 : 123-45-67890<br>
-                                                <span class="wh">순천점 : </span>전라남도 순천시 중앙로 260<br>
-                                                <span class="wh">FAX : </span>062-123-4567<br>
-                                                <span class="wh">E-Mail : </span>smhrd@smhrd.or.kr<br>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="right">
-                                        <ul class="sns">
-                                            <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
-                                                        src="./images/common/kakao-talk.png"></a></li>
-                                            <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
-                                                    target="_blank"><img
-                                                        src="./images/common/naver_icon-icons.com_59879.png"></a></li>
-                                            <li class="youtube"><a
-                                                    href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
-                                                    target="_blank"><img src="./images/common/youtube.png"></a></li>
-                                            <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
-                                                    target="_blank"><img src="./images/common/instagram.png"></a></li>
-                                            <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
-                                                    target="_blank"><img src="./images/common/facebook.png"></a></li>
-                                        </ul>
-                                        <ul class="">
-                                            <li class="">
-                                                <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 서버 구축,기능구현)</h6>
-                                            </li>
-                                            <li class="">
-                                                <p>최서정(추천 알고리즘)</p>
-                                            </li>
-                                            <li class="">
-                                                <p>이지연(데이터 크롤링,키워드 분석)</p>
-                                            </li>
-                                            <li class="">
-                                                <p>권호주(프론트앤드)</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        </footer>
-    </div>
-    <script src="./assets/js/test.js">
-        $('.window .close').click(function (e) {
-            //Cancel the link behavior
-            e.preventDefault();
-        });
-    </script>
-        <script>
-            // 텝매뉴 링크이동
-            $(function () {
-                if (location.hash == "#tab11") {
-                    $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab12") {
-                    $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab13") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab14") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab15") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab16") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
-                }
-            })
-        </script>
+  <jsp:include page="/include/footer.jsp"></jsp:include>
+  <jsp:include page="/include/script.jsp"></jsp:include>
 </body>
 
 </html>

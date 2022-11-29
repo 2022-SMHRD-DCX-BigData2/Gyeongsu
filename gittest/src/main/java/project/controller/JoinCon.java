@@ -25,14 +25,15 @@ public class JoinCon extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String mbti = request.getParameter("mbti");
-		int key_no1 = Integer.parseInt(request.getParameter("key_no1"));
-		int key_no2 = Integer.parseInt(request.getParameter("key_no2"));
-		int key_no3 = Integer.parseInt(request.getParameter("key_no3"));
-		int key_no4 = Integer.parseInt(request.getParameter("key_no4"));
-		
+		String key_no1 = request.getParameter("key_no1");
+		String key_no2 = request.getParameter("key_no2");
+		String key_no3 = request.getParameter("key_no3");
+		String key_no4 = request.getParameter("key_no4");
+		String gender = request.getParameter("gender");
+		int age = Integer.parseInt(request.getParameter("age"));
 		
 		// 2. id, pw를 MavenMember 객체에 담아주기
-		UserMember join = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4);
+		UserMember join = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4, gender, age);
 		
 		// 3. DAO이용해서 2.의 내용을 넣어준다!
 		UserMemberDAO dao = new UserMemberDAO();

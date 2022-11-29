@@ -3,17 +3,27 @@
 <%@page import="project.domain.ReviewMember"%>
 <%@page import="java.util.List"%>
 <%@page import="project.domain.ActivityMemberDAO"%>
+<%@page import="project.domain.ReviewMemberDAO"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
 	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
+	ActivityMember loginActivity = (ActivityMember)session.getAttribute("loginActivity");
 	ActivityMemberDAO dao = new ActivityMemberDAO();
 	List<ActivityMember> actmemberList = dao.selectAllact();
+	ReviewMemberDAO dao2 = new ReviewMemberDAO();
+	List<ReviewMember> revMemberList = dao2.selectAllRev();
+	Date nowTime = new Date();
+	SimpleDateFormat df = new SimpleDateFormat("yy.MM.dd");
 %>
 
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,11 +40,13 @@
     </script>
     <!-- 아이콘 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/mypage.css">
     <title>Document</title>
-    
 </head>
 
 <body>
@@ -317,7 +329,7 @@
                 <!-- <button type="button" class="" aria-owns="" aria-expanded="" aria-label="전체 메뉴"> -->
                 <!-- </button> -->
                 <ul class="topMenu">
-                    <li class="topMenuLi">
+                     <li class="topMenuLi">
                         <a class="menuLink" href="list.jsp">문화체험</a>
                         <ul class="submenu">
                             <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
@@ -330,430 +342,230 @@
                         </ul>
                     </li>
                     <li class="topMenuLi">
-                  <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
+                 <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">문의 게시판</a></li>
-                      <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard2.jsp" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-      <div id="">
-          <!-- 전체 메뉴창   -->
+            <div id="">
+                <!-- 전체 메뉴창   -->
 
-      </div>
-
-
+            </div>
 
 
-  <main id="" class="">
 
 
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                  </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                  </div>
-              </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-      <h1>경남/부산</h1>
+
+        <main id="haha" class="">
             <div class="tabscontainer">
                 <ul class="tabsmenu">
+                    <li>
+                        <a href="#tab11">문의 게시판</a>
+                    </li>
                     <li class="active">
-                    <a href="#tab11">뮤지컬</a>
-                </li>
-                <li>
-                    <a href="#tab12">콘서트</a>
-                </li>
-                <li>
-                    <a href="#tab13">연극</a>
-                </li>
-                <li>
-                    <a href="#tab14">클래식&오페라</a>
-                </li>
-                <li>
-                    <a href="#tab15">무용&전통예술</a>
-                </li>
-                <li>
-                    <a href="#tab16">전시&행사</a>
-                </li>
+                        <a href="#tab12">건의 게시판</a>
+                    </li>
+
                 </ul>
 
-          <div class="tabselements">
-                    <section id="tab11" class="active">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
+                <div class="tabselements">
+                    <section id="tab12" class="active">
+                        <div>
+                            <h3>건의 게시판</h3>
+                            <table class="board">
+                                <tr>
+                                    <td>번호</td>
+                                    <td>작성자</td>
+                                    <td>제목</td>
+                                    <td>작성일</td>
+                                    <td>좋아요</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <!-- 데이터가 없으면 -->
+                                <!-- <tr>
+                                    <td>데이터가 없습니다</td>
+                                </tr> -->
+                                <tr class="button-tr">
+                                    <td colspan="6" id="board-button">
+                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
+                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="6" class="button-tr">
+                                        123
+                                        <%-- <%	// 페이징  처리
+                                            if(count > 0){
+                                                // 총 페이지의 수
+                                                int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
+                                                // 한 페이지에 보여줄 페이지 블럭(링크) 수
+                                                int pageBlock = 10;
+                                                // 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+                                                int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
+                                                int endPage = startPage + pageBlock - 1;
+                                                
+                                                // 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+                                                if(endPage > pageCount){
+                                                    endPage = pageCount;
+                                                }
+                                                
+                                                if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+                                        <%			
+                                                }
+                                                
+                                                for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
+                                                    if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
+                                        %>
+                                                        [<%=i %>]
+                                        <%									
+                                                    }else{ // 현재 페이지가 아닌 경우 링크 설정
+                                        %>
+                                                        <a href="bulletinBoard.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+                                        <%	
+                                                    }
+                                                } // for end
+                                                
+                                                if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+                                        <%			
+                                                }
+                                            }
+                                        %> --%>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </section>
 
 
-              <section id="tab12">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==2){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab13">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==3){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab14">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==4){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab15">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==5){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab16">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==6){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-          </div>
-      </div>
-		
-      <h1>전남/광주</h1>
-            <div class="tabscontainer">
-                <ul class="tabsmenu">
-                    <li class="active">
-                    <a href="#tab21">뮤지컬</a>
-                </li>
-                <li>
-                    <a href="#tab22">콘서트</a>
-                </li>
-                <li>
-                    <a href="#tab23">연극</a>
-                </li>
-                <li>
-                    <a href="#tab24">클래식&오페라</a>
-                </li>
-                <li>
-                    <a href="#tab25">무용&전통예술</a>
-                </li>
-                <li>
-                    <a href="#tab26">전시&행사</a>
-                </li>
-                </ul>
+                    <section id="tab11">
+                        <div>
+                            <h3>문의 게시판</h3>
+                            <table class="board">
+                                <tr>
+                                    <td>번호</td>
+                                    <td>작성자</td>
+                                    <td>제목</td>
+                                    <td>작성일</td>
+                                    <td>좋아요</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <!-- 데이터가 없으면 -->
+                                <!-- <tr>
+                                    <td>데이터가 없습니다</td>
+                                </tr> -->
+                                <tr class="button-tr">
+                                    <td colspan="6" id="board-button">
+                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
+                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
+                                    </td>
+                                </tr>
 
-          <div class="tabselements">
-              <section id="tab21" class="active">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==1){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-
-
-              <section id="tab22">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==2){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab23">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==3){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab24">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==4){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab25">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==5){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-              <section id="tab26">
-                        <ul class="grid">
-                        <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==6){ %>
-                            <li class="g-col-lg-4">
-                                <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
-                                  <div><img
-                                          src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                  </figcaption>
-                              </figure>
-                              </a>
-                      </li>
-                      <%} %>
-                      <%} %>
-                  </ul>
-              </section>
-          </div>
-      </div>
-  </main>
-  <jsp:include page="/include/footer.jsp"></jsp:include>
-  <jsp:include page="/include/script.jsp"></jsp:include>
+                                <tr>
+                                    <td colspan="6" class="button-tr">
+                                        123
+                                        <%-- <%	// 페이징  처리
+                                            if(count > 0){
+                                                // 총 페이지의 수
+                                                int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
+                                                // 한 페이지에 보여줄 페이지 블럭(링크) 수
+                                                int pageBlock = 10;
+                                                // 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+                                                int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
+                                                int endPage = startPage + pageBlock - 1;
+                                                
+                                                // 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+                                                if(endPage > pageCount){
+                                                    endPage = pageCount;
+                                                }
+                                                
+                                                if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+                                        <%			
+                                                }
+                                                
+                                                for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
+                                                    if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
+                                        %>
+                                                        [<%=i %>]
+                                        <%									
+                                                    }else{ // 현재 페이지가 아닌 경우 링크 설정
+                                        %>
+                                                        <a href="bulletinBoard.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+                                        <%	
+                                                    }
+                                                } // for end
+                                                
+                                                if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+                                        <%			
+                                                }
+                                            }
+                                        %> --%>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+            </div>
+            </section>
+    </div>
+    </div>
+    </main>
+     	<jsp:include page="/include/footer.jsp"></jsp:include>
+  		<jsp:include page="/include/script.jsp"></jsp:include>
 </body>
 
 </html>

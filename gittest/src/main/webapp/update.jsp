@@ -24,6 +24,8 @@
 									<li>키워드2 변경 : <input type="text" name="key_no2" value="${loginMember.key_no2}" style="width: 500px; margin: 0 auto;"></li>
 									<li>키워드3 변경 : <input type="text" name="key_no3" value="${loginMember.key_no3}" style="width: 500px; margin: 0 auto;"></li>
 									<li>키워드4 변경 : <input type="text" name="key_no4" value="${loginMember.key_no4}" style="width: 500px; margin: 0 auto;"></li>
+									<li>성별 변경 : <input type="text" name="gender" value="${loginMember.gender}" style="width: 500px; margin: 0 auto;"></li>
+									<li>나이 변경 : <input type="text" name="age" value="${loginMember.age}" style="width: 500px; margin: 0 auto;"></li>
 									<li><input type="submit" value="회원정보수정" class="button fit" style="width: 500px; margin: 0 auto;"></li>
 								</form>
 								<!-- submit에서 value는 보여줄 값 

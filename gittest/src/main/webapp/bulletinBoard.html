@@ -23,7 +23,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/mypage.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bulletinBoard.css">
+    <title>게시판</title>
 </head>
 
 <body>
@@ -308,206 +309,107 @@
 
 
         <main id="" class="">
-
             <div class="tabscontainer">
                 <ul class="tabsmenu">
                     <li class="active">
-                        <a href="#tab11">내정보</a>
+                        <a href="#tab11">문의 게시판</a>
                     </li>
                     <li>
-                        <a href="#tab12">작성글</a>
+                        <a href="#tab12">건의 게시판</a>
                     </li>
-                    <li>
-                        <a href="#tab13">문의사항</a>
-                    </li>
+
                 </ul>
 
                 <div class="tabselements">
                     <section id="tab11" class="active">
                         <div>
-                            <h3>기본정보</h3>
-                            <div>
-                                <form action="" method="post"></form>
-                                <dl class="my-box">
-                                    <dt>아이디</dt>
-                                    <dd>host</dd>
-                                </dl>
-                                
-                                    <dl class="my-box">
-                                        <dt>비밀번호</dt>
-                                        <dd>123456</dd>
-                                    </dl>
-                                    <dl class="my-box">
-                                        <dt>닉네임</dt>
-                                        <dd>홍길동</dd>
-                                    </dl>
-                                    <dl class="my-box">
-                                        <dt>MBTI</dt>
-                                        <dd>
-                                            <div class=" row row-cols-4 ">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="radio" name="mbti-1" value="E" class="box-radio-input"
-                                                        id="mbti-e"><label for="mbti-e">E</label>
-                                                    <input type="radio" name="mbti-1" value="I" class="box-radio-input"
-                                                        id="mbti-i-change"><label for="mbti-i-change">I</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="radio" name="mbti-2" value="S" class="box-radio-input"
-                                                        id="mbti-s-change"><label for="mbti-s-change">S</label>
-                                                    <input type="radio" name="mbti-2" value="N" class="box-radio-input"
-                                                        id="mbti-n-change"><label for="mbti-n-change">N</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="radio" name="mbti-3" value="T" class="box-radio-input"
-                                                        id="mbti-t-change"><label for="mbti-t-change">T</label>
-                                                    <input type="radio" name="mbti-3" value="F" class="box-radio-input"
-                                                        id="mbti-f-change"><label for="mbti-f-change">F</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="radio" name="mbti-4" value="P" class="box-radio-input"
-                                                        id="mbti-p-change"><label for="mbti-p-change">P</label>
-                                                    <input type="radio" name="mbti-4" value="J" class="box-radio-input"
-                                                        id="mbti-j-change"><label for="mbti-j-change">J</label>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="my-box">
-                                        <dt>키워드</dt>
-                                        <dd>
-                                            <div class=" row row-cols-3 ">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실외"
-                                                        class="box-radio-input" id="keyword-1-change"><label
-                                                        for="keyword-1-change">#실외</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실내"
-                                                        class="box-radio-input" id="keyword-2-change"><label
-                                                        for="keyword-2-change">#실내</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활동적인"
-                                                        class="box-radio-input" id="keyword-3-change"><label
-                                                        for="keyword-3-change">#활동적인</label>
-                                                </div>
-                                            </div>
-                                            <!-- 2번째줄 -->
-                                            <div class=" row row-cols-4 keyword-box">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="자연적인"
-                                                        class="box-radio-input" id="keyword-4-change"><label
-                                                        for="keyword-4-change">#자연적인</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="신나는"
-                                                        class="box-radio-input" id="keyword-5-change"><label
-                                                        for="keyword-5-change">#신나는</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활발한"
-                                                        class="box-radio-input" id="keyword-6-change"><label
-                                                        for="keyword-6-change">#활발한</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="조용한"
-                                                        class="box-radio-input" id="keyword-7-change"><label
-                                                        for="keyword-7-change">#조용한</label>
-                                                </div>
-                                            </div>
-                                            <!-- 3번째줄 -->
-                                            <div class=" row row-cols-3 ">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실외"
-                                                        class="box-radio-input" id="keyword-8-change"><label
-                                                        for="keyword-8-change">#실외</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실내"
-                                                        class="box-radio-input" id="keyword-9-change"><label
-                                                        for="keyword-9-change">#실내</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활동적인"
-                                                        class="box-radio-input" id="keyword-10-change"><label
-                                                        for="keyword-10-change">#활동적인</label>
-                                                </div>
-                                            </div>
-                                            <!-- 4번째줄 -->
-                                            <div class=" row row-cols-4 keyword-box">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="자연적인"
-                                                        class="box-radio-input" id="keyword-11-change"><label
-                                                        for="keyword-11-change">#자연적인</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="신나는"
-                                                        class="box-radio-input" id="keyword-12-change"><label
-                                                        for="keyword-12-change">#신나는</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활발한"
-                                                        class="box-radio-input" id="keyword-13-change"><label
-                                                        for="keyword-13-change">#활발한</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="조용한"
-                                                        class="box-radio-input" id="keyword-21-change"><label
-                                                        for="keyword-21-change">#조용한</label>
-                                                </div>
-                                            </div>
-                                            <!-- 5번째줄 -->
-                                            <div class=" row row-cols-3 ">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실외"
-                                                        class="box-radio-input" id="keyword-14-change"><label
-                                                        for="keyword-14-change">#실외</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="실내"
-                                                        class="box-radio-input" id="keyword-15-change"><label
-                                                        for="keyword-15-change">#실내</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활동적인"
-                                                        class="box-radio-input" id="keyword-16-change"><label
-                                                        for="keyword-16-change">#활동적인</label>
-                                                </div>
-                                            </div>
-                                            <!-- 6번째줄 -->
-                                            <div class=" row row-cols-4 keyword-box">
-                                                <!-- <h4>MBTI</h4> -->
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="자연적인"
-                                                        class="box-radio-input" id="keyword-17-change"><label
-                                                        for="keyword-17-change">#자연적인</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="신나는"
-                                                        class="box-radio-input" id="keyword-18-change"><label
-                                                        for="keyword-18-change">#신나는</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="활발한"
-                                                        class="box-radio-input" id="keyword-19-change"><label
-                                                        for="keyword-19-change">#활발한</label>
-                                                </div>
-                                                <div class="box-radio-input MBTI">
-                                                    <input type="checkbox" name="keyword" value="조용한"
-                                                        class="box-radio-input" id="keyword-20-change"><label
-                                                        for="keyword-20-change">#조용한</label>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                </form>
-                                </dl>
-                            </div>
+                            <h3>문의 게시판</h3>
+                            <table class="board">
+                                <tr>
+                                    <td>번호</td>
+                                    <td>작성자</td>
+                                    <td>제목</td>
+                                    <td>작성일</td>
+                                    <td>좋아요</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td><a>그리워하면</a></td>
+                                    <td>2022-11-25</td>
+                                    <td>30</td>
+                                </tr>
+                                <!-- 데이터가 없으면 -->
+                                <!-- <tr>
+                                    <td>데이터가 없습니다</td>
+                                </tr> -->
+                                <tr class="button-tr">
+                                    <td colspan="6" id="board-button">
+                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
+                                        <input type="button" value="글작성" onclick="location.href='post.html'">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="6" class="button-tr">
+                                        123
+                                        <!-- <%	// 페이징  처리
+                                            if(count > 0){
+                                                // 총 페이지의 수
+                                                int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
+                                                // 한 페이지에 보여줄 페이지 블럭(링크) 수
+                                                int pageBlock = 10;
+                                                // 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
+                                                int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
+                                                int endPage = startPage + pageBlock - 1;
+                                                
+                                                // 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
+                                                if(endPage > pageCount){
+                                                    endPage = pageCount;
+                                                }
+                                                
+                                                if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
+                                        <%			
+                                                }
+                                                
+                                                for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
+                                                    if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
+                                        %>
+                                                        [<%=i %>]
+                                        <%									
+                                                    }else{ // 현재 페이지가 아닌 경우 링크 설정
+                                        %>
+                                                        <a href="bulletinBoard.jsp?pageNum=<%=i%>">[<%=i %>]</a>
+                                        <%	
+                                                    }
+                                                } // for end
+                                                
+                                                if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
+                                        %>
+                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
+                                        <%			
+                                                }
+                                            }
+                                        %> -->
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
 
                     </section>
@@ -515,7 +417,7 @@
 
                     <section id="tab12">
                         <div>
-                            <h3>작성글</h3>
+                            <h3>건의 게시판</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
@@ -603,158 +505,68 @@
                                 </tr>
                             </table>
                         </div>
-                    </section>
-                    <section id="tab13">
-                        <div>
-                            <h3>문의글</h3>
-                            <table class="board">
-                                <tr>
-                                    <td>번호</td>
-                                    <td>작성자</td>
-                                    <td>제목</td>
-                                    <td>작성일</td>
-                                    <td>좋아요</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <!-- 데이터가 없으면 -->
-                                <!-- <tr>
-                                    <td>데이터가 없습니다</td>
-                                </tr> -->
-                                <tr class="button-tr">
-                                    <td colspan="6" id="board-button">
-                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
-                                        <input type="button" value="글작성" onclick="location.href='post.html'">
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="6" class="button-tr">
-                                        123
-                                        <!-- <%	// 페이징  처리
-                                            if(count > 0){
-                                                // 총 페이지의 수
-                                                int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
-                                                // 한 페이지에 보여줄 페이지 블럭(링크) 수
-                                                int pageBlock = 10;
-                                                // 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
-                                                int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
-                                                int endPage = startPage + pageBlock - 1;
-                                                
-                                                // 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
-                                                if(endPage > pageCount){
-                                                    endPage = pageCount;
-                                                }
-                                                
-                                                if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-                                        %>
-                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
-                                        <%			
-                                                }
-                                                
-                                                for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
-                                                    if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
-                                        %>
-                                                        [<%=i %>]
-                                        <%									
-                                                    }else{ // 현재 페이지가 아닌 경우 링크 설정
-                                        %>
-                                                        <a href="bulletinBoard.jsp?pageNum=<%=i%>">[<%=i %>]</a>
-                                        <%	
-                                                    }
-                                                } // for end
-                                                
-                                                if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-                                        %>
-                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
-                                        <%			
-                                                }
-                                            }
-                                        %> -->
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </section>
                 </div>
             </div>
-
-        </main>
-        <footer class="">
-            <div>
-                <div class="footer_bottom_holder">
-                    <div class="container">
-                        <div class="container_inner">
-                            <div class="footer_bottom">
-                                <div class="footer_inner">
-                                    <div class="left">
-                                        <dl>
-                                            <dt><strong>올리브</strong></dt>
-                                            <dd>대표자 : 신경수<br>
-                                                개인정보책임관리자 : 신경수<br>
-                                                사업자번호 : 123-45-67890<br>
-                                                <span class="wh">순천점 : </span>전라남도 순천시 중앙로 260<br>
-                                                <span class="wh">FAX : </span>062-123-4567<br>
-                                                <span class="wh">E-Mail : </span>smhrd@smhrd.or.kr<br>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="right">
-                                        <ul class="sns">
-                                            <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
-                                                        src="./images/common/kakao-talk.png"></a></li>
-                                            <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
-                                                    target="_blank"><img
-                                                        src="./images/common/naver_icon-icons.com_59879.png"></a></li>
-                                            <li class="youtube"><a
-                                                    href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
-                                                    target="_blank"><img src="./images/common/youtube.png"></a></li>
-                                            <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
-                                                    target="_blank"><img src="./images/common/instagram.png"></a></li>
-                                            <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
-                                                    target="_blank"><img src="./images/common/facebook.png"></a></li>
-                                        </ul>
-                                        <ul class="">
-                                            <li class="">
-                                                <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 서버 구축,기능구현)</h6>
-                                            </li>
-                                            <li class="">
-                                                <p>최서정(추천 알고리즘)</p>
-                                            </li>
-                                            <li class="">
-                                                <p>이지연(데이터 크롤링,키워드 분석)</p>
-                                            </li>
-                                            <li class="">
-                                                <p>권호주(프론트앤드)</p>
-                                            </li>
-                                        </ul>
-                                    </div>
+            </section>
+    </div>
+    </div>
+    </main>
+    <footer class="">
+        <div>
+            <div class="footer_bottom_holder">
+                <div class="container">
+                    <div class="container_inner">
+                        <div class="footer_bottom">
+                            <div class="footer_inner">
+                                <div class="left">
+                                    <dl>
+                                        <dt><strong>올리브</strong></dt>
+                                        <dd>대표자 : 신경수<br>
+                                            개인정보책임관리자 : 신경수<br>
+                                            사업자번호 : 123-45-67890<br>
+                                            <span class="wh">순천점 : </span>전라남도 순천시 중앙로 260<br>
+                                            <span class="wh">FAX : </span>062-123-4567<br>
+                                            <span class="wh">E-Mail : </span>smhrd@smhrd.or.kr<br>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="right">
+                                    <ul class="sns">
+                                        <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
+                                                    src="./images/common/kakao-talk.png"></a></li>
+                                        <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
+                                                target="_blank"><img
+                                                    src="./images/common/naver_icon-icons.com_59879.png"></a></li>
+                                        <li class="youtube"><a
+                                                href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
+                                                target="_blank"><img src="./images/common/youtube.png"></a></li>
+                                        <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
+                                                target="_blank"><img src="./images/common/instagram.png"></a></li>
+                                        <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
+                                                target="_blank"><img src="./images/common/facebook.png"></a></li>
+                                    </ul>
+                                    <ul class="">
+                                        <li class="">
+                                            <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 서버 구축,기능구현)</h6>
+                                        </li>
+                                        <li class="">
+                                            <p>최서정(추천 알고리즘)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>이지연(데이터 크롤링,키워드 분석)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>권호주(프론트앤드)</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-        </footer>
+    </footer>
     </div>
     <script src="./assets/js/test.js">
         $('.window .close').click(function (e) {
@@ -762,30 +574,30 @@
             e.preventDefault();
         });
     </script>
-        <script>
-            // 텝매뉴 링크이동
-            $(function () {
-                if (location.hash == "#tab11") {
-                    $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab12") {
-                    $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab13") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab14") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab15") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
-                } else if (location.hash == "#tab16") {
-                    $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                    $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
-                }
-            })
-        </script>
+    <script>
+        // 텝매뉴 링크이동
+        $(function () {
+            if (location.hash == "#tab11") {
+                $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab12") {
+                $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab13") {
+                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab14") {
+                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab15") {
+                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab16") {
+                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
+            }
+        })
+    </script>
 </body>
 
 </html>

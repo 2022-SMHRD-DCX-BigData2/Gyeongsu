@@ -1,8 +1,11 @@
 package project.domain;
 
+import java.sql.Timestamp;
+
 public class ReviewMember {
 
-	
+
+
 
 
 	private int review_no;
@@ -14,7 +17,7 @@ public class ReviewMember {
 	private int review_type;
 	private int favor;
 	private String mbti;
-	
+	private java.sql.Timestamp review_time;
 	
 	// getter, setter
 	
@@ -108,11 +111,20 @@ public class ReviewMember {
 	}
 	
 	
+	public java.sql.Timestamp getReview_time() {
+		return review_time;
+	}
+
+
+	public void setReview_time(java.sql.Timestamp review_time) {
+		this.review_time = review_time;
+	}
+
 	// 생성자
 	
 	// 전체
 	public ReviewMember(int review_no, int activity_no, int user_no, String id, String title, String review,
-			int review_type, int favor, String mbti) {
+			int review_type, int favor, String mbti, Timestamp review_time) {
 		super();
 		this.review_no = review_no;
 		this.activity_no = activity_no;
@@ -123,11 +135,12 @@ public class ReviewMember {
 		this.review_type = review_type;
 		this.favor = favor;
 		this.mbti = mbti;
+		this.review_time = review_time;
 	}
 	
 	// 각각 정보, 아이디, 댓글, 댓글타입, 좋아요
 	public ReviewMember(int review_no, int activity_no, int user_no, String id, String review, int review_type,
-			int favor, String mbti) {
+			int favor, String mbti, Timestamp review_time) {
 		super();
 		this.review_no = review_no;
 		this.activity_no = activity_no;
@@ -137,11 +150,12 @@ public class ReviewMember {
 		this.review_type = review_type;
 		this.favor = favor;
 		this.mbti = mbti;
+		this.review_time = review_time;
 	}
 	
 	// 각각 정보, 아이디, 제목, 댓글, 댓글타입
 	public ReviewMember(int review_no, int user_no, String id, String title, String review,
-			int review_type, String mbti) {
+			int review_type, String mbti, Timestamp review_time) {
 		super();
 		this.review_no = review_no;
 		this.user_no = user_no;
@@ -150,6 +164,7 @@ public class ReviewMember {
 		this.review = review;
 		this.review_type = review_type;
 		this.mbti = mbti;
+		this.review_time = review_time;
 	}
 	
 	// 아무것도 없을때

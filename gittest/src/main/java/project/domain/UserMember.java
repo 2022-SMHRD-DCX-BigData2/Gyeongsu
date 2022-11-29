@@ -3,16 +3,19 @@ package project.domain;
 public class UserMember {
 
 
+	
+
 	private int user_no;
 	private String id;
 	private String pw;
 	private String name;
 	private String mbti;
-	private int key_no1;
-	private int key_no2;
-	private int key_no3;
-	private int key_no4;
-	
+	private String key_no1;
+	private String key_no2;
+	private String key_no3;
+	private String key_no4;
+	private String gender;
+	private int age;
 	
 	// getter, setter
 	
@@ -46,29 +49,41 @@ public class UserMember {
 	public void setMbti(String mbti) {
 		this.mbti = mbti;
 	}
-	public int getKey_no1() {
+	public String getKey_no1() {
 		return key_no1;
 	}
-	public void setKey_no1(int key_no1) {
+	public void setKey_no1(String key_no1) {
 		this.key_no1 = key_no1;
 	}
-	public int getKey_no2() {
+	public String getKey_no2() {
 		return key_no2;
 	}
-	public void setKey_no2(int key_no2) {
+	public void setKey_no2(String key_no2) {
 		this.key_no2 = key_no2;
 	}
-	public int getKey_no3() {
+	public String getKey_no3() {
 		return key_no3;
 	}
-	public void setKey_no3(int key_no3) {
+	public void setKey_no3(String key_no3) {
 		this.key_no3 = key_no3;
 	}
-	public int getKey_no4() {
+	public String getKey_no4() {
 		return key_no4;
 	}
-	public void setKey_no4(int key_no4) {
+	public void setKey_no4(String key_no4) {
 		this.key_no4 = key_no4;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 	// 생성자
@@ -106,8 +121,8 @@ public class UserMember {
 		this.mbti = mbti;
 	}
 	
-	public UserMember(int user_no, String id, String pw, String name, String mbti, int key_no1, int key_no2,
-			int key_no3, int key_no4) {
+	public UserMember(int user_no, String id, String pw, String name, String mbti, String key_no1, String key_no2,
+			String key_no3, String key_no4, String gender, int age) {
 		super();
 		this.user_no = user_no;
 		this.id = id;
@@ -118,9 +133,11 @@ public class UserMember {
 		this.key_no2 = key_no2;
 		this.key_no3 = key_no3;
 		this.key_no4 = key_no4;
+		this.gender = gender;
+		this.age = age;
 	}
 	
-	public UserMember(int key_no1, int key_no2, int key_no3, int key_no4) {
+	public UserMember(String key_no1, String key_no2, String key_no3, String key_no4) {
 		super();
 		this.key_no1 = key_no1;
 		this.key_no2 = key_no2;
@@ -128,7 +145,7 @@ public class UserMember {
 		this.key_no4 = key_no4;
 	}
 	
-	public UserMember(String id, String pw, String name, String mbti, int key_no1, int key_no2, int key_no3, int key_no4) {
+	public UserMember(String id, String pw, String name, String mbti, String key_no1, String key_no2, String key_no3, String key_no4) {
 		super();
 		this.id = id;
 		this.pw = pw;

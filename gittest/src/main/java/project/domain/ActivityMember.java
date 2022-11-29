@@ -3,6 +3,9 @@ package project.domain;
 public class ActivityMember {
 
 
+	
+
+
 	private int activity_no;
 	private String activity_title;
 	private String activity_pic;
@@ -17,11 +20,12 @@ public class ActivityMember {
 	private String mbti1;
 	private String mbti2;
 	private String mbti3;
-	private int key_no1;
-	private int key_no2;
-	private int key_no3;
-	private int key_no4;
-	private int key_no5;
+	private String key_no1;
+	private String key_no2;
+	private String key_no3;
+	private String key_no4;
+	private String key_no5;
+	private String activity_age;
 	
 	// getter, setter
 	
@@ -137,53 +141,55 @@ public class ActivityMember {
 		this.mbti3 = mbti3;
 	}
 
-	public int getKey_no1() {
+	public String getKey_no1() {
 		return key_no1;
 	}
 
-	public void setKey_no1(int key_no1) {
+	public void setKey_no1(String key_no1) {
 		this.key_no1 = key_no1;
 	}
 
-	public int getKey_no2() {
+	public String getKey_no2() {
 		return key_no2;
 	}
 
-	public void setKey_no2(int key_no2) {
+	public void setKey_no2(String key_no2) {
 		this.key_no2 = key_no2;
 	}
 
-	public int getKey_no3() {
+	public String getKey_no3() {
 		return key_no3;
 	}
 
-	public void setKey_no3(int key_no3) {
+	public void setKey_no3(String key_no3) {
 		this.key_no3 = key_no3;
 	}
 	
-	public int getKey_no4() {
+	public String getKey_no4() {
 		return key_no4;
 	}
 
-	public void setKey_no4(int key_no4) {
+	public void setKey_no4(String key_no4) {
 		this.key_no4 = key_no4;
 	}
 	
-	public int getKey_no5() {
+	public String getKey_no5() {
 		return key_no5;
 	}
 
-	public void setKey_no5(int key_no5) {
+	public void setKey_no5(String key_no5) {
 		this.key_no5 = key_no5;
 	}
 	
+	public String getActivity_age() {
+		return activity_age;
+	}
+
+	public void setActivity_age(String activity_age) {
+		this.activity_age = activity_age;
+	}
 	
 	// 생성자
-	
-	public ActivityMember(int activity_no) {
-		super();
-		this.activity_no = activity_no;
-	}
 	
 	
 	// 암것두
@@ -194,8 +200,8 @@ public class ActivityMember {
 	// 전체
 	public ActivityMember(int activity_no, String activity_title, String activity_pic, String activity_ad,
 			String activity_place, String start_date, String finish_date, String contents, int activity_type,
-			int region_type, int favor_add, String mbti1, String mbti2, String mbti3, int key_no1, int key_no2,
-			int key_no3, int key_no4, int key_no5) {
+			int region_type, int favor_add, String mbti1, String mbti2, String mbti3, String key_no1, String key_no2,
+			String key_no3, String key_no4, String key_no5, String activity_age) {
 		super();
 		this.activity_no = activity_no;
 		this.activity_title = activity_title;
@@ -216,6 +222,7 @@ public class ActivityMember {
 		this.key_no3 = key_no3;
 		this.key_no4 = key_no4;
 		this.key_no5 = key_no5;
+		this.activity_age = activity_age;
 	}
 	
 	// 메인 페이지에 올수 있는 것들
@@ -238,12 +245,10 @@ public class ActivityMember {
 	}
 
 	// 불러올때 로그인엑티비티
-	public ActivityMember(int activity_no, String activity_title) {
+	public ActivityMember(int activity_no) {
 		super();
 		this.activity_no = activity_no;
-		this.activity_title = activity_title;
 	}
-	
 
 	// tostring
 	@Override
@@ -253,7 +258,7 @@ public class ActivityMember {
 				+ start_date + ", finish_date=" + finish_date + ", contents=" + contents + ", activity_type="
 				+ activity_type + ", region_type=" + region_type + ", favor_add=" + favor_add + ", mbti1=" + mbti1
 				+ ", mbti2=" + mbti2 + ", mbti3=" + mbti3 + ", key_no1=" + key_no1 + ", key_no2=" + key_no2
-				+ ", key_no3=" + key_no3 + ", key_no4=" + key_no4 + ", key_no5=" + key_no5 + "]";
+				+ ", key_no3=" + key_no3 + ", key_no4=" + key_no4 + ", key_no5=" + key_no5 + ", activity_age=" + activity_age + "]";
 	}
 
 	

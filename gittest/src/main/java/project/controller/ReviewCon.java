@@ -1,6 +1,7 @@
 package project.controller;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -39,9 +40,10 @@ public class ReviewCon extends HttpServlet {
 		int review_type = Integer.parseInt(request.getParameter("review_type"));
 		int favor = Integer.parseInt(request.getParameter("favor"));
 		String title = request.getParameter("title");
+		String review_time = request.getParameter("review_time");
 		
 		// 객체에 담아주기
-		ReviewMember reviews = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti);
+		ReviewMember reviews = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti, null);
 		
 		System.out.println("리뷰는"+reviews);
 		
