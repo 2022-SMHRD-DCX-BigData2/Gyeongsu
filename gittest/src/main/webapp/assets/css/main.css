@@ -34,6 +34,7 @@ a {
   justify-content: space-between;
   margin-top: 3%;
   border-top: 1px solid rgb(152, 152, 152);
+  padding-top: 3%;
   
 }
 footer{
@@ -476,6 +477,9 @@ input[type=text],input[type=password] {
 }
 .sns{
   display: flex;
+}
+.sns li{
+  margin-right: 10px;
 }
 .sns li a img{
   width: 34px;

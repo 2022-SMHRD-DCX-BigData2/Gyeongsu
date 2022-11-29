@@ -280,19 +280,19 @@
                         <a class="menuLink" href="#">문화체험</a>
                         <ul class="submenu">
                             <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
-                            <li class=""><a href="#" class="submenuLink longLink">뮤지컬</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">콘서트</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">연극</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">클래식&오페라</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">무용&전통예술</a></li>
-                            <li class=""><a href="#" class="submenuLink longLink">전시&행사</a></li>
+                            <li class=""><a href="list.html" class="submenuLink longLink">뮤지컬</a></li>
+                            <li class=""><a href="list.html#tab12" data-toggle="tab" class="submenuLink longLink">콘서트</a></li>
+                            <li class=""><a href="list.html#tab13" data-toggle="tab" class="submenuLink longLink">연극</a></li>
+                            <li class=""><a href="list.html#tab14" data-toggle="tab" class="submenuLink longLink">클래식&오페라</a></li>
+                            <li class=""><a href="list.html#tab15" data-toggle="tab" class="submenuLink longLink">무용&전통예술</a></li>
+                            <li class=""><a href="list.html#tab16" data-toggle="tab" class="submenuLink longLink">전시&행사</a></li>
                         </ul>
                     </li>
                     <li class="topMenuLi">
                         <a class="menuLink" href="#">게시판</a>
                         <ul class="submenu">
-                            <li><a href="#" class="submenuLink longLink">문의 게시판</a></li>
-                            <li><a href="#" class="submenuLink longLink">건의 게시판</a></li>
+                            <li><a href="bulletinBoard.html" onclick="location.href='bulletinBoard.html#tab11'" class="submenuLink longLink">문의 게시판</a></li>
+                            <li><a href="bulletinBoard.html#tab12" onclick="location.href='#tab12'" class="submenuLink longLink">건의 게시판</a></li>
                             <li></li>
                         </ul>
                     </li>
@@ -317,9 +317,7 @@
                     <li>
                         <a href="#tab12">건의 게시판</a>
                     </li>
-
                 </ul>
-
                 <div class="tabselements">
                     <section id="tab11" class="active">
                         <div>
@@ -587,13 +585,13 @@
                 $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
                 $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
             } else if (location.hash == "#tab14") {
-                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabsmenu').find('li').eq(3).addClass('active').siblings().removeClass();
                 $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
             } else if (location.hash == "#tab15") {
-                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabsmenu').find('li').eq(4).addClass('active').siblings().removeClass();
                 $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
             } else if (location.hash == "#tab16") {
-                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabsmenu').find('li').eq(5).addClass('active').siblings().removeClass();
                 $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
             }
         })

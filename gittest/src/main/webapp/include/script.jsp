@@ -17,13 +17,13 @@
             $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
             $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
         } else if (location.hash == "#tab14") {
-            $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+            $('.tabsmenu').find('li').eq(3).addClass('active').siblings().removeClass();
             $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
         } else if (location.hash == "#tab15") {
-            $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+            $('.tabsmenu').find('li').eq(4).addClass('active').siblings().removeClass();
             $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
         } else if (location.hash == "#tab16") {
-            $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+            $('.tabsmenu').find('li').eq(5).addClass('active').siblings().removeClass();
             $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
         }
     })
@@ -33,7 +33,7 @@
     jQuery(document).ready(function($) {
 $("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
     // var cnt = $("#selCnt").val();
-    if( 3==$("input[name=keyword]:checkbox:checked").length ) {
+    if( 5==$("input[name=keyword]:checkbox:checked").length ) {
         $(":checkbox:not(:checked)").attr("disabled", "disabled");
     } else {
         $("input[name=keyword]:checkbox").removeAttr("disabled");
