@@ -122,37 +122,7 @@ padding: 10%;
   border-radius: 16px;
   margin: 3%;
 }
-.comment .btn{
-  --bs-btn-bg:#55efc4;
-  color: #fff;
-  border-color: #fff;
-}
-.comment .btn:hover{
-  background-color:#00cec9;
-}
-.input-group .btn{
-  --bs-btn-bg:#55efc4;
-  color: #fff;
-  border-color: #fff;
-}
-.input-group .btn:hover{
-  background-color:#00cec9;
-}
-.bi-heart-fill{
-  font-size: 3rem;
-}
-.btn-primary{
-  --bs-btn-color: #000;
-    --bs-btn-bg: #ffffff;
-    --bs-btn-border-color: #000000;
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #9b9b9b;
-    --bs-btn-hover-border-color: #000000;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #f00;
-    --bs-btn-active-bg: #ffffff;
-    --bs-btn-active-border-color: #000000;
-}
+
 
 @media (max-width:991px){
   .information-img{
