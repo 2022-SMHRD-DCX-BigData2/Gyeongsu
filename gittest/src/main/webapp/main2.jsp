@@ -289,13 +289,13 @@
         <header class="">
             <div class="container text-center ">
                 <div class="row">
-                    <div class="col align-self-center">
+                    <div class="col align-self-center main-img">
                         <a href="main2.jsp"><img src="./images/common/logo.png"></a>
                     </div>
                     <div class="col-6 align-self-center">
                         <form action="" method="post">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Recipient's username"
+                                <input type="text" class="form-control" placeholder="검색"
                                     aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                         class="bi bi-search"></i></button>
@@ -371,50 +371,18 @@
 
 
   <main id="" class="">
-
-
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                  </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                  </div>
-              </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
+       <section id="slider">
+                <input type="radio" name="slider" id="s1">
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3" checked>
+                <input type="radio" name="slider" id="s4">
+                <input type="radio" name="slider" id="s5">
+                <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt=""></label>
+              </section>
       </div>
       <h1>경남/부산</h1>
             <div class="tabscontainer">
@@ -735,24 +703,6 @@
                       <%} %>
                       </div>
               </section>
-              <div class="row text-center">
-                    <div class="col-12">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item" aria-current="page">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
                 <!-- 페이지 디자인 끝 -->
           </div>
       </div>

@@ -357,6 +357,7 @@
             <form action="PostCon" method="post">
                 <div class="col-12">
                     <input type="text" class="post-name" placeholder="제목" name="title">
+                    <div class="mt-3"></div>
                     <input type="hidden" name="user_no" value="${loginMember.user_no}">
                 	<input type="hidden" name="review_no" value="0">
                 	<input type="hidden" name="mbti" value="${loginMember.mbti}">
@@ -381,6 +382,7 @@
 					</c:if>
                 </div>
                 </form>
+                <div class="mt-3"></div>
         </main>
          <jsp:include page="/include/footer.jsp"></jsp:include>
   		 <jsp:include page="/include/script.jsp"></jsp:include>
