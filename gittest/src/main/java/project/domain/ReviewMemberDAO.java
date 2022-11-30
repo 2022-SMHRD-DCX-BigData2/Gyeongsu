@@ -66,4 +66,32 @@ public class ReviewMemberDAO {
 				
 			return revMemberList;
 		}// 문화 전체 검색 끝!
+		
+		
+		// 포스트 기능 구현
+				public int insertPost(ReviewMember joinPost) {
+					int cnt = 0;
+					try {
+						// mapper.xml의 id값
+						cnt = sqlSession.insert("insertReview", joinPost);
+						
+						if(cnt > 0) {
+							// 만약에 내가 원하는 일을 했으면 DB에 반영
+							System.out.println("DAO : 포스트추가 성공!!");
+							sqlSession.commit();
+						} else {
+							// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+							sqlSession.rollback();
+						}
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						// 빌렸던 Connection 객체를 반납
+						sqlSession.close();
+					}
+					
+					return cnt;
+					
+				}// 포스트 입력 끝!
 }

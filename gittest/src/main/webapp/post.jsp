@@ -354,12 +354,22 @@
         </header>
         <main id="" class="">
             <div class="row">
+            <form action="ReviewCon" method="post">
                 <div class="col-12">
-                    <input type="text" class="post-name" placeholder="제목">
+                    <input type="text" class="post-name" placeholder="제목" name="title">
+                    <input type="hidden" name="user_no" value="${loginMember.user_no}">
+                	<input type="hidden" name="review_no" value="0">
+                	<input type="hidden" name="mbti" value="${loginMember.mbti}">
+                	<input type="hidden" name="id" value="${loginMember.id}">
+                	<input type="hidden" name="activity_no" value=null>
+                	<input type="hidden" name="review_type" value="2">
+                	<input type="hidden" name="favor" value="0">
+                	<input type="hidden" name="review_time" value=null>
                 </div>
-                <div class="input-group mb-3 comment post-text">
-                    <textarea    class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2"></textarea>
-                    
+                <div class="input-group mb-3 comment post-text"></div>
+                    <textarea    class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="등록">
+                    </form>
                   </div>
             
         </main>

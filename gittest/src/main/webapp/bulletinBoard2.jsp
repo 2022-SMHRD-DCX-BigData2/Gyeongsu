@@ -377,35 +377,28 @@
                     <section id="tab12" class="active">
                         <div>
                             <h3>건의 게시판</h3>
+                            <section id="tab12">
+                        <div>
+                            <h3>건의 게시판</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
                                     <td>작성자</td>
                                     <td>제목</td>
                                     <td>작성일</td>
-                                    <td>좋아요</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
+                                <%int cnt = 0;%>
+                                <%for(ReviewMember m:revMemberList){ %>
+					            <% if(m.getReview_type()==2){ %>
+                                <%cnt++; %>
+								<tr>
+										<td><p><%=cnt%></p></td>
+					                    <td><p><%=m.getTitle() %></p></td>
+					                    <td><P><%=m.getReview() %></P></td>
+					                    <td><P><%=m.getReview_time()%></P></td>
+								</tr>
+					                <%} %>
+					                <%} %>   
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>

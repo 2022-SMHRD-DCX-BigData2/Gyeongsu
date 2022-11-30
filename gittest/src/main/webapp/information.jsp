@@ -19,6 +19,7 @@
 	List<ReviewMember> revMemberList = dao2.selectAllRev();
 	Date nowTime = new Date();
 	SimpleDateFormat df = new SimpleDateFormat("YYYY.MM.dd");
+	
 %>
 
 
@@ -414,6 +415,10 @@
                     <dd>(재)예술경영지원센터(주최), 문화체육관광부(주관)</dd>
                 </dl>
             </div>
+            <div class="contentmid">
+            	<h2>상세 정보</h2>
+            	<img src="<%=loginActivity.getContents() %>" alt="">
+            </div>
             <div>
                 <h2>리뷰</h2>
                 
@@ -435,11 +440,13 @@
                 </form>
               <div>
               	<%for(ReviewMember m:revMemberList){ %>
+              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1){ %>
                 <div class="form-control comment-text">
                     <p><%=m.getId() %></p>
                     <P><%=m.getReview() %></P>
-                    <P><%=m.getReview_time()%> </P>
+                    <P><%=m.getReview_time() %></P>
                 </div>
+                <%} %>
                 <%} %>
             </div>
         </div>
