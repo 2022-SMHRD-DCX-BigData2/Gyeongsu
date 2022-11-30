@@ -53,8 +53,13 @@ public class PostCon extends HttpServlet {
 		
 		// 4. DAO의 명령 후 처리
 		if(cnt >0) {
+			if(id.equals("admin")) {
+				
 			// 성공했으면 -> 성공페이지로 이동O
 			response.sendRedirect("bulletinBoard.jsp");
+			}else {
+			response.sendRedirect("bulletinBoard2.jsp");
+			}
 		} else {
 			// 실패했으면 -> 이동X
 			System.out.println("회원가입 실패!");
