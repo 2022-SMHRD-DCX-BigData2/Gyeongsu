@@ -32,21 +32,28 @@ a {
 .footer_inner{
   display: flex;
   justify-content: space-between;
-  margin-top: 3%;
-  border-top: 1px solid rgb(152, 152, 152);
-  padding-top: 3%;
+
+  
   
 }
+.footer_bottom{
+	padding-top: 0.8%;
+  border-top: 1px solid rgb(152, 152, 152);
+}
 footer{
+width:100%;
   height: 200px;
   max-height: 200px;
   min-height: 150px;
   /* background-color: rgb(255, 255, 255); */
-  color: rgb(0, 0, 0);
+  color: #55EFC4;
+  margin-bottom: 100px
 }
+
 a:hover{
   color: black;
 }
+
 figure{
   width: 200px;
   height: auto;
@@ -489,6 +496,7 @@ input[type=text],input[type=password] {
 }
 .sns{
   display: flex;
+  justify-content: flex-end;
 }
 .sns li{
   margin-right: 10px;

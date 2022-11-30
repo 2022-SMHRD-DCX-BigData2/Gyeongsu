@@ -465,7 +465,22 @@
                 <div class="container">
                     <div class="container_inner">
                         <div class="footer_bottom">
+                        			<ul class="sns">
+                                        <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
+                                                    src="./images/common/kakao-talk-1.png"></a></li>
+                                        <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
+                                                target="_blank"><img
+                                                    src="./images/common/naver_icon-icons.com_59879-1.png"></a></li>
+                                        <li class="youtube"><a
+                                                href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
+                                                target="_blank"><img src="./images/common/youtube-1.png"></a></li>
+                                        <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
+                                                target="_blank"><img src="./images/common/instagram-1.png"></a></li>
+                                        <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
+                                                target="_blank"><img src="./images/common/facebook-1.png"></a></li>
+                                    </ul>
                             <div class="footer_inner">
+                            	
                                 <div class="left">
                                     <dl>
                                         <dt><strong>올리브</strong></dt>
@@ -479,20 +494,7 @@
                                     </dl>
                                 </div>
                                 <div class="right">
-                                    <ul class="sns">
-                                        <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
-                                                    src="./images/common/kakao-talk.png"></a></li>
-                                        <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
-                                                target="_blank"><img
-                                                    src="./images/common/naver_icon-icons.com_59879.png"></a></li>
-                                        <li class="youtube"><a
-                                                href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
-                                                target="_blank"><img src="./images/common/youtube.png"></a></li>
-                                        <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
-                                                target="_blank"><img src="./images/common/instagram.png"></a></li>
-                                        <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
-                                                target="_blank"><img src="./images/common/facebook.png"></a></li>
-                                    </ul>
+                                    
                                     <ul class="">
                                         <li class="">
                                             <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 서버 구축,기능구현)</h6>

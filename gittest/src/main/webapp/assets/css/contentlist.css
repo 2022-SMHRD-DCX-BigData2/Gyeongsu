@@ -122,7 +122,14 @@ padding: 10%;
   border-radius: 16px;
   margin: 3%;
 }
-
+.contentmid>img{
+	display: block;
+	margin: auto;
+}
+.contentmid>h2{
+	margin-top:3%;
+	border-top: solid 3px black;
+}
 
 @media (max-width:991px){
   .information-img{
