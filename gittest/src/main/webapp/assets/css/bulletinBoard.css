@@ -48,6 +48,9 @@
     margin-left: 2%;
 
 }
+.post{
+    align-items: center;
+}
 .post-name{
     margin-top: 2%;
     height: 45px;
@@ -57,6 +60,15 @@
     background-color: #eee;
     display: flex;
     align-items: center;
+    margin-right: -75%;
+}
+.post-day{
+    margin-top: 5%;
+    padding: 0 50px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 45px;
 }
 .tabselements {
     border-top:none; 
@@ -67,4 +79,11 @@
 }
 .crystal-icon>button{
     margin-right: 10px;
+}
+.post-text{
+    min-height: 300px;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    border: solid 1px #A8C595;
+    border-radius: 3px;
 }
