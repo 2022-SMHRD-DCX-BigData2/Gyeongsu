@@ -289,7 +289,7 @@
             <div class="container text-center ">
                 <div class="row">
                     <div class="col align-self-center">
-                        <a href="main2.jsp"><img src="./images/common/logo.png"></a>
+                        <a href="main2.jsp" class="main-img"><img src="./images/common/logo.png"></a>
                     </div>
                     <div class="col-6 align-self-center">
                         <form action="" method="post">
