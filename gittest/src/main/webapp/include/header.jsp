@@ -230,7 +230,7 @@
                     <header class="">
                         <div class="container text-center ">
                             <div class="row">
-                                <div class="col align-self-center">
+                                <div class="col align-self-center main-img" >
                                     <a href="main.html">Main img</a>
                                 </div>
                                 <div class="col-6 align-self-center">

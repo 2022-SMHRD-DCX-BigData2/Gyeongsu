@@ -581,7 +581,7 @@ input[type=text],input[type=password] {
 }
 .tabname{
   margin-bottom: 10px;
-  color: #abe2f7;
+  color: black;
 }
 .tabtext{
   display: flex;
@@ -754,6 +754,11 @@ select{
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+#slider label img{
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
 
 #s1:checked ~ #slide4, #s2:checked ~ #slide5,
 #s3:checked ~ #slide1, #s4:checked ~ #slide2,
@@ -790,8 +795,20 @@ select{
   transform: translate3d(120%,0,-200px);
 }
 
-#slide1 { background: #00BCD4 }
-#slide2 { background: #4CAF50 }
-#slide3 { background: #CDDC39 }
-#slide4 { background: #FFC107 }
-#slide5 { background: #FF5722 }
+@media (max-width:991px){
+  .information-img{
+    width: 100%;
+    height: 100%;
+  }
+  .information-text{
+    width: 100%;
+    font-size: 0.5;
+    
+  }
+  .bi-box-arrow-in-right{
+    font-size: 2rem ;
+  }
+  .bi-person-plus{
+    font-size: 2rem;
+  }
+}
