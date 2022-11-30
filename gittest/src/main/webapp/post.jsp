@@ -355,7 +355,7 @@
         <main id="" class="">
             <div class="row">
             <form action="PostCon" method="post">
-                <div class="col-12">
+                <div class="col-12 post-text">
                     <input type="text" class="post-name" placeholder="제목" name="title">
                     <div class="mt-3"></div>
                     <input type="hidden" name="user_no" value="${loginMember.user_no}">
@@ -373,7 +373,7 @@
                 	<input type="hidden" name="review_time" value="0">
                 	<textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
                 </div>
-                <div class="input-group mb-3 comment post-text"></div>
+                <div class="input-group mb-3 comment"></div>
                      <c:if test="${loginMember == null}">
 					<input class="btn btn-outline-secondary" type="button" id="button-addon2" value="등록" onclick="alert('로그인후 이용가능합니다!')">
 					</c:if>

@@ -6,7 +6,7 @@
 }
 *{
   font-family: 'MICEGothic Bold';
-  font-size: ;
+
 }
 html {
   margin-left: 10%;
@@ -722,6 +722,11 @@ select{
     --bs-btn-active-color: #f00;
     --bs-btn-active-bg: #ffffff;
     --bs-btn-active-border-color: #000000;
+}
+.post-text>textarea{
+    min-height: 300px;
+    
+
 }
 
 
