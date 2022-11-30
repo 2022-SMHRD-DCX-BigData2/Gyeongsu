@@ -88,10 +88,15 @@ ul li {
 }
 .main-img{
 	display: flex;
-	width: 300px;
+	justify-content: center;
+	
+}
+.main-img>a{
+	display: flex;
+	width: 200px;
 	height: auto;
 }
-.main-img>img{
+.main-img>a>img{
   width: 100%;
   height: auto;
 }
@@ -243,6 +248,10 @@ input[type=text],input[type=password] {
   justify-content: space-around;
   flex-wrap: wrap;
 
+}
+
+.grid ul{
+	
 }
 
 
