@@ -436,29 +436,11 @@
                 	<input type="hidden" name="review_time" value=null>
 	                <textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
 	                <c:if test="${loginMember == null}">
-					<input class="btn btn-outline-secondary" type="button" id="button-addon2" value="등록">
-					<%
-
-    out.println("<script>");
-
-    out.println("alert('jsp에서 경고창 띄우기.');");
-
-    out.println("</script>");
-
-
-    String aaa = "test";
-
- 
-
-    out.println("<script>");
-
-    out.println("alert('" + aaa + "');");
-
-    out.println("</script>");
-
-%>
+					<input class="btn btn-outline-secondary" type="button" id="button-addon2" value="등록" onclick="alert('로그인후 이용가능합니다!')">
 					</c:if>
-	                <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="등록">
+					<c:if test="${loginMember != null}">
+					<input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="등록">
+					</c:if>
                 </div>
                 </form>
               <div>

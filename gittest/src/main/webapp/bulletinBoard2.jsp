@@ -384,12 +384,12 @@
                                     <td>제목</td>
                                     <td>작성일</td>
                                 </tr>
-                                <%int cnt = 0;%>
+                                <%int cnt2 = 0;%>
                                 <%for(ReviewMember m:revMemberList){ %>
 					            <% if(m.getReview_type()==2){ %>
-                                <%cnt++; %>
+                                <%cnt2++; %>
 								<tr>
-										<td><p><%=cnt%></p></td>
+										<td><p><%=cnt2%></p></td>
 					                    <td><p><%=m.getId() %></p></td>
 					                    <td><P><%=m.getTitle() %></P></td>
 					                    <td><P><%=m.getReview_time()%></P></td>
@@ -400,16 +400,23 @@
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
-                                <tr class="button-tr">
-                                    <td colspan="6" id="board-button">
-                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
-                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
-                                    </td>
-                                </tr>
-
+                                <c:if test="${loginMember == null}">
+                                	<tr class="button-tr">
+		                                <td colspan="6" id="board-button">
+		                                	<input type="button" value="글작성" onclick="alert('로그인후 이용가능합니다!')">
+		                                </td>
+	                                </tr>
+								</c:if>
+								<c:if test="${loginMember != null}">
+									<tr class="button-tr">
+	                                    <td colspan="6" id="board-button">
+	                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
+	                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
+	                                    </td>
+			                        </tr>
+								</c:if>    
                                 <tr>
                                     <td colspan="6" class="button-tr">
-                                        123
                                         <%-- <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
@@ -462,34 +469,24 @@
                         <div>
                             <h3>공지사항</h3>
                             <table class="board">
-                                <tr>
+                                 <tr>
                                     <td>번호</td>
                                     <td>작성자</td>
                                     <td>제목</td>
                                     <td>작성일</td>
-                                    <td>좋아요</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                </tr>
+                                <%int cnt1 = 0;%>
+                                <%for(ReviewMember m:revMemberList){ %>
+					            <% if(m.getReview_type()==2){ %>
+                                <%cnt1++; %>
+								<tr>
+										<td><p><%=cnt1%></p></td>
+					                    <td><p><%=m.getId() %></p></td>
+					                    <td><P><%=m.getTitle() %></P></td>
+					                    <td><P><%=m.getReview_time()%></P></td>
+								</tr>
+					                <%} %>
+					                <%} %>
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
@@ -503,7 +500,6 @@
 
                                 <tr>
                                     <td colspan="6" class="button-tr">
-                                        123
                                         <%-- <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
