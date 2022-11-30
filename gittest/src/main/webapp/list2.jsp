@@ -433,7 +433,7 @@
                       <%} %>
                       </div>
               </section>
-                <section id="tab13" class="active">
+                <section id="tab13" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==3){ %>
@@ -455,7 +455,7 @@
                       <%} %>
                       </div>
               </section>
-                <section id="tab14" class="active">
+                <section id="tab14" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==4){ %>
@@ -477,7 +477,7 @@
                       <%} %>
                       </div>
               </section>
-                <section id="tab15" class="active">
+                <section id="tab15" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==5){ %>
@@ -499,7 +499,7 @@
                       <%} %>
                       </div>
               </section>
-                <section id="tab16" class="active">
+                <section id="tab16" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==6){ %>
