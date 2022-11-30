@@ -39,3 +39,32 @@
     margin-top:1%;
     margin-bottom: 1%;
 }
+.post-text{
+    width: 95%;
+    min-height: 350px;
+    height: 100%;
+    border: 3px solid bisque;
+    border-radius: 25px;
+    margin-left: 2%;
+
+}
+.post-name{
+    margin-top: 2%;
+    height: 45px;
+    padding: 0 50px 0 20px;
+    border: 0;
+    border-radius: 45px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+}
+.tabselements {
+    border-top:none; 
+  }
+.crystal-icon{
+    display: flex;
+    justify-content: flex-end;
+}
+.crystal-icon>button{
+    margin-right: 10px;
+}

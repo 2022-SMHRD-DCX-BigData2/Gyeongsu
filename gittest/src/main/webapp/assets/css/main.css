@@ -13,6 +13,9 @@ html {
   width: 80vw;
   margin-top: 5vh;
 }
+body{
+	background-color: #fff0;
+}
 #topleftmenu{
   height: 100%;
   justify-content: center;
@@ -38,7 +41,7 @@ a {
 }
 .footer_bottom{
 	padding-top: 0.8%;
-  border-top: 1px solid rgb(152, 152, 152);
+  border-top: 1px solid #A8C595
 }
 footer{
 width:100%;
@@ -46,7 +49,7 @@ width:100%;
   max-height: 200px;
   min-height: 150px;
   /* background-color: rgb(255, 255, 255); */
-  color: #55EFC4;
+  color:#8ec810;
   margin-bottom: 100px
 }
 
@@ -162,7 +165,7 @@ input[type=text],input[type=password] {
   color: white;
   background-color: #2d2d2d;
   float: left;
-  line-height: 30px;
+  line-height: 40px;
   vertical-align: middle;
   text-align: center;
   position: relative;
@@ -191,7 +194,7 @@ input[type=text],input[type=password] {
   /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
   /* color: red; */
   /* background-color: #4d4d4d; */
-  border-bottom: #2d2d2d solid 3px;
+  border-bottom: #84BF04 solid 3px;
 }
 
 .longLink {
@@ -217,10 +220,10 @@ input[type=text],input[type=password] {
   height: 0px;
   overflow: hidden;
   /* 나오는 임펙트 시간 */
-  /* transition: height .2s;
+  transition: height .2s;
     -webkit-transition: height .2s;
     -moz-transition: height .2s;
-    -o-transition: height .2s; */
+    -o-transition: height .2s;
   width: 100%;
   /* [변경] 가로 드랍다운 메뉴의 넓이 */
 }
@@ -236,9 +239,10 @@ input[type=text],input[type=password] {
 
 .topMenuLi:hover .submenu {
   /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
-  height: 32px;
+  height: 40px;
   width: auto;
   border: solid #2d2d2d 1px;
+  border-radius: 5px;
 
   /* [변경] 높이를 32px로 설정 */
 }
@@ -246,7 +250,7 @@ input[type=text],input[type=password] {
 .submenuLink:hover {
   /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
   color: rgb(0, 0, 0);
-  /* background-color: #dddddd; */
+  background-color: #C1D9B0;
 
 }
 
@@ -498,6 +502,10 @@ input[type=text],input[type=password] {
   display: flex;
   justify-content: flex-end;
 }
+.sns>li>img{
+	width: 100%;
+	height: auto;
+}
 .sns li{
   margin-right: 10px;
 }
@@ -684,20 +692,20 @@ select{
   align-items: center;
 }
 .comment .btn{
-  --bs-btn-bg:#55efc4;
+  --bs-btn-bg:#A8C595;
   color: #fff;
   border-color: #fff;
 }
 .comment .btn:hover{
-  background-color:#00cec9;
+  background-color:#A8C595;
 }
 .input-group .btn{
-  --bs-btn-bg:#55efc4;
+  --bs-btn-bg:#84BF04;
   color: #fff;
   border-color: #fff;
 }
 .input-group .btn:hover{
-  background-color:#00cec9;
+  background-color:#A8C595;
 }
 .bi-heart-fill{
   font-size: 3rem;
@@ -708,9 +716,82 @@ select{
     --bs-btn-border-color: #000000;
     --bs-btn-hover-color: #000;
     --bs-btn-hover-bg: #9b9b9b;
-    --bs-btn-hover-border-color: #000000;
+    --bs-btn-hover-border-color: #8ec810;
     --bs-btn-focus-shadow-rgb: 49,132,253;
     --bs-btn-active-color: #f00;
     --bs-btn-active-bg: #ffffff;
     --bs-btn-active-border-color: #000000;
 }
+
+
+/* 슬라이더 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+[type=radio] {
+  display: none;
+}
+#slider>[type=radio] {
+  display: none;
+}
+
+#slider {
+  height: 33vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider label {
+  margin: auto;
+  width: 30%;
+  height: 80%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-120%,0,-200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-60%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(60%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(120%,0,-200px);
+}
+
+#slide1 { background: #00BCD4 }
+#slide2 { background: #4CAF50 }
+#slide3 { background: #CDDC39 }
+#slide4 { background: #FFC107 }
+#slide5 { background: #FF5722 }
