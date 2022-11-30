@@ -344,7 +344,7 @@
                     <li class="topMenuLi">
                  <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">공지사항</a></li>
                       <li><a href="bulletinBoard2.jsp" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>	
@@ -365,7 +365,7 @@
             <div class="tabscontainer">
                 <ul class="tabsmenu">
                     <li class="active">
-                        <a href="#tab11">문의 게시판</a>
+                        <a href="#tab11">공지사항</a>
                     </li>
                     <li>
                         <a href="#tab12">건의 게시판</a>
@@ -376,7 +376,7 @@
                 <div class="tabselements">
                    <section id="tab11">
                         <div>
-                            <h3>문의 게시판</h3>
+                            <h3>공지사항</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
@@ -410,13 +410,14 @@
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
-                                <tr class="button-tr">
+                                <c:if test="${loginMember.id eq 'admin'}">
+								<tr class="button-tr">
                                     <td colspan="6" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
                                         <input type="button" value="글작성" onclick="location.href='post.jsp'">
                                     </td>
                                 </tr>
-
+								</c:if>
                                 <tr>
                                     <td colspan="6" class="button-tr">
                                         123
@@ -484,8 +485,8 @@
                                 <%cnt++; %>
 								<tr>
 										<td><p><%=cnt%></p></td>
-					                    <td><p><%=m.getTitle() %></p></td>
-					                    <td><P><%=m.getReview() %></P></td>
+					                    <td><p><%=m.getId() %></p></td>
+					                    <td><P><%=m.getTitle() %></P></td>
 					                    <td><P><%=m.getReview_time()%></P></td>
 								</tr>
 					                <%} %>
@@ -498,13 +499,14 @@
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
-                                <tr class="button-tr">
+                                <c:if test="${loginMember != null}">
+								<tr class="button-tr">
                                     <td colspan="6" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
                                         <input type="button" value="글작성" onclick="location.href='post.jsp'">
                                     </td>
                                 </tr>
-
+								</c:if>                               
                                 <tr>
                                     <td colspan="6" class="button-tr">
                                         123

@@ -345,7 +345,7 @@
                     <li class="topMenuLi">
                   <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">공지사항</a></li>
                       <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>
@@ -435,6 +435,29 @@
                 	<input type="hidden" name="favor" value="0">
                 	<input type="hidden" name="review_time" value=null>
 	                <textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
+	                <c:if test="${loginMember == null}">
+					<input class="btn btn-outline-secondary" type="button" id="button-addon2" value="등록">
+					<%
+
+    out.println("<script>");
+
+    out.println("alert('jsp에서 경고창 띄우기.');");
+
+    out.println("</script>");
+
+
+    String aaa = "test";
+
+ 
+
+    out.println("<script>");
+
+    out.println("alert('" + aaa + "');");
+
+    out.println("</script>");
+
+%>
+					</c:if>
 	                <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="등록">
                 </div>
                 </form>

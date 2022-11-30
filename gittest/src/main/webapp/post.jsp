@@ -344,7 +344,7 @@
                     <li class="topMenuLi">
                   <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">공지사항</a></li>
                       <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>

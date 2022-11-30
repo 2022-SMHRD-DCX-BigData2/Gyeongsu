@@ -344,7 +344,7 @@
                     <li class="topMenuLi">
                  <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">문의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">공지사항</a></li>
                       <li><a href="bulletinBoard2.jsp" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>
@@ -365,7 +365,7 @@
             <div class="tabscontainer">
                 <ul class="tabsmenu">
                     <li>
-                        <a href="#tab11">문의 게시판</a>
+                        <a href="#tab11">공지사항</a>
                     </li>
                     <li class="active">
                         <a href="#tab12">건의 게시판</a>
@@ -375,9 +375,6 @@
 
                 <div class="tabselements">
                     <section id="tab12" class="active">
-                        <div>
-                            <h3>건의 게시판</h3>
-                            <section id="tab12">
                         <div>
                             <h3>건의 게시판</h3>
                             <table class="board">
@@ -393,8 +390,8 @@
                                 <%cnt++; %>
 								<tr>
 										<td><p><%=cnt%></p></td>
-					                    <td><p><%=m.getTitle() %></p></td>
-					                    <td><P><%=m.getReview() %></P></td>
+					                    <td><p><%=m.getId() %></p></td>
+					                    <td><P><%=m.getTitle() %></P></td>
 					                    <td><P><%=m.getReview_time()%></P></td>
 								</tr>
 					                <%} %>
@@ -463,7 +460,7 @@
 
                     <section id="tab11">
                         <div>
-                            <h3>문의 게시판</h3>
+                            <h3>공지사항</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
