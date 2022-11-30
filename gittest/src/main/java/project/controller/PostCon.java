@@ -40,9 +40,10 @@ public class PostCon extends HttpServlet {
 		String title = request.getParameter("title");
 		String review_time = request.getParameter("review_time");
 		int activity_no = Integer.parseInt(request.getParameter("activity_no"));
+		String activity_title = request.getParameter("activity_title");
 		
 		// 객체에 담아주기
-		ReviewMember posts = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti, null);
+		ReviewMember posts = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti, null, activity_title);
 		
 		System.out.println("리뷰는"+posts);
 		

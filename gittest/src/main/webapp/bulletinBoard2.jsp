@@ -46,6 +46,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/mypage.css">
+    <link rel="stylesheet" href="./assets/css/bulletinBoard.css">
     <title>Document</title>
 </head>
 
@@ -389,10 +390,10 @@
 					            <% if(m.getReview_type()==2){ %>
                                 <%cnt2++; %>
 								<tr>
-										<td><p><%=cnt2%></p></td>
-					                    <td><p><%=m.getId() %></p></td>
-					                    <td><P><%=m.getTitle() %></P></td>
-					                    <td><P><%=m.getReview_time()%></P></td>
+										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt2%></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle() %></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
 								</tr>
 					                <%} %>
 					                <%} %>   
@@ -477,13 +478,13 @@
                                 </tr>
                                 <%int cnt1 = 0;%>
                                 <%for(ReviewMember m:revMemberList){ %>
-					            <% if(m.getReview_type()==2){ %>
+					            <% if(m.getReview_type()==3){ %>
                                 <%cnt1++; %>
 								<tr>
-										<td><p><%=cnt1%></p></td>
-					                    <td><p><%=m.getId() %></p></td>
-					                    <td><P><%=m.getTitle() %></P></td>
-					                    <td><P><%=m.getReview_time()%></P></td>
+										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt1%></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle() %></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
 								</tr>
 					                <%} %>
 					                <%} %>
@@ -491,13 +492,14 @@
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
-                                <tr class="button-tr">
+                                <c:if test="${loginMember.id eq 'admin'}">
+								<tr class="button-tr">
                                     <td colspan="6" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
                                         <input type="button" value="글작성" onclick="location.href='post.jsp'">
                                     </td>
                                 </tr>
-
+								</c:if>
                                 <tr>
                                     <td colspan="6" class="button-tr">
                                         <%-- <%	// 페이징  처리

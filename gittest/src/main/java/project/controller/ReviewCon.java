@@ -34,6 +34,7 @@ public class ReviewCon extends HttpServlet {
 		int user_no = loginMember.getUser_no();
 		String mbti = loginMember.getMbti();
 		int activity_no = loginActivity.getActivity_no();
+		String activity_title = loginActivity.getActivity_title();
 		
 		// 파라미터 수집
 		int review_no = Integer.parseInt(request.getParameter("review_no"));
@@ -44,7 +45,7 @@ public class ReviewCon extends HttpServlet {
 		String review_time = request.getParameter("review_time");
 		
 		// 객체에 담아주기
-		ReviewMember reviews = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti, null);
+		ReviewMember reviews = new ReviewMember(review_no, activity_no, user_no, id, title, review, review_type, favor, mbti, null,activity_title);
 		
 		System.out.println("리뷰는"+reviews);
 		

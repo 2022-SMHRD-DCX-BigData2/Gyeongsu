@@ -52,6 +52,12 @@
   	<description></description>
   	<servlet-class>project.controller.PostCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SelectReview</servlet-name>
+  	<display-name>SelectReview</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.SelectReview</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -83,5 +89,9 @@
   <servlet-mapping>
   	<servlet-name>PostCon</servlet-name>
   	<url-pattern>/PostCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectReview</servlet-name>
+  	<url-pattern>/SelectReview</url-pattern>
   </servlet-mapping>
 </web-app>

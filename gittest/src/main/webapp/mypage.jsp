@@ -370,10 +370,10 @@
                         <a href="#tab11">내정보</a>
                     </li>
                     <li>
-                        <a href="#tab12">작성글</a>
+                        <a href="#tab12">작성댓글</a>
                     </li>
                     <li>
-                        <a href="#tab13">문의사항</a>
+                        <a href="#tab13">건의 게시판</a>
                     </li>
                 </ul>
 
@@ -570,59 +570,41 @@
 
                     <section id="tab12">
                         <div>
-                            <h3>작성글</h3>
+                            <h3>작성댓글</h3>
                             <table class="board">
                                 <tr>
                                     <td>번호</td>
                                     <td>작성자</td>
-                                    <td>제목</td>
+                                    <td>댓글 작성한 페이지</td>
                                     <td>작성일</td>
-                                    <td>좋아요</td>
-                                    <td>수정</td>
-                                    <td>삭제</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
+                                <%int cnt1 = 0;%>
+                                <%for(ReviewMember m:revMemberList){ %>
+				              	<% if(m.getUser_no()==loginMember.getUser_no() && m.getReview_type()==1){ %>
+				              	<%cnt1++; %>
+				                	<tr>
+										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt1%></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getActivity_title()%></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+									</tr>
+				                <%} %>
+				                <%} %>
+
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
                                 </tr> -->
-                                <tr class="button-tr">
+<%--                                 <tr class="button-tr">
                                     <td colspan="7" id="board-button">
-                                        <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
+                                        <!-- 버튼을 클릭하면 post.jsp로 이동 -->
                                         <input type="button" value="글작성" onclick="location.href='post.html'">
                                     </td>
-                                </tr>
+                                </tr> --%>
 
-                                <tr>
+                                <%-- <tr>
                                     <td colspan="7" class="button-tr">
-                                        123
-                                        <%-- <%	// 페이징  처리
+                                        <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
                                                 int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
@@ -661,52 +643,34 @@
                                         <%			
                                                 }
                                             }
-                                        %> --%>
+                                        %>
                                     </td>
-                                </tr>
+                                </tr> --%>
                             </table>
                         </div>
                     </section>
                     <section id="tab13">
                         <div>
-                            <h3>문의사항</h3>
-                            <table class="board">
+                            <h3>건의 게시판</h3>
+                                <table class="board">
                                 <tr>
                                     <td>번호</td>
                                     <td>작성자</td>
                                     <td>제목</td>
                                     <td>작성일</td>
-                                    <td>좋아요</td>
-                                    <td>수정</td>
-                                    <td>삭제</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>홍길동</td>
-                                    <td><a>그리워하면</a></td>
-                                    <td>2022-11-25</td>
-                                    <td>30</td>
-                                    <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                                    <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                                </tr>
+                                <%int cnt2 = 0;%>
+                                <%for(ReviewMember m:revMemberList){ %>
+				              	<% if(m.getUser_no()==loginMember.getUser_no() && m.getReview_type()==2){ %>
+				              	<%cnt2++; %>
+				                	<tr>
+										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt2%></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle()%></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+									</tr>
+				                <%} %>
+				                <%} %>
                                 <!-- 데이터가 없으면 -->
                                 <!-- <tr>
                                     <td>데이터가 없습니다</td>
@@ -718,10 +682,10 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                               <%--  <tr>
                                     <td colspan="7" class="button-tr">
-                                        123
-                                        <%-- <%	// 페이징  처리
+
+                                        <%	// 페이징  처리
                                             if(count > 0){
                                                 // 총 페이지의 수
                                                 int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
@@ -760,9 +724,9 @@
                                         <%			
                                                 }
                                             }
-                                        %> --%>
+                                        %>
                                     </td>
-                                </tr>
+                                </tr> --%>
                             </table>
                         </div>
                     </section>

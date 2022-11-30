@@ -431,6 +431,7 @@
                 	<input type="hidden" name="mbti" value="${loginMember.mbti}">
                 	<input type="hidden" name="id" value="${loginMember.id}">
                 	<input type="hidden" name="activity_no" value="${loginActivity.activity_no}">
+                	<input type="hidden" name="activity_title" value="${loginActivity.activity_title}">
                 	<input type="hidden" name="review_type" value="1">
                 	<input type="hidden" name="favor" value="0">
                 	<input type="hidden" name="review_time" value=null>

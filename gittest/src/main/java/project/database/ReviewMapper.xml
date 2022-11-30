@@ -9,10 +9,14 @@
 		세미콜론 적지 않는다, ?바인드 변수와 같은 기능을 하는 것 #{컬럼명=객체의 필드명}
 -->	
 	<insert id="insertReview" parameterType="project.domain.ReviewMember">
-		insert into review_info values (plus_seq.NEXTVAL,#{activity_no},#{user_no},#{id},#{title},#{review},#{review_type},#{favor},#{mbti},current_date)
+		insert into review_info values (plus_seq.NEXTVAL,#{activity_no},#{user_no},#{id},#{title},#{review},#{review_type},#{favor},#{mbti},current_date,#{activity_title})
 	</insert>
 	
 	<select id="selectAllRev" resultType="project.domain.ReviewMember">
 		select * from review_info order by review_time DESC
+	</select>
+	
+	<select id="selectReview" parameterType="project.domain.ReviewMember" resultType="project.domain.ReviewMember">
+		select * from review_info where review_no = #{review_no}
 	</select>
 </mapper>
