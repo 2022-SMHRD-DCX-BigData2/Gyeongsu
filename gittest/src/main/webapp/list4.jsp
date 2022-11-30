@@ -329,7 +329,7 @@
                 <!-- </button> -->
                 <ul class="topMenu">
                     <li class="topMenuLi">
-                        <a class="menuLink" href="list.jsp">문화체험</a>
+                         <a class="menuLink" href="list.jsp">문화체험</a>
                         <ul class="submenu">
                             <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
                             <li class=""><a href="list.jsp" class="submenuLink longLink">뮤지컬</a></li>
@@ -366,7 +366,7 @@
 
         <div class="tabscontainer">
             <ul class="tabsmenu">
-                <li class="active">
+                <li>
                     <a href="#tab11"  data-toggle="tab">뮤지컬</a>
                 </li>
                 <li>
@@ -375,7 +375,7 @@
                 <li>
                     <a href="#tab13"  data-toggle="tab">연극</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#tab14"  data-toggle="tab">클래식&오페라</a>
                 </li>
                 <li>
@@ -387,7 +387,7 @@
             </ul>
 
             <div class="tabselements">
-                <section id="tab11" class="active">
+                <section id="tab11" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==1){ %>
@@ -411,7 +411,7 @@
               </section>
 
 
-                <section id="tab12" class="active">
+                <section id="tab12" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==2){ %>
@@ -433,7 +433,7 @@
                       <%} %>
                       </div>
               </section>
-                <section id="tab13" class="active">
+                <section id="tab13" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==3){ %>

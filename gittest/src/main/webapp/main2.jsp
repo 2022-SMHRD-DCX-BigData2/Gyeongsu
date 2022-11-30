@@ -33,6 +33,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/contentlist.css">
     <title>Document</title>
     
 </head>
@@ -440,156 +441,138 @@
 
           <div class="tabselements">
                     <section id="tab11" class="active">
-                        <ul class="grid">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
 
 
-              <section id="tab12">
-                        <ul class="grid">
+              <section id="tab12" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==2){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab13">
-                        <ul class="grid">
+              <section id="tab13" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==3){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab14">
-                        <ul class="grid">
+              <section id="tab14" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==4){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab15">
-                        <ul class="grid">
+              <section id="tab15" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==5){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab16">
-                        <ul class="grid">
+              <section id="tab16" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==6){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
           </div>
       </div>
@@ -619,157 +602,158 @@
 
           <div class="tabselements">
               <section id="tab21" class="active">
-                        <ul class="grid">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==1){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
 
 
-              <section id="tab22">
-                        <ul class="grid">
+              <section id="tab22" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==2){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab23">
-                        <ul class="grid">
+              <section id="tab23" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==3){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab24">
-                        <ul class="grid">
+              <section id="tab24" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==4){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab25">
-                        <ul class="grid">
+              <section id="tab25" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==5){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
-              <section id="tab26">
-                        <ul class="grid">
+              <section id="tab26" class="active">
+                            <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==100 && m.getActivity_type()==6){ %>
-                            <li class="g-col-lg-4">
+                                <div class="grid-item ">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                              <figure>
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
-                                          alt=""></div>
-                                  <figcaption>
-                                      <h3 class="tabname"><%=m.getActivity_title() %></h3>
+                                          alt="">
+                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
                                       <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="tabtext">
+                                      <div class="d-none d-md-block">
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-                                  </figcaption>
-                              </figure>
+
                               </a>
-                      </li>
+                      </div>
                       <%} %>
                       <%} %>
-                  </ul>
+                      </div>
               </section>
+              <div class="row text-center">
+                    <div class="col-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 페이지 디자인 끝 -->
           </div>
       </div>
   </main>
