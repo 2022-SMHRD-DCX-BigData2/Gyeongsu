@@ -66,11 +66,15 @@
                     <p>닉네임</p>
                     <input type="text" placeholder="닉네임" name="name" />
                     <div class="row">
-                	<div class="col MBTI"><p>성별</p>
-                            <input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
-                            for="age-y">남</label>
-                            <input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
-                            for="age-x">여</label>
+                	<div class="col MBTI">
+                			<p>성별</p>
+                			<div class="sex">
+                				<input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
+                            	for="age-y">남</label>
+                            	<input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
+                            	for="age-x">여</label>
+                			</div>
+                            
                         </div>
                         <div class="col MBTI">
                             <p>나이</p>

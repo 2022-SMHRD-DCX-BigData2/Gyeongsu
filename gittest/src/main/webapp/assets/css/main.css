@@ -262,9 +262,7 @@ input[type=text],input[type=password] {
 
 }
 
-.grid ul{
-	
-}
+
 
 
 
@@ -598,6 +596,41 @@ input[type=text],input[type=password] {
   align-items: center;
 }
 
+.age{
+  display: flex;
+}
+.MBTI>.sex>input[type=radio]{
+  display: none;
+  
+}
+.MBTI>.sex>input[type=radio]+label{
+  display: inline-block;
+  cursor: pointer;
+  height: 32px;
+  width: 51px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight:bold;
+  font-size:15px;
+  margin: 3px;
+  align-items: center;
+  padding-top: 4px;
+}
+.MBTI>.sex>input[type=radio]+label{
+  background-color: #fff;
+  color: #333;
+}
+.MBTI>.sex>input[type=radio]:checked+label{
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+
+
 .MBTI>input[type=radio]{
   display: none;
   
@@ -744,7 +777,7 @@ select{
 }
 
 #slider {
-  height: 33vw;
+  height: 34vw;
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -752,7 +785,7 @@ select{
 
 #slider label {
   margin: auto;
-  width: 30%;
+  width: 25%;
   height: 80%;
   border-radius: 4px;
   position: absolute;

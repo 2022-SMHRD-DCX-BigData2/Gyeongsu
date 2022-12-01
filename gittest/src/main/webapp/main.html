@@ -1548,37 +1548,27 @@
         }, 2000);
         
         </script> -->
-        <!-- <script type="text/javascript">
-            function test() {
-                var obj_length = document.getElementsByName("slider").length;
-                for (var i = 1; i <= obj_length; i++) {
-                    var conuter = i;
-                    if (document.getElementById('s' + i).checked = true) {
-                        
-                        
-                        document.getElementById('s'+ i+1).checked = true
-                    }
-                }
-            }
-        </script> -->
-         <script type="text/javascript">
-            setInterval(function () {
-                // 전체 슬라이드 길이 구하고
-                var obj_length = document.getElementsByName("slider").length;
-                for (let i = 1; i <= obj_length.length; i++) {
 
-                    const slide = document.getElementById('s'+i).checked;
-                    var next = document.getElementById('s'+i+1);
-                    // 아이디에 체크 클라스 유무 확인
-                    if (slide==true) {
-                        next.classList.remove('checked')
-                        slide.classList.add('checked')
+         <!-- 슬라이드 자동변환 -->
+    <script type="text/javascript">
+        const counter = 1;
+        const ele = document.getElementsByName('slider');
+        setInterval(function () {
+            for (let i = 0; i < ele.length; i++) {
+
+                if (ele[i].checked = true) {
+                    $ele[i].prop("checked", false)
+                    $ele[i+1].prop("checked", true)
+                    counter++;
+                    if ( counter> ele.length) {
+                        counter = 1;
                     }
-                    
                 }
-            }, 2000);
-            
-        </script>
+
+            }
+
+
+        }, 2000);
 </body>
 
 </html>
