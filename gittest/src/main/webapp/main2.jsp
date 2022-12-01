@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
+     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/contentlist.css">
     <title>Document</title>
@@ -66,15 +67,15 @@
                     <input type="text" placeholder="닉네임" name="name" />
                     <div class="row">
                 	<div class="col MBTI"><p>성별</p>
-                            <input type="radio" name="age" value="남" class="box-radio-input" id="age-y"><label
+                            <input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
                             for="age-y">남</label>
-                            <input type="radio" name="age" value="여" class="box-radio-input" id="age-x"><label
+                            <input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
                             for="age-x">여</label>
                         </div>
                         <div class="col MBTI">
                             <p>나이</p>
-                            <select>
-                                <option value="">선택</option>
+                            <select name="age">
+                                <option value="" >선택</option>
                                 <option value="age10">10대</option>
                                 <option value="age20">20대</option>
                                 <option value="age30">30대</option>
@@ -104,9 +105,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
-                        <fieldset>
-                            <legend>
+                    
                                 <h5>MBTI</h5>
                                 <div class=" row row-cols-4 ">
                                     <!-- <h4>MBTI</h4> -->
@@ -272,9 +271,7 @@
                                             id="keyword-26"><label for="keyword-26">#소통</label>
                                     </div>
                                 </div>
-                            </legend>
-                        </fieldset>
-                    </form>
+                           
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -734,6 +731,7 @@
   </main>
   <jsp:include page="/include/footer.jsp"></jsp:include>
   <jsp:include page="/include/script.jsp"></jsp:include>
+
 </body>
 
 </html>
