@@ -371,29 +371,26 @@
                         <a class="menuLink" href="list.jsp">문화체험</a>
                         <ul class="submenu">
                             <!-- 뮤지컬 , 콘서트,연극,클래식&오페라,무용&전통예술,전시&행사 -->
-                            <li class=""><a href="list.jsp#tab11" class="submenuLink longLink">뮤지컬</a></li>
-                            <li class=""><a href="list.jsp#tab12" class="submenuLink longLink">콘서트</a></li>
-                            <li class=""><a href="list.jsp#tab13" class="submenuLink longLink">연극</a></li>
-                            <li class=""><a href="list.jsp#tab14" class="submenuLink longLink">클래식&오페라</a></li>
-                            <li class=""><a href="list.jsp#tab15" class="submenuLink longLink">무용&전통예술</a></li>
-                            <li class=""><a href="list.jsp#tab16" class="submenuLink longLink">전시&행사</a></li>
+                            <li class=""><a href="list.jsp" class="submenuLink longLink">뮤지컬</a></li>
+                            <li class=""><a href="list2.jsp" class="submenuLink longLink">콘서트</a></li>
+                            <li class=""><a href="list3.jsp" class="submenuLink longLink">연극</a></li>
+                            <li class=""><a href="list4.jsp" class="submenuLink longLink">클래식&오페라</a></li>
+                            <li class=""><a href="list5.jsp" class="submenuLink longLink">무용&전통예술</a></li>
+                            <li class=""><a href="list6.jsp" class="submenuLink longLink">전시&행사</a></li>
                         </ul>
                     </li>
                     <li class="topMenuLi">
                   <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">공지사항</a></li>
-                      <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">공지사항</a></li>
+                      <li><a href="bulletinBoard2.jsp" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-      <div id="">
-          <!-- 전체 메뉴창   -->
 
-      </div>
 
 
 
