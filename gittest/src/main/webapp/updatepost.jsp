@@ -355,24 +355,24 @@
         </header>
         <main id="" class="">
             <div class="row">
-            <form action="PostCon" method="post">
+            <form action="UpdateReviewCon" method="post">
                 <div class="col-12 post-text">
-                    <input type="text" class="post-name" placeholder="제목" name="title">
+                    <input type="text" class="post-name" name="title" value="${loginReview.title}">
                     <div class="mt-3"></div>
-                    <input type="hidden" name="user_no" value="${loginMember.user_no}">
-                	<input type="hidden" name="review_no" value="0">
-                	<input type="hidden" name="mbti" value="${loginMember.mbti}">
-                	<input type="hidden" name="id" value="${loginMember.id}">
-                	<input type="hidden" name="activity_no" value="0">
-                	<input type="hidden" name="activity_title" value="0">
+                    <input type="hidden" name="user_no" value="${loginReview.user_no}">
+                	<input type="hidden" name="review_no" value="${loginReview.review_no}">
+                	<input type="hidden" name="mbti" value="${loginReview.review_no}">
+                	<input type="hidden" name="id" value="${loginReview.id}">
+                	<input type="hidden" name="activity_no" value="${loginReview.activity_no}">
+                	<input type="hidden" name="activity_title" value="${loginReview.activity_title}">
                 	<% if(loginMember.getId().equals("admin")){ %>
                 		<input type="hidden" name="review_type" value="3">
                 	<%}else{ %>
                 		<input type="hidden" name="review_type" value="2">
                 	<%} %>
-                	<input type="hidden" name="favor" value="0">
-                	<input type="hidden" name="review_time" value="0">
-                	<textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
+                	<input type="hidden" name="favor" value="${loginReview.favor}">
+                	<input type="hidden" name="review_time" value="${loginReview.review_time}">
+                	<textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"><%=loginReview.getReview() %></textarea>
                 </div>
                 <div class="input-group mb-3 comment"></div>
                      <c:if test="${loginMember == null}">
