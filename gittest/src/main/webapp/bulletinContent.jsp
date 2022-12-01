@@ -390,7 +390,7 @@
                         <%if(loginMember.getUser_no() == loginReview.getUser_no()){ %>
                                 <button class="btn btn-primary" onclick="location.href='updatepost.jsp';"
                                 data-bs-toggle="modal" >수정</button>
-                                <button class="btn btn-primary" onclick="location.href='post.jsp';"
+                                <button class="btn btn-primary" onclick="location.href='DeleteReviewCon?review_no=<%=loginReview.getReview_no() %>';"
                                 data-bs-toggle="modal">삭제</button>
                          <%} %>
                                 </div>

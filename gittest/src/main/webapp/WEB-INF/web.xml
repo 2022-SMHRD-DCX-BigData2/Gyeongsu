@@ -76,6 +76,18 @@
   	<description></description>
   	<servlet-class>project.controller.UpdateReviewCon2</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DeleteReviewCon</servlet-name>
+  	<display-name>DeleteReviewCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.DeleteReviewCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReviewCon2</servlet-name>
+  	<display-name>DeleteReviewCon2</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.DeleteReviewCon2</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -123,5 +135,13 @@
   <servlet-mapping>
   	<servlet-name>UpdateReviewCon2</servlet-name>
   	<url-pattern>/UpdateReviewCon2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReviewCon</servlet-name>
+  	<url-pattern>/DeleteReviewCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReviewCon2</servlet-name>
+  	<url-pattern>/DeleteReviewCon2</url-pattern>
   </servlet-mapping>
 </web-app>

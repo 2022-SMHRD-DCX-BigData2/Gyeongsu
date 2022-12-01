@@ -678,7 +678,7 @@
                                 <tr class="button-tr">
                                     <td colspan="7" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
-                                        <input type="button" value="글작성" onclick="location.href='post.html'">
+                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
                                     </td>
                                 </tr>
 
