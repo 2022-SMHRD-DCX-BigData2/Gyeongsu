@@ -583,10 +583,10 @@
 				              	<% if(m.getUser_no()==loginMember.getUser_no() && m.getReview_type()==1){ %>
 				              	<%cnt1++; %>
 				                	<tr>
-										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt1%></p></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getActivity_title()%></P></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+										<td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><p><%=cnt1%></p></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><P><%=m.getActivity_title()%></P></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
 									</tr>
 				                <%} %>
 				                <%} %>
@@ -664,10 +664,10 @@
 				              	<% if(m.getUser_no()==loginMember.getUser_no() && m.getReview_type()==2){ %>
 				              	<%cnt2++; %>
 				                	<tr>
-										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt2%></p></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle()%></P></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+										<td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><p><%=cnt2%></p></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle()%></P></a></td>
+					                    <td><a href="SelectReview2?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
 									</tr>
 				                <%} %>
 				                <%} %>
@@ -678,7 +678,7 @@
                                 <tr class="button-tr">
                                     <td colspan="7" id="board-button">
                                         <!-- <%-- 버튼을 클릭하면 post.jsp로 이동 --%> -->
-                                        <input type="button" value="글작성" onclick="location.href='post.html'">
+                                        <input type="button" value="글작성" onclick="location.href='post.jsp'">
                                     </td>
                                 </tr>
 

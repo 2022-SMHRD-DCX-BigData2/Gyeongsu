@@ -5,7 +5,7 @@
     });
 </script>
 <script>
-    // 텝매뉴 링크이동
+    // íë§¤ë´ ë§í¬ì´ë
     $(function () {
         if (location.hash == "#tab11") {
             $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
@@ -28,21 +28,20 @@
         }
     })
 </script>
-<script>
-    //채크박스 개수제한
-    jQuery(document).ready(function($) {
-$("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
-    // var cnt = $("#selCnt").val();
-    if( 5==$("input[name=keyword]:checkbox:checked").length ) {
-        $(":checkbox:not(:checked)").attr("disabled", "disabled");
-    } else {
+    <script>
+        jQuery(document).ready(function($) {
+    $("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
+        // var cnt = $("#selCnt").val();
+        if( 5==$("input[name=keyword]:checkbox:checked").length ) {
+            $(":checkbox:not(:checked)").attr("disabled", "disabled");
+        } else {
+            $("input[name=keyword]:checkbox").removeAttr("disabled");
+        }
+    });
+ 
+    $("#selCnt").change(function() {
+        $("input[name=keyword]:checkbox").removeAttr("checked");
         $("input[name=keyword]:checkbox").removeAttr("disabled");
-    }
+    });
 });
-
-$("#selCnt").change(function() {
-    $("input[name=keyword]:checkbox").removeAttr("checked");
-    $("input[name=keyword]:checkbox").removeAttr("disabled");
-});
-});
-</script>
+    </script>

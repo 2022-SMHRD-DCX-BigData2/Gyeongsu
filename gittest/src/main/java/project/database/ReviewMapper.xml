@@ -19,4 +19,12 @@
 	<select id="selectReview" parameterType="project.domain.ReviewMember" resultType="project.domain.ReviewMember">
 		select * from review_info where review_no = #{review_no}
 	</select>
+	
+	<update id="updateReview" parameterType="project.domain.ReviewMember">
+		update review_info set activity_no=#{activity_no}, user_no=#{user_no}, id=#{id}, title=#{title}, review=#{review}, review_type=#{review_type}, favor=#{favor}, mbti=#{mbti}, review_time=current_date, activity_title=#{activity_title} where review_no=#{review_no}
+	</update>
+	
+	<delete id="deleteReview" parameterType="int">
+		delete from review_info where review_no=#{review_no}
+	</delete>
 </mapper>

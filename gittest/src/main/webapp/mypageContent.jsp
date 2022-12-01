@@ -23,8 +23,6 @@
 %>
 
 
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,6 +45,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/mypage.css">
+    <link rel="stylesheet" href="./assets/css/bulletinBoard.css">
     <title>Document</title>
 </head>
 
@@ -343,50 +342,157 @@
                         </ul>
                     </li>
                     <li class="topMenuLi">
-                  <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
+                 <a class="menuLink" href="bulletinBoard.jsp">게시판</a>
                   <ul class="submenu">
-                      <li><a href="bulletinBoard.jsp#tab11" class="submenuLink longLink">공지사항</a></li>
-                      <li><a href="bulletinBoard.jsp#tab12" class="submenuLink longLink">건의 게시판</a></li>
+                      <li><a href="bulletinBoard.jsp" class="submenuLink longLink">공지사항</a></li>
+                      <li><a href="bulletinBoard2.jsp" class="submenuLink longLink">건의 게시판</a></li>
                       <li></li>
-                        </ul>
+                        </ul>	
                     </li>
                 </ul>
             </nav>
         </header>
+            <div id="">
+                <!-- 전체 메뉴창   -->
+
+            </div>
+
+
+
+
         <main id="" class="">
-            <div class="row">
-            <form action="PostCon" method="post">
-                <div class="col-12 post-text">
-                    <input type="text" class="post-name" placeholder="제목" name="title">
-                    <div class="mt-3"></div>
-                    <input type="hidden" name="user_no" value="${loginMember.user_no}">
-                	<input type="hidden" name="review_no" value="0">
-                	<input type="hidden" name="mbti" value="${loginMember.mbti}">
-                	<input type="hidden" name="id" value="${loginMember.id}">
-                	<input type="hidden" name="activity_no" value="0">
-                	<input type="hidden" name="activity_title" value="0">
-                	<% if(loginMember.getId().equals("admin")){ %>
-                		<input type="hidden" name="review_type" value="3">
-                	<%}else{ %>
-                		<input type="hidden" name="review_type" value="2">
-                	<%} %>
-                	<input type="hidden" name="favor" value="0">
-                	<input type="hidden" name="review_time" value="0">
-                	<textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
+            <div class="tabscontainer">
+                <ul class="tabsmenu">
+                    <li class="active">
+                        <a href="mypage.jsp#tab11">내정보</a>
+                    </li>
+                    <li>
+                        <a href="mypage.jsp#tab12">작성댓글</a>
+                    </li>
+                    <li>
+                        <a href="mypage.jsp#tab13">건의 게시판</a>
+                    </li>
+                </ul>
+                <div class="tabselements">
+                    <div class="row post">
+                        <div class="col-7">
+                            <%if(loginReview.getReview_type()==1){ %>
+                            <p class="post-name"><%=loginReview.getActivity_title() %></p>                            
+                            <%}else{ %>
+                            <p class="post-name"><%=loginReview.getTitle() %></p>   
+                            <%} %>
+                        </div>
+                        <div class="col-5">
+                            <p class="post-day"><%=loginReview.getReview_time() %></p>
+                        </div>
+                        <div class="mt-3"></div>
+                        <div class="input-group mb-3 comment post-text">
+                            
+                            <P><%=loginReview.getReview() %></P>
+        
+                        </div>
+                            <div class="crystal-icon">
+                        <%if(loginMember.getUser_no() == loginReview.getUser_no()){ %>
+                                <button class="btn btn-primary" onclick="location.href='updatepost2.jsp';"
+                                data-bs-toggle="modal" >수정</button>
+                                <button class="btn btn-primary" onclick="location.href='DeleteReviewCon2?review_no=<%=loginReview.getReview_no() %>';"
+                                data-bs-toggle="modal">삭제</button>
+                         <%} %>
+                                </div>
+                        <div class="mt-3"></div>
                 </div>
-                <div class="input-group mb-3 comment"></div>
-                     <c:if test="${loginMember == null}">
-					<input class="btn btn-outline-secondary" type="button" id="button-addon2" value="등록" onclick="alert('로그인후 이용가능합니다!')">
-					</c:if>
-					<c:if test="${loginMember != null}">
-					<input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="등록">
-					</c:if>
+            </div>
+            
+    </div>
+    </div>
+    </main>
+    <footer class="">
+        <div>
+            <div class="footer_bottom_holder">
+                <div class="container">
+                    <div class="container_inner">
+                        <div class="footer_bottom">
+                            <div class="footer_inner">
+                                <div class="left">
+                                    <dl>
+                                        <dt><strong>올리브</strong></dt>
+                                        <dd>대표자 : 신경수<br>
+                                            개인정보책임관리자 : 신경수<br>
+                                            사업자번호 : 123-45-67890<br>
+                                            <span class="wh">순천점 : </span>전라남도 순천시 중앙로 260<br>
+                                            <span class="wh">FAX : </span>062-123-4567<br>
+                                            <span class="wh">E-Mail : </span>smhrd@smhrd.or.kr<br>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="right">
+                                    <ul class="sns">
+                                        <li class="kakao"><a href="https://pf.kakao.com/_VYlpM" target="_blank"><img
+                                                    src="./images/common/kakao-talk.png"></a></li>
+                                        <li class="naver"><a href="https://blog.naver.com/jang0_0yw"
+                                                target="_blank"><img
+                                                    src="./images/common/naver_icon-icons.com_59879.png"></a></li>
+                                        <li class="youtube"><a
+                                                href="https://www.youtube.com/channel/UCubIpLB7cA9tWIUZ26WFKPg"
+                                                target="_blank"><img src="./images/common/youtube.png"></a></li>
+                                        <li class="instagram"><a href="https://www.instagram.com/smhrd0317/"
+                                                target="_blank"><img src="./images/common/instagram.png"></a></li>
+                                        <li class="facebook"><a href="https://www.facebook.com/smhrd0317"
+                                                target="_blank"><img src="./images/common/facebook.png"></a></li>
+                                    </ul>
+                                    <ul class="">
+                                        <li class="">
+                                            <h6>팀장 : 신경수(프로젝트 총괄, 일정계획, 서버 구축,기능구현)</h6>
+                                        </li>
+                                        <li class="">
+                                            <p>최서정(추천 알고리즘)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>이지연(데이터 크롤링,키워드 분석)</p>
+                                        </li>
+                                        <li class="">
+                                            <p>권호주(프론트앤드)</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </form>
-                <div class="mt-3"></div>
-        </main>
-         <jsp:include page="/include/footer.jsp"></jsp:include>
-  		 <jsp:include page="/include/script.jsp"></jsp:include>
+            </div>
+
+    </footer>
+    </div>
+    <script src="./assets/js/test.js">
+        $('.window .close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        // 텝매뉴 링크이동
+        $(function () {
+            if (location.hash == "#tab11") {
+                $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab12") {
+                $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab13") {
+                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab14") {
+                $('.tabsmenu').find('li').eq(3).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab15") {
+                $('.tabsmenu').find('li').eq(4).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
+            } else if (location.hash == "#tab16") {
+                $('.tabsmenu').find('li').eq(5).addClass('active').siblings().removeClass();
+                $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
+            }
+        })
+    </script>
 </body>
 
 </html>

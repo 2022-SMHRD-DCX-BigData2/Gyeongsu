@@ -58,6 +58,36 @@
   	<description></description>
   	<servlet-class>project.controller.SelectReview</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateReviewCon</servlet-name>
+  	<display-name>UpdateReviewCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.UpdateReviewCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SelectReview2</servlet-name>
+  	<display-name>SelectReview2</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.SelectReview2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateReviewCon2</servlet-name>
+  	<display-name>UpdateReviewCon2</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.UpdateReviewCon2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReviewCon</servlet-name>
+  	<display-name>DeleteReviewCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.DeleteReviewCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReviewCon2</servlet-name>
+  	<display-name>DeleteReviewCon2</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.DeleteReviewCon2</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -93,5 +123,25 @@
   <servlet-mapping>
   	<servlet-name>SelectReview</servlet-name>
   	<url-pattern>/SelectReview</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateReviewCon</servlet-name>
+  	<url-pattern>/UpdateReviewCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectReview2</servlet-name>
+  	<url-pattern>/SelectReview2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateReviewCon2</servlet-name>
+  	<url-pattern>/UpdateReviewCon2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReviewCon</servlet-name>
+  	<url-pattern>/DeleteReviewCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReviewCon2</servlet-name>
+  	<url-pattern>/DeleteReviewCon2</url-pattern>
   </servlet-mapping>
 </web-app>
