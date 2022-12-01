@@ -140,108 +140,136 @@
                                 <div class=" row row-cols-3 ">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="실외" class="box-radio-input"
-                                            id="keyword-1"><label for="keyword-1">#실외</label>
-                                    </div>
-                                    <div class="box-radio-input MBTI">
                                         <input type="checkbox" name="keyword" value="실내" class="box-radio-input"
-                                            id="keyword-2"><label for="keyword-2">#실내</label>
+                                            id="keyword-1"><label for="keyword-1">#실내</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활동적인" class="box-radio-input"
-                                            id="keyword-3"><label for="keyword-3">#활동적인</label>
+                                        <input type="checkbox" name="keyword" value="실외" class="box-radio-input"
+                                            id="keyword-2"><label for="keyword-2">#실외</label>
+                                    </div>
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="잔잔" class="box-radio-input"
+                                            id="keyword-3"><label for="keyword-3">#잔잔</label>
                                     </div>
                                 </div>
                                 <!-- 2번째줄 -->
                                 <div class=" row row-cols-4 keyword-box">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="자연적인" class="box-radio-input"
-                                            id="keyword-4"><label for="keyword-4">#자연적인</label>
+                                        <input type="checkbox" name="keyword" value="활발" class="box-radio-input"
+                                            id="keyword-4"><label for="keyword-4">#활발</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="신나는" class="box-radio-input"
-                                            id="keyword-5"><label for="keyword-5">#신나는</label>
+                                        <input type="checkbox" name="keyword" value="개인" class="box-radio-input"
+                                            id="keyword-5"><label for="keyword-5">#개인</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활발한" class="box-radio-input"
-                                            id="keyword-6"><label for="keyword-6">#활발한</label>
+                                        <input type="checkbox" name="keyword" value="집단" class="box-radio-input"
+                                            id="keyword-6"><label for="keyword-6">#집단</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="조용한" class="box-radio-input"
-                                            id="keyword-7"><label for="keyword-7">#조용한</label>
+                                        <input type="checkbox" name="keyword" value="관람" class="box-radio-input"
+                                            id="keyword-7"><label for="keyword-7">#관람</label>
                                     </div>
                                 </div>
                                 <!-- 3번째줄 -->
                                 <div class=" row row-cols-3 ">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="실외" class="box-radio-input"
-                                            id="keyword-8"><label for="keyword-8">#실외</label>
+                                        <input type="checkbox" name="keyword" value="참여" class="box-radio-input"
+                                            id="keyword-8"><label for="keyword-8">#참여</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="실내" class="box-radio-input"
-                                            id="keyword-9"><label for="keyword-9">#실내</label>
+                                        <input type="checkbox" name="keyword" value="로맨틱" class="box-radio-input"
+                                            id="keyword-9"><label for="keyword-9">#로맨틱</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활동적인" class="box-radio-input"
-                                            id="keyword-10"><label for="keyword-10">#활동적인</label>
+                                        <input type="checkbox" name="keyword" value="데이트" class="box-radio-input"
+                                            id="keyword-10"><label for="keyword-10">#데이트</label>
                                     </div>
                                 </div>
                                 <!-- 4번째줄 -->
                                 <div class=" row row-cols-4 keyword-box">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="자연적인" class="box-radio-input"
-                                            id="keyword-11"><label for="keyword-11">#자연적인</label>
+                                        <input type="checkbox" name="keyword" value="어린이" class="box-radio-input"
+                                            id="keyword-11"><label for="keyword-11">#어린이</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="신나는" class="box-radio-input"
-                                            id="keyword-12"><label for="keyword-12">#신나는</label>
+                                        <input type="checkbox" name="keyword" value="가족" class="box-radio-input"
+                                            id="keyword-12"><label for="keyword-12">#가족</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활발한" class="box-radio-input"
-                                            id="keyword-13"><label for="keyword-13">#활발한</label>
+                                        <input type="checkbox" name="keyword" value="감동" class="box-radio-input"
+                                            id="keyword-13"><label for="keyword-13">#감동</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="조용한" class="box-radio-input"
-                                            id="keyword-7"><label for="keyword-7">#조용한</label>
+                                        <input type="checkbox" name="keyword" value="코믹" class="box-radio-input"
+                                            id="keyword-14"><label for="keyword-14">#코믹</label>
                                     </div>
                                 </div>
                                 <!-- 5번째줄 -->
                                 <div class=" row row-cols-3 ">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="실외" class="box-radio-input"
-                                            id="keyword-14"><label for="keyword-14">#실외</label>
+                                        <input type="checkbox" name="keyword" value="포토존" class="box-radio-input"
+                                            id="keyword-15"><label for="keyword-15">#포토존</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="실내" class="box-radio-input"
-                                            id="keyword-15"><label for="keyword-15">#실내</label>
+                                        <input type="checkbox" name="keyword" value="연말" class="box-radio-input"
+                                            id="keyword-16"><label for="keyword-16">#연말</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활동적인" class="box-radio-input"
-                                            id="keyword-16"><label for="keyword-16">#활동적인</label>
+                                        <input type="checkbox" name="keyword" value="화려" class="box-radio-input"
+                                            id="keyword-17"><label for="keyword-17">#화려</label>
                                     </div>
                                 </div>
                                 <!-- 6번째줄 -->
                                 <div class=" row row-cols-4 keyword-box">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="자연적인" class="box-radio-input"
-                                            id="keyword-17"><label for="keyword-17">#자연적인</label>
+                                        <input type="checkbox" name="keyword" value="동화" class="box-radio-input"
+                                            id="keyword-18"><label for="keyword-18">#동화</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="신나는" class="box-radio-input"
-                                            id="keyword-18"><label for="keyword-18">#신나는</label>
+                                        <input type="checkbox" name="keyword" value="소규모" class="box-radio-input"
+                                            id="keyword-19"><label for="keyword-19">#소규모</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="활발한" class="box-radio-input"
-                                            id="keyword-19"><label for="keyword-19">#활발한</label>
+                                        <input type="checkbox" name="keyword" value="대규모" class="box-radio-input"
+                                            id="keyword-20"><label for="keyword-20">#대규모</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="checkbox" name="keyword" value="조용한" class="box-radio-input"
-                                            id="keyword-20"><label for="keyword-20">#조용한</label>
+                                        <input type="checkbox" name="keyword" value="음악" class="box-radio-input"
+                                            id="keyword-21"><label for="keyword-21">#음악</label>
+                                    </div>
+                                </div>
+                                <!-- 7번째 -->
+                                <div class=" row row-cols-3 ">
+                                    <!-- <h4>MBTI</h4> -->
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="친구" class="box-radio-input"
+                                            id="keyword-22"><label for="keyword-22">#친구</label>
+                                    </div>
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="감성" class="box-radio-input"
+                                            id="keyword-23"><label for="keyword-23">#감성</label>
+                                    </div>
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="힐링" class="box-radio-input"
+                                            id="keyword-24"><label for="keyword-24">#힐링</label>
+                                    </div>
+                                </div>
+                                <!-- 6번째줄 -->
+                                <div class=" row row-cols-4 keyword-box">
+                                    <!-- <h4>MBTI</h4> -->
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="웅장" class="box-radio-input"
+                                            id="keyword-25"><label for="keyword-25">#웅장</label>
+                                    </div>
+                                    <div class="box-radio-input MBTI">
+                                        <input type="checkbox" name="keyword" value="소통" class="box-radio-input"
+                                            id="keyword-26"><label for="keyword-26">#소통</label>
                                     </div>
                                 </div>
                             </legend>
