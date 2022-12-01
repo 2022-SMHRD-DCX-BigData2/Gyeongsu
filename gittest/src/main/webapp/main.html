@@ -317,17 +317,28 @@
 
 
             <section id="slider">
-                <input type="radio" name="slider" id="s1">
+                <input type="radio" name="slider" id="s1" checked>
                 <input type="radio" name="slider" id="s2">
-                <input type="radio" name="slider" id="s3" checked>
+                <input type="radio" name="slider" id="s3">
                 <input type="radio" name="slider" id="s4">
                 <input type="radio" name="slider" id="s5">
-                <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <input type="radio" name="slider" id="s6">
+                <input type="radio" name="slider" id="s7">
+                <input type="radio" name="slider" id="s8">
+                <input type="radio" name="slider" id="s9">
+                <input type="radio" name="slider" id="s10">
+                <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt="">1</label>
+                <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt="">2</label>
+                <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt="">3</label>
+                <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt="">4</label>
+                <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt="">5</label>
+                <label for="s6" id="slide6"><img src="https://via.placeholder.com/200x275" alt="">6</label>
+                <label for="s7" id="slide7"><img src="https://via.placeholder.com/200x275" alt="">7</label>
+                <label for="s8" id="slide8"><img src="https://via.placeholder.com/200x275" alt="">8</label>
+                <label for="s9" id="slide9"><img src="https://via.placeholder.com/200x275" alt="">9</label>
+                <label for="s10" id="slide10"><img src="https://via.placeholder.com/200x275" alt="">10</label>
               </section>
+              <button onclick="test()">다음</button>
             <h1>경남/부산</h1>
             <div class="tabscontainer">
                 <ul class="tabsmenu">
@@ -1525,6 +1536,49 @@
     });
 });
     </script>
+    <!-- 슬라이드 자동변환 -->
+    <!-- <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+          document.getElementById('s' + counter).checked = true;
+          counter++;
+          if(counter > 10){
+            counter = 1;
+          }
+        }, 2000);
+        
+        </script> -->
+        <!-- <script type="text/javascript">
+            function test() {
+                var obj_length = document.getElementsByName("slider").length;
+                for (var i = 1; i <= obj_length; i++) {
+                    var conuter = i;
+                    if (document.getElementById('s' + i).checked = true) {
+                        
+                        
+                        document.getElementById('s'+ i+1).checked = true
+                    }
+                }
+            }
+        </script> -->
+         <script type="text/javascript">
+            setInterval(function () {
+                // 전체 슬라이드 길이 구하고
+                var obj_length = document.getElementsByName("slider").length;
+                for (let i = 1; i <= obj_length.length; i++) {
+
+                    const slide = document.getElementById('s'+i).checked;
+                    var next = document.getElementById('s'+i+1);
+                    // 아이디에 체크 클라스 유무 확인
+                    if (slide==true) {
+                        next.classList.remove('checked')
+                        slide.classList.add('checked')
+                    }
+                    
+                }
+            }, 2000);
+            
+        </script>
 </body>
 
 </html>
