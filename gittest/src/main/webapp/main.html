@@ -22,6 +22,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/test.js"></script>
     <title>Document</title>
 </head>
 
@@ -1545,93 +1546,7 @@
             });
         });
     </script>
-    <!-- 슬라이드 자동변환 -->
-    <script>
-        var counter = 1;
-        setInterval(function () {
-            document.getElementById('s' + counter).checked = true;
-            counter++;
-            if (counter >= 11) {
-                counter = 1;
-            }
-        }, 2000);
-    </script>
-    <!-- 슬라이드 클릭시 그번호로 시작 -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("input:radio[name=slider]").click(function () {
-                var num = $(this).attr('id')
-                console.log(num);
-                for (let i = 0; i <= document.getElementsByName("slider").length; i++) {
-                    if (num == 's' + i) {
-                        counter = i;
-
-                    }
-
-                }
-
-                OnlyMember();
-
-            })
-        });
-        function OnlyMember() {
-
-            return false;
-        }
-    </script>
-    <script>
-        // 각개 버튼이 클릭될 때 해당 버튼의 구현하고 싶은 코드 구현 방법
-        $(document).ready(function btns () {
-            $(".slider-btn").on('click', function (e) {
-                if (e.target.id === 'prev-btn') {
-                    // 1번 버튼을 클릭했을 때 구현하고 싶은 코드
-                    var currentNumber = $("input[name='slider']:checked").attr('id');
-                    for (let i = 0; i <= document.getElementsByName("slider").length; i++) {
-                        if (currentNumber == 's' + i) {
-                            currentNumber = 's' + (i - 1);
-                            if (currentNumber == 's0') {
-                                currentNumber = 's' + 10;
-                                counter=10;
-                                
-                            }else{
-                                counter = i-1
-                            }
-                                
-                            
-                            document.getElementById(currentNumber).checked = true;
-                            
-                            return false;
-                            
-                        }
-                        
-                    }
-                } else if (e.target.id === 'next-btn') {
-                    // 2번 버튼을 클릭했을 때 구현하고 싶으 코드
-                    var currentNumber = $("input[name='slider']:checked").attr('id');
-                    for (let i = 0; i <= document.getElementsByName("slider").length; i++) {
-                        if (currentNumber == 's' + i) {
-                            currentNumber = 's' + (i + 1);
-                            if (currentNumber == "s11" ) {
-                                currentNumber = 's' + 1;
-                                counter=1;
-                            }
-                            document.getElementById(currentNumber).checked = true;
-                            counter = i+1;
-                            return false;
-                            
-                        }
-                        
-                    }
-                }
-                OnlyMember();
-
-            });
-        });
-        function OnlyMember() {
-
-            return false;
-        }
-    </script>
+    
 </body>
 
 </html>

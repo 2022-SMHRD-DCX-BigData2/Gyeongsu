@@ -282,7 +282,7 @@ input[type=text],input[type=password] {
 
 :root {
   --tabcolor: rgb(255, 255, 255);
-  --tabtextcolor: #CA9393;
+  --tabtextcolor: #A8C595;
   --tabactive: rgba(0, 0, 0, 0.438);
 }
 
@@ -322,7 +322,7 @@ input[type=text],input[type=password] {
 
 .tabsmenu li.active a {
   cursor: default;
-  border-bottom: solid 5px var(--tabtextcolor);
+  border-bottom: solid 5px #A8C595
 
 }
 

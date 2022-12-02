@@ -111,6 +111,36 @@ padding: 10%;
 .like{
   justify-content: center;
 }
+.MBTI-rank{
+  display: flex;
+  width: 107px;
+  height: 32px;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: center;
+  justify-content: center;
+}
+.statistics{
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgb(0 0 0 / 10%);
+  padding: 3%;
+}
+.statistics-1{
+  justify-content: center;
+}
+.statistics h3{
+  color: #C1D9B0;
+}
+.statistics>.col-6:first-child{
+  border-right: solid rgba(0, 0, 0, 0.24);
+  padding-bottom: 2%;
+}
+.statistics .col-3{
+  display: flex;
+}
+.statistics .MBTI-box{
+  margin-top: 1%;
+}
 .form-control{
   width: auto;
 }
