@@ -182,12 +182,15 @@ public class ReviewMember {
 		super();
 	}
 		
-	public ReviewMember(int favor) {
-		super();
-		this.favor = favor;
-	}
+
 
 	
+
+	public ReviewMember(int review_no) {
+		super();
+		this.review_no = review_no;
+	}
+
 
 	public ReviewMember(int activity_no, int user_no, int favor) {
 		super();
