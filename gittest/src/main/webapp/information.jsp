@@ -387,14 +387,11 @@
     			<%}%>
     			<div class="col-9"></div>
     			<div class="col align-self-end">
-                    
-                    <%for(ReviewMember m:revMemberList){ %>
+                <%for(ReviewMember m:revMemberList){ %>
               	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
 						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
-
                 <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
 						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
-
                 <%} %>
                 <%} %>
                     </div>
@@ -499,6 +496,7 @@
                 </form>
               <div>
               	<%for(ReviewMember m:revMemberList){ %>
+                    <%if(m.getReview()!=null) {%>
               	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1){ %>
                 <div class="form-control comment-text">
                     <p><%=m.getId() %></p>
@@ -506,6 +504,7 @@
                     <P><%=m.getReview_time() %></P>
                 </div>
                 <%} %>
+                    <%} %>
                 <%} %>
             </div>
         </div>
