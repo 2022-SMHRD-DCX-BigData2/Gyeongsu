@@ -400,19 +400,26 @@
             <div class="col-2"><img src="<%=loginActivity.getActivity_pic() %>" alt=""></div>
             <div class="col-8">
                 <dl class="information-text">
-                    <dt>기간</dt>
-                    <dd>2022-11-21 ~ 2022-11-23 (진행중)</dd>
-                    <dt>시간</dt>
-                    <dd>월요일 ~ 수요일(19:30)</dd>
-                    <dt>가격</dt>
-                    <dd>전석 30,000원</dd>
-                    <dt>장소</dt>
-                    <dd>부산
-                        공간소극장</dd>
-                    <dt>문의</dt>
-                    <dd>공간소극장 051-611-8518</dd>
-                    <dt>주취</dt>
-                    <dd>(재)예술경영지원센터(주최), 문화체육관광부(주관)</dd>
+                    <dt>기간 : </dt>
+                    <dd>
+                    <%if(startdate.compareTo(nowdate)>=1){%>
+            	<%=loginActivity.getStart_date() %>~<%=loginActivity.getFinish_date() %> (예정중)
+            <%}else if(startdate.compareTo(nowdate)<=0 && finishdate.compareTo(nowdate)>=0){%>
+            	<%=loginActivity.getStart_date() %>~<%=loginActivity.getFinish_date() %> (진행중)
+    		<%}else if(finishdate.compareTo(nowdate)<=-1){%>
+    			<%=loginActivity.getStart_date() %>~<%=loginActivity.getFinish_date() %> (완료)
+    		<%}else{%>
+    			<%=loginActivity.getStart_date() %>~<%=loginActivity.getFinish_date() %> (미정)
+    			<%}%>
+                    </dd>
+                    <dt>장소 : </dt>
+                    <dd>
+                    <%=loginActivity.getActivity_place() %>
+                    </dd>
+                    <dt>관람 연령 : </dt>
+                    <dd><%=loginActivity.getActivity_age()%></dd>
+                    <dt>예매 링크 : </dt>
+                    <dd><div class="hashtag-box"><a href="<%=loginActivity.getActivity_ad()%>">바로가기</a></div></dd>
                 </dl>
             </div>
             <div class="contentmid">
