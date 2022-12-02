@@ -764,11 +764,30 @@ select{
 
 
 /* 슬라이더 */
-* {
-  margin: 0;
-  padding: 0;
+#prev-btn,#next-btn{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  border: rgba(245, 245, 220, 0);
+  background-color: rgba(255, 222, 173, 0);
+  cursor: pointer;
+  width: 3%;
+  height: auto;
 }
+#prev-btn{
+  
+  
+  top: 50%;
+  left: 10%;
+  
 
+}
+#next-btn{
+  
+  top: 50%;
+  left: 90%;
+  
+
+}
 [type=radio] {
   display: none;
 }
