@@ -15,7 +15,7 @@ public class UserMember {
 	private String key_no3;
 	private String key_no4;
 	private String gender;
-	private int age;
+	private String age;
 	
 	// getter, setter
 	
@@ -79,10 +79,10 @@ public class UserMember {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	
@@ -90,6 +90,14 @@ public class UserMember {
 	public UserMember() {
 		super();
 	}
+	
+	
+	
+	public UserMember(int user_no) {
+		super();
+		this.user_no = user_no;
+	}
+	
 	
 	public UserMember(String id, String pw) {
 		super();
@@ -120,9 +128,9 @@ public class UserMember {
 		this.name = name;
 		this.mbti = mbti;
 	}
-	
+		
 	public UserMember(int user_no, String id, String pw, String name, String mbti, String key_no1, String key_no2,
-			String key_no3, String key_no4, String gender, int age) {
+			String key_no3, String key_no4, String gender, String age) {
 		super();
 		this.user_no = user_no;
 		this.id = id;
@@ -156,6 +164,18 @@ public class UserMember {
 		this.key_no3 = key_no3;
 		this.key_no4 = key_no4;
 	}
+	
+	
+	public UserMember(int user_no, String id, String pw, String name, String gender, String age) {
+		super();
+		this.user_no = user_no;
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+	}
+	
 	
 	// 객체에 담긴 정보를 출력해볼 수 있는 메소드
 	// toString

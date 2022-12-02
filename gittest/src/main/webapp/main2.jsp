@@ -41,6 +41,7 @@
 
 <body>
     <!-- 회원가입모달 -->
+<form action="JoinCon" method="post">
     <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -50,31 +51,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="JoinCon" method="post">
                 	<input type="hidden" name="user_no" value="0">
-                	<input type="hidden" name="mbti" placeholder="MBTI를 입력하세요" value="1234">
-					<input type="hidden" name="key_no1" placeholder="키워드1를 입력하세요" value="1">
-					<input type="hidden" name="key_no2" placeholder="키워드2를 입력하세요" value="2">
-					<input type="hidden" name="key_no3" placeholder="키워드3를 입력하세요" value="3">
-					<input type="hidden" name="key_no4" placeholder="키워드4를 입력하세요" value="4">
-					<input type="hidden" name="gender" value="0">
-					<input type="hidden" name="age" value="0">
                     <p>아이디</p>
                     <input type="text" placeholder="아이디" name="id" />
                     <p>비밀번호</p>
                     <input type="password" placeholder="비밀번호" name="pw"  class="password"/>
-                    <p>닉네임</p>
-                    <input type="text" placeholder="닉네임" name="name" />
+                    <p>이름</p>
+                    <input type="text" placeholder="이름" name="name" />
                     <div class="row">
                 	<div class="col MBTI">
+                	
                 			<p>성별</p>
-                			<div class="sex">
                 				<input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
                             	for="age-y">남</label>
                             	<input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
                             	for="age-x">여</label>
-                			</div>
-                            
                         </div>
                         <div class="col MBTI">
                             <p>나이</p>
@@ -91,11 +82,11 @@
                         </div>
                 	</div>
                 </div> 
-				</form>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                        data-bs-toggle="modal">완료</button>
+                	<button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal" type="button">다음</button>
                 </div>
+				
             </div>
         </div>
     </div>
@@ -114,27 +105,27 @@
                                 <div class=" row row-cols-4 ">
                                     <!-- <h4>MBTI</h4> -->
                                     <div class="box-radio-input MBTI">
-                                        <input type="radio" name="mbti-1" value="E" class="box-radio-input"
+                                        <input type="radio" name="mbti_1" value="E" class="box-radio-input"
                                             id="mbti-e"><label for="mbti-e">E</label>
-                                        <input type="radio" name="mbti-1" value="I" class="box-radio-input"
+                                        <input type="radio" name="mbti_1" value="I" class="box-radio-input"
                                             id="mbti-i"><label for="mbti-i">I</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="radio" name="mbti-2" value="S" class="box-radio-input"
+                                        <input type="radio" name="mbti_2" value="S" class="box-radio-input"
                                             id="mbti-s"><label for="mbti-s">S</label>
-                                        <input type="radio" name="mbti-2" value="N" class="box-radio-input"
+                                        <input type="radio" name="mbti_2" value="N" class="box-radio-input"
                                             id="mbti-n"><label for="mbti-n">N</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="radio" name="mbti-3" value="T" class="box-radio-input"
+                                        <input type="radio" name="mbti_3" value="T" class="box-radio-input"
                                             id="mbti-t"><label for="mbti-t">T</label>
-                                        <input type="radio" name="mbti-3" value="F" class="box-radio-input"
+                                        <input type="radio" name="mbti_3" value="F" class="box-radio-input"
                                             id="mbti-f"><label for="mbti-f">F</label>
                                     </div>
                                     <div class="box-radio-input MBTI">
-                                        <input type="radio" name="mbti-4" value="P" class="box-radio-input"
+                                        <input type="radio" name="mbti_4" value="P" class="box-radio-input"
                                             id="mbti-p"><label for="mbti-p">P</label>
-                                        <input type="radio" name="mbti-4" value="J" class="box-radio-input"
+                                        <input type="radio" name="mbti_4" value="J" class="box-radio-input"
                                             id="mbti-j"><label for="mbti-j">J</label>
                                     </div>
                                 </div>
@@ -284,7 +275,7 @@
             </div>
         </div>
     </div>
-
+</form>
     <!-- 회원가입모달끝 -->
     <!-- 로그인모달 -->
 

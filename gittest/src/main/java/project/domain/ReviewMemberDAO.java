@@ -174,4 +174,30 @@ public class ReviewMemberDAO {
 			
 			return cnt;
 		}// 리뷰삭제 끝!
+		
+		// 좋아요정보 수정 기능 구현
+				public int updateFavor(ReviewMember updateFavor) {
+					int cnt = 0;
+					try {
+						// mapper.xml의 id값
+						cnt = sqlSession.update("updateFavor", updateFavor);
+						
+						if(cnt > 0) {
+							// 만약에 내가 원하는 일을 했으면 DB에 반영
+							System.out.println("DAO : 리뷰정보수정 성공!!");
+							sqlSession.commit();
+						} else {
+							// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+							sqlSession.rollback();
+						}
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						// 빌렸떤 Connection 객체를 반납
+						sqlSession.close();
+					}
+					
+					return cnt;
+				} // 리뷰정보 수정 끝!!
 }

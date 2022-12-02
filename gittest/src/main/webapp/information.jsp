@@ -420,8 +420,24 @@
             	<img src="<%=loginActivity.getContents() %>" alt="">
             </div>
             <div>
+                <div class="row align-items-center like">
+                    <div class="col-3">
+                    
+                    <%for(ReviewMember m:revMemberList){ %>
+              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>
+						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+                <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
+						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+                <%} %>
+                <%} %>
+                    </div>
+                    <div class="col-3">
+                        <div class="MBTI-box ">INFP</div>
+                        <div class="MBTI-box ">ISFJ</div>
+                        <div class="MBTI-box ">ESTP</div>
+                    </div>
+                </div>
                 <h2>리뷰</h2>
-                
             </div>
              <form action="ReviewCon" method="post">
                 <div class="input-group mb-3 comment">

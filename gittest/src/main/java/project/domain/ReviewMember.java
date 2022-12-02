@@ -4,12 +4,6 @@ import java.sql.Timestamp;
 
 public class ReviewMember {
 
-
-
-
-
-
-
 	private int review_no;
 	private int activity_no;
 	private int user_no;
@@ -187,11 +181,19 @@ public class ReviewMember {
 	public ReviewMember() {
 		super();
 	}
+		
+	public ReviewMember(int favor) {
+		super();
+		this.favor = favor;
+	}
+
 	
 
-	public ReviewMember(int review_no) {
+	public ReviewMember(int activity_no, int user_no, int favor) {
 		super();
-		this.review_no = review_no;
+		this.activity_no = activity_no;
+		this.user_no = user_no;
+		this.favor = favor;
 	}
 
 

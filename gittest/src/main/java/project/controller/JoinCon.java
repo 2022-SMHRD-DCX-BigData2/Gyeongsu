@@ -24,16 +24,31 @@ public class JoinCon extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
-		String mbti = request.getParameter("mbti");
-		String key_no1 = request.getParameter("key_no1");
-		String key_no2 = request.getParameter("key_no2");
-		String key_no3 = request.getParameter("key_no3");
-		String key_no4 = request.getParameter("key_no4");
+		String[] keyword = request.getParameterValues("keyword");
+		String mbti_1 = request.getParameter("mbti_1");
+		String mbti_2 = request.getParameter("mbti_2");
+		String mbti_3 = request.getParameter("mbti_3");
+		String mbti_4 = request.getParameter("mbti_4");
 		String gender = request.getParameter("gender");
-		int age = Integer.parseInt(request.getParameter("age"));
+		String age = request.getParameter("age");
+		
+		for (String ky : keyword) {
+			System.out.print(keyword + " ");
+		}
+		
+		String key_no1 = keyword[0];
+		String key_no2 = keyword[1];
+		String key_no3 = keyword[2];
+		String key_no4 = keyword[3];
+		
+		String mbti = mbti_1 + mbti_2 + mbti_3 + mbti_4;
+		
 		
 		// 2. id, pw를 MavenMember 객체에 담아주기
 		UserMember join = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4, gender, age);
+		
+		
+		System.out.println("mbti는"+mbti+" 조인은"+ join);
 		
 		// 3. DAO이용해서 2.의 내용을 넣어준다!
 		UserMemberDAO dao = new UserMemberDAO();
