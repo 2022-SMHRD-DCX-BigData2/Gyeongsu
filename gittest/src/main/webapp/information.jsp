@@ -431,10 +431,12 @@
                     <div class="col-3">
                     
                     <%for(ReviewMember m:revMemberList){ %>
-              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>
+              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
 						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+
                 <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
 						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+
                 <%} %>
                 <%} %>
                     </div>
