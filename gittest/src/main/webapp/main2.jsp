@@ -426,10 +426,10 @@
 
           <div class="tabselements">
                     <section id="tab11" class="active">
-                            <div class="grid tab-grid ">
+                            <div class="grid tab-grid">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -440,7 +440,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div>300</div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -464,7 +470,7 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+										
                               </a>
                       </div>
                       <%} %>

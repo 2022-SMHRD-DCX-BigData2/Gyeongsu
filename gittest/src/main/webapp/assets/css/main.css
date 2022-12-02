@@ -30,7 +30,7 @@ a {
   text-decoration-line: none;
   text-decoration-style: initial;
   text-decoration-color: initial;
-  color: black;
+  color: rgba(0, 0, 0, 0.558);
   
 }
 .footer_inner{
@@ -548,6 +548,29 @@ input[type=text],input[type=password] {
   border: 2px solid black;
   width: 500px;
   height: 500px;
+}
+.main-item{
+	position: relative;
+}
+#main-like{
+	width: 100%;
+	transform: translate(-50%,0%);
+	position: absolute;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    bottom: 2px;
+    left: 50%;
+ /*    border-top: solid #A8C595 3px;
+    border-radius: 3px */
+}
+#main-like img{
+	width: 25px;
+  height: 25px;
+  padding: 0;
+}
+.like-bottom{
+	height: 25px;
 }
 .items {
   width: 300px;
