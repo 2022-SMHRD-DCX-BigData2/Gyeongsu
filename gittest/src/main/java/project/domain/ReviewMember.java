@@ -182,10 +182,7 @@ public class ReviewMember {
 		super();
 	}
 		
-
-
 	
-
 	public ReviewMember(int review_no) {
 		super();
 		this.review_no = review_no;
