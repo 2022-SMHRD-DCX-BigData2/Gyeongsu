@@ -385,6 +385,19 @@
     		<%}else{%>
     			<div class="hashtag-box">미정</div>
     			<%}%>
+    			<div class="col-9"></div>
+    			<div class="col align-self-end">
+                    
+                    <%for(ReviewMember m:revMemberList){ %>
+              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
+						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+
+                <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
+						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+
+                <%} %>
+                <%} %>
+                    </div>
             <div class = "mt-3"></div>
     
             <div col></div>
@@ -426,27 +439,42 @@
             	<h2>상세 정보</h2>
             	<img src="<%=loginActivity.getContents() %>" alt="">
             </div>
-            <div>
-                <div class="row align-items-center like">
-                    <div class="col-3">
-                    
-                    <%for(ReviewMember m:revMemberList){ %>
-              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
-						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
-
-                <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
-						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
-
-                <%} %>
-                <%} %>
+            <div>    
+                <h2>리뷰</h2>
+                <div class="row align-items-center statistics">
+                    <div class="col-6">
+                        <div class="col-6">성별</div>
+                        <div class="row statistics-1">
+                            <div class="col-3">
+                                <img src="https://openimage.interpark.com/ticket-desktop/pages/product/illust_male.png" alt="">
+                                <div>
+                                    <p>남자</p>
+                                    <h3>18%</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <img src="https://openimage.interpark.com/ticket-desktop/pages/product/illust_female.png" alt="">
+                                <div>
+                                    <p>여자</p>
+                                    <h3>82%</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <div class="MBTI-box ">INFP</div>
-                        <div class="MBTI-box ">ISFJ</div>
-                        <div class="MBTI-box ">ESTP</div>
+                    <div class="col-6">
+                        <div class="col-6">MBTI성향</div>
+                        <div class="row statistics-1">
+                            <div class="MBTI-rank">1순위</div>
+                            <div class="MBTI-rank">2순위</div>
+                            <div class="MBTI-rank">3순위</div>
+                        </div>
+                        <div class="row statistics-1">
+                            <div class="MBTI-box ">INFP</div>
+                            <div class="MBTI-box ">ISFJ</div>
+                            <div class="MBTI-box ">ESTP</div>
+                        </div>
                     </div>
                 </div>
-                <h2>리뷰</h2>
             </div>
              <form action="ReviewCon" method="post">
                 <div class="input-group mb-3 comment">
