@@ -31,7 +31,7 @@
     <!-- 아이콘 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
+    <script src="./assets/js/test.js"></script>
      <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/contentlist.css">
@@ -389,18 +389,31 @@
 
   <main id="" class="">
        <section id="slider">
-                <input type="radio" name="slider" id="s1">
+                <input type="radio" name="slider" id="s1" checked>
                 <input type="radio" name="slider" id="s2">
-                <input type="radio" name="slider" id="s3" checked>
+                <input type="radio" name="slider" id="s3">
                 <input type="radio" name="slider" id="s4">
                 <input type="radio" name="slider" id="s5">
+                <input type="radio" name="slider" id="s6">
+                <input type="radio" name="slider" id="s7">
+                <input type="radio" name="slider" id="s8">
+                <input type="radio" name="slider" id="s9">
+                <input type="radio" name="slider" id="s10">
                 <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt=""></label>
                 <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt=""></label>
                 <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt=""></label>
                 <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt=""></label>
                 <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s6" id="slide6"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s7" id="slide7"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s8" id="slide8"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s9" id="slide9"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s10" id="slide10"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <div>
+                    <img onclick="btns()" class="slider-btn" id="prev-btn" src="./images/common/left-arrow.png"></img>
+                    <img onclick="btns()" class="slider-btn" id="next-btn" src="./images/common/right-arrow.png"></img>
+                </div>
               </section>
-      </div>
       <h1>경남/부산</h1>
             <div class="tabscontainer">
                 <ul class="tabsmenu">
@@ -426,10 +439,10 @@
 
           <div class="tabselements">
                     <section id="tab11" class="active">
-                            <div class="grid tab-grid ">
+                            <div class="grid tab-grid">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -440,7 +453,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div>300</div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -464,7 +483,7 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+										
                               </a>
                       </div>
                       <%} %>

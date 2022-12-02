@@ -56,9 +56,9 @@
                     </div>
                 </div>
             </div>
-
+ 		</div>
     </footer>
-    </div>
+   
     <script src="./assets/js/test.js">
         $('.window .close').click(function (e) {
             //Cancel the link behavior
