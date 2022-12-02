@@ -110,6 +110,16 @@ padding: 10%;
 }
 .like{
   justify-content: center;
+  display: flex;
+}
+.like img{
+  width: 37px;
+  height: 37px;
+}
+.like p{
+	margin-left:10px;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 .MBTI-rank{
   display: flex;

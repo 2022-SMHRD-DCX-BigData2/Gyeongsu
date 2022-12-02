@@ -386,7 +386,7 @@
     			<div class="hashtag-box">미정</div>
     			<%}%>
     			<div class="col-9"></div>
-    			<div class="col align-self-end">
+    			<div class="col align-self-end like">
                     
                     <%for(ReviewMember m:revMemberList){ %>
               	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
@@ -397,6 +397,7 @@
 
                 <%} %>
                 <%} %>
+                    <p>300개</p>
                     </div>
             <div class = "mt-3"></div>
     
