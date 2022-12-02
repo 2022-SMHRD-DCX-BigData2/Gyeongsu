@@ -55,7 +55,8 @@
 dd{
     margin-bottom: 0;
 }
-.board .btn{
-    
+.mypage-crystal{
+    display: flex;
+    justify-content: flex-end;
 }
 

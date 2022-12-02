@@ -409,51 +409,6 @@
                                     </td>
                                 </tr>
 								</c:if>
-                                <tr>
-                                    <td colspan="6" class="button-tr">
-                                        <%-- <%	// 페이징  처리
-                                            if(count > 0){
-                                                // 총 페이지의 수
-                                                int pageCount = count / pageSize + (count%pageSize == 0 ? 0 : 1);
-                                                // 한 페이지에 보여줄 페이지 블럭(링크) 수
-                                                int pageBlock = 10;
-                                                // 한 페이지에 보여줄 시작 및 끝 번호(예 : 1, 2, 3 ~ 10 / 11, 12, 13 ~ 20)
-                                                int startPage = ((currentPage-1)/pageBlock)*pageBlock+1;
-                                                int endPage = startPage + pageBlock - 1;
-                                                
-                                                // 마지막 페이지가 총 페이지 수 보다 크면 endPage를 pageCount로 할당
-                                                if(endPage > pageCount){
-                                                    endPage = pageCount;
-                                                }
-                                                
-                                                if(startPage > pageBlock){ // 페이지 블록수보다 startPage가 클경우 이전 링크 생성
-                                        %>
-                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage - 10%>">[이전]</a>	
-                                        <%			
-                                                }
-                                                
-                                                for(int i=startPage; i <= endPage; i++){ // 페이지 블록 번호
-                                                    if(i == currentPage){ // 현재 페이지에는 링크를 설정하지 않음
-                                        %>
-                                                        [<%=i %>]
-                                        <%									
-                                                    }else{ // 현재 페이지가 아닌 경우 링크 설정
-                                        %>
-                                                        <a href="bulletinBoard.jsp?pageNum=<%=i%>">[<%=i %>]</a>
-                                        <%	
-                                                    }
-                                                } // for end
-                                                
-                                                if(endPage < pageCount){ // 현재 블록의 마지막 페이지보다 페이지 전체 블록수가 클경우 다음 링크 생성
-                                        %>
-                                                    <a href="bulletinBoard.jsp?pageNum=<%=startPage + 10 %>">[다음]</a>
-                                        <%			
-                                                }
-                                            }
-                                        %> --%>
-                                    </td>
-                                </tr>
-                            </table>
                         </div>
 
                     </section>
