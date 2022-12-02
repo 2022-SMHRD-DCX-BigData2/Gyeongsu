@@ -93,6 +93,9 @@ padding: 10%;
   margin-left: 5px;
   margin-bottom: 5px;
 }
+.hashtag-box>a{
+  color: #fff;
+}
 .comment{
   height: 100px;
 }
