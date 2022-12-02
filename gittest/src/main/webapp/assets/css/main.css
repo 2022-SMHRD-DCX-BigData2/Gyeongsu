@@ -621,6 +621,9 @@ input[type=text],input[type=password] {
   flex-direction: column;
   align-items: center;
 }
+#age{
+  flex-direction: row;
+}
 
 .age{
   display: flex;

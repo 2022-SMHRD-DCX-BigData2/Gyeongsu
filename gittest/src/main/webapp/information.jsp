@@ -268,7 +268,6 @@
             <input type="password" placeholder="비밀번호" name="pw" />
         </div>
         <div class="modal-footer">
-          <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="CLose">
           <input type="submit" class="btn btn-primary" value="다음">
         </div>
         </form>
