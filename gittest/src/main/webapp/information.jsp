@@ -13,6 +13,7 @@
 	UserMember loginMember = (UserMember)session.getAttribute("loginMember");
 	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
 	ActivityMember loginActivity = (ActivityMember)session.getAttribute("loginActivity");
+	ReviewMember loginFavor = (ReviewMember)session.getAttribute("loginFavor");
 	ActivityMemberDAO dao = new ActivityMemberDAO();
 	List<ActivityMember> actmemberList = dao.selectAllact();
 	ReviewMemberDAO dao2 = new ReviewMemberDAO();
@@ -387,13 +388,13 @@
     			<%}%>
     			<div class="col-9"></div>
     			<div class="col align-self-end">
-                <%for(ReviewMember m:revMemberList){ %>
-              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==0){ %>	
-						<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
-                <%}else if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1 && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){ %>
-						<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
-                <%} %>
-                <%} %>
+    			<%if(loginFavor == null){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getFavor()==1){ %>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<%}else if(loginFavor.getFavor()==0){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%} %>
                     </div>
             <div class = "mt-3"></div>
     
