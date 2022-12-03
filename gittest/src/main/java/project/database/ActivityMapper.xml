@@ -16,4 +16,8 @@
 		select * from activity_info where activity_no = #{activity_no}
 	</select>
 	
+	<update id="updateFavor_add" parameterType="project.domain.ActivityMember">
+		update activity_info set activity_title=#{activity_title}, activity_pic=#{activity_pic}, activity_ad=#{activity_ad}, activity_place=#{activity_place}, start_date=#{start_date}, finish_date=#{finish_date}, contents=#{contents}, activity_type=#{activity_type}, region_type=#{region_type}, favor_add=#{favor_add}, mbti1=#{mbti1}, mbti2=#{mbti2}, mbti3=#{mbti3}, key_no1=#{key_no1}, key_no2=#{key_no2}, key_no3=#{key_no3}, key_no4=#{key_no4}, key_no5=#{key_no5}, activity_age=#{activity_age} where activity_no=#{activity_no}
+	</update>
+	
 </mapper>

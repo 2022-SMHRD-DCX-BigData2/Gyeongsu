@@ -250,6 +250,16 @@ public class ActivityMember {
 		this.activity_no = activity_no;
 	}
 
+	
+	
+	public ActivityMember(int activity_no, int favor_add) {
+		super();
+		this.activity_no = activity_no;
+		this.favor_add = favor_add;
+	}
+	
+	
+
 	// tostring
 	@Override
 	public String toString() {

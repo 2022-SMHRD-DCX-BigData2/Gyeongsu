@@ -388,7 +388,12 @@
     			<%}%>
     			<div class="col-9"></div>
     			<div class="col align-self-end">
+    			
     			<%if(loginFavor == null){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getActivity_no() != loginActivity.getActivity_no()){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getUser_no() != loginMember.getUser_no()){ %>
     			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
     			<%}else if(loginFavor.getFavor()==1){ %>
     			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>

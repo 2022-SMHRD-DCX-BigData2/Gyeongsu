@@ -32,6 +32,7 @@ public class SelectOneCon extends HttpServlet {
 		ActivityMemberDAO dao = new ActivityMemberDAO();
 		ActivityMember loginActivity = dao.selectActivity(login);
 		
+		System.out.println("섹션은" +loginActivity);
 		// 4. MemberMapper.xml에 SQL문 만들기
 		
 		// 5. 명령 후 처리
