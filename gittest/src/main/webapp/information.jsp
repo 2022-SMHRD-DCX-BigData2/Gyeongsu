@@ -4,6 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="project.domain.ActivityMemberDAO"%>
 <%@page import="project.domain.ReviewMemberDAO"%>
+<%@page import="project.domain.UserMemberDAO"%>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
@@ -18,6 +19,8 @@
 	List<ActivityMember> actmemberList = dao.selectAllact();
 	ReviewMemberDAO dao2 = new ReviewMemberDAO();
 	List<ReviewMember> revMemberList = dao2.selectAllRev();
+	UserMemberDAO dao3 = new UserMemberDAO();
+	List<UserMember> UserMemberList = dao3.selectAll();
 	Date nowTime = new Date();
 	SimpleDateFormat df = new SimpleDateFormat("YYYY.MM.dd");
 	
@@ -442,7 +445,7 @@
             	<h2>상세 정보</h2>
             	<img src="<%=loginActivity.getContents() %>" alt="">
             </div>
-            <div>    
+            <div>
                 <h2>리뷰</h2>
                 <div class="row align-items-center statistics">
                     <div class="col-6">

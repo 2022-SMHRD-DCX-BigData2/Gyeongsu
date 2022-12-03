@@ -87,7 +87,7 @@ public class Favor_addCon extends HttpServlet {
 					// 같은 이름으로 덮어쓰기 해야한다!
 					session.setAttribute("loginActivity", update);
 					
-					response.sendRedirect("information.jsp");
+					response.sendRedirect("InsertRatioCon");
 				}else {
 					System.out.println("회원정보수정 실패!");
 					response.sendRedirect("main2.jsp");
