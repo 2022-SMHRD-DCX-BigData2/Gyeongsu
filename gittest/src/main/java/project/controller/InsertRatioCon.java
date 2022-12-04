@@ -66,6 +66,8 @@ public class InsertRatioCon extends HttpServlet {
 			// 4. DAO의 명령 후 처리
 			if(cnt >0) {
 				// 성공했으면 -> 성공페이지로 이동O
+				session.setAttribute("loginRatio", posts);
+				
 				response.sendRedirect("information.jsp");
 				
 			} else {

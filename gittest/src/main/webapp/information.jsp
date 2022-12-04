@@ -1,10 +1,16 @@
 <%@page import="project.domain.UserMember"%>
 <%@page import="project.domain.ActivityMember"%>
 <%@page import="project.domain.ReviewMember"%>
+<%@page import="project.domain.RatioMember"%>
 <%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import= "java.util.Collections"%>
+<%@page import= "java.util.HashSet"%>
+<%@page import= "java.util.Set"%>
 <%@page import="project.domain.ActivityMemberDAO"%>
 <%@page import="project.domain.ReviewMemberDAO"%>
 <%@page import="project.domain.UserMemberDAO"%>
+<%@page import="project.domain.RatioMemberDAO"%>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>  
@@ -15,14 +21,18 @@
 	ActivityMember activityMember = (ActivityMember)session.getAttribute("activityMember");
 	ActivityMember loginActivity = (ActivityMember)session.getAttribute("loginActivity");
 	ReviewMember loginFavor = (ReviewMember)session.getAttribute("loginFavor");
+	RatioMember loginRatio = (RatioMember)session.getAttribute("loginRatio");
 	ActivityMemberDAO dao = new ActivityMemberDAO();
 	List<ActivityMember> actmemberList = dao.selectAllact();
 	ReviewMemberDAO dao2 = new ReviewMemberDAO();
 	List<ReviewMember> revMemberList = dao2.selectAllRev();
 	UserMemberDAO dao3 = new UserMemberDAO();
 	List<UserMember> UserMemberList = dao3.selectAll();
+	RatioMemberDAO dao4 = new RatioMemberDAO();
+	List<RatioMember> RatioMemberList = dao4.selectAllRatio();
 	Date nowTime = new Date();
 	SimpleDateFormat df = new SimpleDateFormat("YYYY.MM.dd");
+	ArrayList<String> arrList = new ArrayList<String>();
 	
 %>
 
@@ -391,6 +401,33 @@
     			<%}%>
     			<div class="col-9"></div>
     			<div class="col align-self-end">
+    			<c:if test="${loginMember == null}">
+					<a href="#" onclick="alert('로그인후 이용가능합니다!')"><img src="./images/common/love.png"></a>
+				</c:if>
+				<c:if test="${loginMember != null}">
+    			<%if(loginMember!=null){ %>
+    			<% int saveheart =0; %>
+    			<%for(RatioMember m:RatioMemberList){ %>
+    			<%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getUser_no()==loginMember.getUser_no() && m.getFavor()==1){%>
+				<%saveheart++; %>	    			
+    			<%} %>
+    			<%} %>
+    			
+    			<%if(saveheart==1){ %>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<%}else if(loginFavor == null){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getActivity_no() != loginActivity.getActivity_no()){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getUser_no() != loginMember.getUser_no()){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%}else if(loginFavor.getFavor()==1){ %>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<%}else if(loginFavor.getFavor()==0){ %>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<%} %>
+    			
+    			<%}else{ %>
     			
     			<%if(loginFavor == null){ %>
     			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
@@ -403,6 +440,10 @@
     			<%}else if(loginFavor.getFavor()==0){ %>
     			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
     			<%} %>
+    			
+    			<%} %>
+    			</c:if>
+    			
                     </div>
             <div class = "mt-3"></div>
     
@@ -454,20 +495,108 @@
                             <div class="col-3">
                                 <img src="https://openimage.interpark.com/ticket-desktop/pages/product/illust_male.png" alt="">
                                 <div>
+                                <%
+                                	int total = 0;
+                                	int man_sum = 0;
+                                	int woman_sum = 0;
+                                	
+                                %>
+                                <%for(RatioMember m:RatioMemberList){ %>
+                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1){ %>
+                                	<%total ++;%>                                                             
+                                <%} %>
+                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1 && m.getGender().equals("남")){ %>
+                                	<%man_sum ++;%>                                                           
+                                <%} %>
+                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1 && m.getGender().equals("여")){ %>
+                                	<%woman_sum ++;%>                                                           
+                                <%} %>
+                                <%} %>
+                                
                                     <p>남자</p>
-                                    <h3>18%</h3>
+                                    <h3>
+                                    <%if(total==0){ %>
+                                    <%=0 %>%
+                                    <%}else if(total!=0){ %>
+                                    <%=(man_sum*100)/total%>%
+                                    <%} %>
+                                    </h3>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <img src="https://openimage.interpark.com/ticket-desktop/pages/product/illust_female.png" alt="">
                                 <div>
                                     <p>여자</p>
-                                    <h3>82%</h3>
+                                    <h3>
+                                    <%if(total==0){ %>
+                                    <%=0 %>%
+                                    <%}else if(total!=0){ %>
+                                    <%=(woman_sum*100)/total%>%
+                                    <%} %>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
+
+                                
+                                
+                                <%for(RatioMember m:RatioMemberList){ %>
+                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1){ %>
+                                <%arrList.add(m.getMbti()); %>
+                                <%} %>
+                                <%} %>
+            					
+             					<%int a = 0; %>
+            					<%String as = ""; %>
+            					<%int b = 0; %>
+            					<%String bs = ""; %>
+            					<%int c = 0; %>
+            					<%String cs = ""; %>
+            					<%int space = 0; %>
+            					<%String spaces = ""; %>
+            					<%int space2 = 0; %>
+            					<%String spaces2 = ""; %>
+            					
+            					 <% Set<String> set = new HashSet<String>(arrList);%>
+            					 <% for (String str : set) {%>
+            					 <% int countmbti = Collections.frequency(arrList, str);%>
+            					 <%if(countmbti > a){ %>
+            					 
+            					 <%spaces = as; %>
+            					 <%space = a; %>
+            					 <%spaces2 = bs; %>
+            					 <%space2 = b; %>
+            					 
+            					 <%as = str; %>
+            					 <%a = countmbti; %>
+            					 <%bs = spaces; %>
+            					 <%b = space; %>
+            					 <%cs = spaces2; %>
+            					 <%c = space2; %>
+            					 
+            					 <%}else if(countmbti <= a && countmbti > b){ %>
+            					 
+            					 <%spaces2 = bs; %>
+            					 <%space2 = b; %>
+            					 
+            					 <%bs = str; %>
+            					 <%b = countmbti; %>
+            					 <%cs = spaces2; %>
+            					 <%c = space2; %>
+            					 
+            					 <%}else if(countmbti <= b){ %>
+            					 
+            					 <%cs = str; %>
+            					 <%c = countmbti; %>
+            					 
+							     <%}%>
+							     <%}%>
+						            <%-- <% out.println(as + " : " + a);%>
+						            <% out.println(bs + " : " + b);%>
+						            <% out.println(cs + " : " + c);%> --%>
+		
                         <div class="col-6">MBTI성향</div>
                         <div class="row statistics-1">
                             <div class="MBTI-rank">1순위</div>
@@ -475,9 +604,9 @@
                             <div class="MBTI-rank">3순위</div>
                         </div>
                         <div class="row statistics-1">
-                            <div class="MBTI-box ">INFP</div>
-                            <div class="MBTI-box ">ISFJ</div>
-                            <div class="MBTI-box ">ESTP</div>
+                            <div class="MBTI-box "><%=as %></div>
+                            <div class="MBTI-box "><%=bs %></div>
+                            <div class="MBTI-box "><%=cs %></div>
                         </div>
                     </div>
                 </div>
