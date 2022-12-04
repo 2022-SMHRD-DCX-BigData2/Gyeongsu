@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="project.domain.UserMember"%>
 <%@page import="project.domain.ActivityMember"%>
 <%@page import="project.domain.ReviewMember"%>
@@ -379,84 +380,97 @@
 
                 <div class="tabselements">
                     <section id="tab11" class="active">
+                                <form action="UpdateCon" method="post">
                         <div>
                             <h3>기본정보</h3>
                             <div>
-                                <form action="" method="post"></form>
                                 <dl class="my-box">
                                     <dt>아이디</dt>
-                                    <dd>host</dd>
+                                    <dd><input type="text" name="id" placeholder="아이디를 입력하세요" value="<%=loginMember.getId()%>"></dd>
                                 </dl>
                     
                                 <dl class="my-box">
                                     <dt>비밀번호</dt>
-                                    <dd>123456</dd>
+                                    <dd><input type="password" name="pw" placeholder="비밀번호를 입력하세요" value="<%=loginMember.getPw()%>"></dd>
                                 </dl>
                                 <dl class="my-box">
-                                    <dt>닉네임</dt>
-                                    <dd>홍길동</dd>
+                                    <dt>이름</dt>
+                                    <dd><input type="text" name="name" placeholder="이름을 입력하세요" value="<%=loginMember.getName()%>"></dd>
                                 </dl>
                                 <dl class="my-box">
+                                <% String saveage = loginMember.getAge(); %>
                                     <dt>나이</dt>
                                     <dd><select name="age">
                                             <option value="">선택</option>
-                                            <option value="age10">10대</option>
-                                            <option value="age20">20대</option>
-                                            <option value="age30">30대</option>
-                                            <option value="age40">40대</option>
-                                            <option value="age50">50대</option>
-                                            <option value="age60">60대</option>
-                                            <option value="age70">70대이상</option>
+                                            <option value="age10" <%if(saveage.equals("age10")){%> selected <%} %>>10대</option>
+                                            <option value="age20" <%if(saveage.equals("age20")){%> selected <%} %>>20대</option>
+                                            <option value="age30" <%if(saveage.equals("age30")){%> selected <%} %>>30대</option>
+                                            <option value="age40" <%if(saveage.equals("age40")){%> selected <%} %>>40대</option>
+                                            <option value="age50" <%if(saveage.equals("age50")){%> selected <%} %>>50대</option>
+                                            <option value="age60" <%if(saveage.equals("age60")){%> selected <%} %>>60대</option>
+                                            <option value="age70" <%if(saveage.equals("age70")){%> selected <%} %>>70대이상</option>
                                         </select></dd>
                                 </dl>
                                 <dl class="my-box">
+                                <%
+                                	String savembti = loginMember.getMbti();
+                  					String first = savembti.substring(0,1);
+                  					String second = savembti.substring(1,2);
+                  					String third = savembti.substring(2,3);
+                  					String forth = savembti.substring(3);
+                  				
+                  				%>
                                     <dt>MBTI</dt>
                                     <dd>
                                         <div class=" row row-cols-4 ">
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
-                                                <input type="radio" name="mbti-1" value="E" class="box-radio-input" id="mbti-e-change"><label
-                                                    for="mbti-e-change">E</label>
+                                                <input type="radio" name="mbti-1" value="E" class="box-radio-input" 
+                                                	id="mbti-e-change" <%if(first.equals("E")){%> checked="checked" <%} %>><label for="mbti-e-change">E</label>
                                                 <input type="radio" name="mbti-1" value="I" class="box-radio-input"
-                                                    id="mbti-i-change"><label for="mbti-i-change">I</label>
+                                                    id="mbti-i-change" <%if(first.equals("I")){%> checked="checked" <%} %>><label for="mbti-i-change">I</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="radio" name="mbti-2" value="S" class="box-radio-input"
-                                                    id="mbti-s-change"><label for="mbti-s-change">S</label>
+                                                    id="mbti-s-change" <%if(second.equals("S")){%> checked="checked" <%} %>><label for="mbti-s-change">S</label>
                                                 <input type="radio" name="mbti-2" value="N" class="box-radio-input"
-                                                    id="mbti-n-change"><label for="mbti-n-change">N</label>
+                                                    id="mbti-n-change" <%if(second.equals("N")){%> checked="checked" <%} %>><label for="mbti-n-change">N</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="radio" name="mbti-3" value="T" class="box-radio-input"
-                                                    id="mbti-t-change"><label for="mbti-t-change">T</label>
+                                                    id="mbti-t-change" <%if(third.equals("T")){%> checked="checked" <%} %>><label for="mbti-t-change">T</label>
                                                 <input type="radio" name="mbti-3" value="F" class="box-radio-input"
-                                                    id="mbti-f-change"><label for="mbti-f-change">F</label>
+                                                    id="mbti-f-change" <%if(third.equals("F")){%> checked="checked" <%} %>><label for="mbti-f-change">F</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="radio" name="mbti-4" value="P" class="box-radio-input"
-                                                    id="mbti-p-change"><label for="mbti-p-change">P</label>
+                                                     id="mbti-p-change" <%if(forth.equals("P")){%> checked="checked" <%} %>><label for="mbti-p-change">P</label>
                                                 <input type="radio" name="mbti-4" value="J" class="box-radio-input"
-                                                    id="mbti-j-change"><label for="mbti-j-change">J</label>
+                                                     id="mbti-j-change" <%if(forth.equals("J")){%> checked="checked" <%} %>><label for="mbti-j-change">J</label>
                                             </div>
                                         </div>
                                     </dd>
                                 </dl>
                                 <dl class="my-box">
+                                <% 
+                                	String savekeyword = loginMember.getKey_no1() + " " + loginMember.getKey_no2() + " " + loginMember.getKey_no3() + " " + loginMember.getKey_no4();
+                                	
+                                %>
                                     <dt>키워드</dt>
                                     <dd>
                                         <div class=" row row-cols-3 ">
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="실내" class="box-radio-input"
-                                                    id="keyword-1-change"><label for="keyword-1-change">#실내</label>
+                                                    id="keyword-1-change" <% if(savekeyword.contains("실내")){%> checked <%} %>><label for="keyword-1-change">#실내</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="실외" class="box-radio-input"
-                                                    id="keyword-2-change"><label for="keyword-2-change">#실외</label>
+                                                    id="keyword-2-change" <% if(savekeyword.contains("실외")){%> checked <%} %>><label for="keyword-2-change">#실외</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="잔잔" class="box-radio-input"
-                                                    id="keyword-3-change"><label for="keyword-3-change">#잔잔</label>
+                                                    id="keyword-3-change" <% if(savekeyword.contains("잔잔")){%> checked <%} %>><label for="keyword-3-change">#잔잔</label>
                                             </div>
                                         </div>
                                         <!-- 2번째줄 -->
@@ -464,19 +478,19 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="활발" class="box-radio-input"
-                                                    id="keyword-4-change"><label for="keyword-4-change">#활발</label>
+                                                    id="keyword-4-change" <% if(savekeyword.contains("활발")){%> checked <%} %>><label for="keyword-4-change">#활발</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="개인" class="box-radio-input"
-                                                    id="keyword-5-change"><label for="keyword-5-change">#개인</label>
+                                                    id="keyword-5-change" <% if(savekeyword.contains("개인")){%> checked <%} %>><label for="keyword-5-change">#개인</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="집단" class="box-radio-input"
-                                                    id="keyword-6-change"><label for="keyword-6-change">#집단</label>
+                                                    id="keyword-6-change" <% if(savekeyword.contains("집단")){%> checked <%} %>><label for="keyword-6-change">#집단</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="관람" class="box-radio-input"
-                                                    id="keyword-7-change"><label for="keyword-7-change">#관람</label>
+                                                    id="keyword-7-change" <% if(savekeyword.contains("관람")){%> checked <%} %>><label for="keyword-7-change">#관람</label>
                                             </div>
                                         </div>
                                         <!-- 3번째줄 -->
@@ -484,15 +498,15 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="참여" class="box-radio-input"
-                                                    id="keyword-8-change"><label for="keyword-8-change">#참여</label>
+                                                    id="keyword-8-change" <% if(savekeyword.contains("참여")){%> checked <%} %>><label for="keyword-8-change">#참여</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="로맨틱" class="box-radio-input"
-                                                    id="keyword-9-change"><label for="keyword-9-change">#로맨틱</label>
+                                                    id="keyword-9-change" <% if(savekeyword.contains("로맨틱")){%> checked <%} %>><label for="keyword-9-change">#로맨틱</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="데이트" class="box-radio-input"
-                                                    id="keyword-10-change"><label for="keyword-10-change">#데이트</label>
+                                                    id="keyword-10-change" <% if(savekeyword.contains("데이트")){%> checked <%} %>><label for="keyword-10-change">#데이트</label>
                                             </div>
                                         </div>
                                         <!-- 4번째줄 -->
@@ -500,19 +514,19 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="어린이" class="box-radio-input"
-                                                    id="keyword-11-change"><label for="keyword-11-change">#어린이</label>
+                                                    id="keyword-11-change" <% if(savekeyword.contains("어린이")){%> checked <%} %>><label for="keyword-11-change">#어린이</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="가족" class="box-radio-input"
-                                                    id="keyword-12-change"><label for="keyword-12-change">#가족</label>
+                                                    id="keyword-12-change" <% if(savekeyword.contains("가족")){%> checked <%} %>><label for="keyword-12-change">#가족</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="감동" class="box-radio-input"
-                                                    id="keyword-13-change"><label for="keyword-13-change">#감동</label>
+                                                    id="keyword-13-change" <% if(savekeyword.contains("감동")){%> checked <%} %>><label for="keyword-13-change">#감동</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="코믹" class="box-radio-input"
-                                                    id="keyword-14-change"><label for="keyword-14-change">#코믹</label>
+                                                    id="keyword-14-change" <% if(savekeyword.contains("코믹")){%> checked <%} %>><label for="keyword-14-change">#코믹</label>
                                             </div>
                                         </div>
                                         <!-- 5번째줄 -->
@@ -520,15 +534,15 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="포토존" class="box-radio-input"
-                                                    id="keyword-15-change"><label for="keyword-15-change">#포토존</label>
+                                                    id="keyword-15-change" <% if(savekeyword.contains("포토존")){%> checked <%} %>><label for="keyword-15-change">#포토존</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="연말" class="box-radio-input"
-                                                    id="keyword-16-change"><label for="keyword-16-change">#연말</label>
+                                                    id="keyword-16-change" <% if(savekeyword.contains("연말")){%> checked <%} %>><label for="keyword-16-change">#연말</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="화려" class="box-radio-input"
-                                                    id="keyword-17-change"><label for="keyword-17-change">#화려</label>
+                                                    id="keyword-17-change" <% if(savekeyword.contains("화려")){%> checked <%} %>><label for="keyword-17-change">#화려</label>
                                             </div>
                                         </div>
                                         <!-- 6번째줄 -->
@@ -536,19 +550,19 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="동화" class="box-radio-input"
-                                                    id="keyword-18-change"><label for="keyword-18-change">#동화</label>
+                                                    id="keyword-18-change" <% if(savekeyword.contains("동화")){%> checked <%} %>><label for="keyword-18-change">#동화</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="소규모" class="box-radio-input"
-                                                    id="keyword-19-change"><label for="keyword-19-change">#소규모</label>
+                                                    id="keyword-19-change" <% if(savekeyword.contains("소규모")){%> checked <%} %>><label for="keyword-19-change">#소규모</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="대규모" class="box-radio-input"
-                                                    id="keyword-20-change"><label for="keyword-20-change">#대규모</label>
+                                                    id="keyword-20-change" <% if(savekeyword.contains("대규모")){%> checked <%} %>><label for="keyword-20-change">#대규모</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="음악" class="box-radio-input"
-                                                    id="keyword-21-change"><label for="keyword-21-change">#음악</label>
+                                                    id="keyword-21-change" <% if(savekeyword.contains("음악")){%> checked <%} %>><label for="keyword-21-change">#음악</label>
                                             </div>
                                         </div>
                                         <!-- 7번째 -->
@@ -556,15 +570,15 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="친구" class="box-radio-input"
-                                                    id="keyword-22-change"><label for="keyword-22-change">#친구</label>
+                                                    id="keyword-22-change" <% if(savekeyword.contains("친구")){%> checked <%} %>><label for="keyword-22-change">#친구</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="감성" class="box-radio-input"
-                                                    id="keyword-23-change"><label for="keyword-23-change">#감성</label>
+                                                    id="keyword-23-change" <% if(savekeyword.contains("감성")){%> checked <%} %>><label for="keyword-23-change">#감성</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="힐링" class="box-radio-input"
-                                                    id="keyword-24-change"><label for="keyword-24-change">#힐링</label>
+                                                    id="keyword-24-change" <% if(savekeyword.contains("힐링")){%> checked <%} %>><label for="keyword-24-change">#힐링</label>
                                             </div>
                                         </div>
                                         <!-- 6번째줄 -->
@@ -572,24 +586,24 @@
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="웅장" class="box-radio-input"
-                                                    id="keyword-25-change"><label for="keyword-25-change">#웅장</label>
+                                                    id="keyword-25-change" <% if(savekeyword.contains("웅장")){%> checked <%} %>><label for="keyword-25-change">#웅장</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
                                                 <input type="checkbox" name="keyword" value="소통" class="box-radio-input"
-                                                    id="keyword-26-change"><label for="keyword-26-change">#소통</label>
+                                                    id="keyword-26-change" <% if(savekeyword.contains("소통")){%> checked <%} %>><label for="keyword-26-change">#소통</label>
                                             </div>
                                         </div>
                                     </dd>
                                     
-                                    </form>
                                 </dl>
                             </div>
                         </div>
                         <div class="row">
                         <div class="mypage-crystal">
-                    		<button>수정</button>
+                    		<button type="submit">수정</button>
                     	</div>
                         </div>
+                                    </form>
                     	
                     </section>
 

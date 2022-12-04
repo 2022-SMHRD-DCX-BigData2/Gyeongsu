@@ -32,7 +32,7 @@
         jQuery(document).ready(function($) {
     $("input[name=keyword]:checkbox").change(function() {// 체크박스들이 변경됬을때
         // var cnt = $("#selCnt").val();
-        if( 5==$("input[name=keyword]:checkbox:checked").length ) {
+        if( 4==$("input[name=keyword]:checkbox:checked").length ) {
             $(":checkbox:not(:checked)").attr("disabled", "disabled");
         } else {
             $("input[name=keyword]:checkbox").removeAttr("disabled");

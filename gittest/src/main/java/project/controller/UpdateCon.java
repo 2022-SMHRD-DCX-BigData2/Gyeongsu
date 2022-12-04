@@ -20,23 +20,35 @@ public class UpdateCon extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		// 어떤사람의 회원정보를 수정할지 email을 가져와야함
 		HttpSession session = request.getSession();
 		UserMember loginMember = (UserMember)session.getAttribute("loginMember");
-		String id = loginMember.getId();
 		int user_no = loginMember.getUser_no();
+		String gender = loginMember.getGender();
+		
+		
 		
 		// 파라미터 수집
-		// pw, tel, address
+		// pw, tel, address		
+		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
-		String mbti = request.getParameter("mbti");
-		String key_no1 = request.getParameter("key_no1");
-		String key_no2 = request.getParameter("key_no2");
-		String key_no3 = request.getParameter("key_no3");
-		String key_no4 = request.getParameter("key_no4");
-		String gender = request.getParameter("gender");
-		int age = Integer.parseInt(request.getParameter("age"));
+		String[] keyword = request.getParameterValues("keyword");
+		String mbti_1 = request.getParameter("mbti_1");
+		String mbti_2 = request.getParameter("mbti_2");
+		String mbti_3 = request.getParameter("mbti_3");
+		String mbti_4 = request.getParameter("mbti_4");
+		String age = request.getParameter("age");
+		
+		for (String ky : keyword) {
+			System.out.print(keyword + " ");
+		}
+		
+		String key_no1 = keyword[0];
+		String key_no2 = keyword[1];
+		String key_no3 = keyword[2];
+		String key_no4 = keyword[3];
+		
+		String mbti = mbti_1 + mbti_2 + mbti_3 + mbti_4;
 		
 		// 받아온 데이터를 Member객체에 담아주기
 		UserMember update = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4, gender, age);
@@ -52,10 +64,10 @@ public class UpdateCon extends HttpServlet {
 			// 같은 이름으로 덮어쓰기 해야한다!
 			session.setAttribute("loginMember", update);
 			
-			response.sendRedirect("main2.jsp");
+			response.sendRedirect("mypage.jsp");
 		}else {
 			System.out.println("회원정보수정 실패!");
-			response.sendRedirect("update.jsp");
+			response.sendRedirect("main2.jsp");
 		}
 		
 	}

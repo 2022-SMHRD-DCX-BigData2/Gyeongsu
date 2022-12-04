@@ -93,6 +93,20 @@ public class UserMember {
 	
 	
 	
+	public UserMember(String id, String pw, String name, String mbti, String key_no1, String key_no2, String key_no3,
+			String key_no4, String age) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.mbti = mbti;
+		this.key_no1 = key_no1;
+		this.key_no2 = key_no2;
+		this.key_no3 = key_no3;
+		this.key_no4 = key_no4;
+		this.age = age;
+	}
+	
 	public UserMember(int user_no) {
 		super();
 		this.user_no = user_no;
