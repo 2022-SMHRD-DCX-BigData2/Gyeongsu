@@ -62,10 +62,12 @@
                 	<div class="col MBTI">
                 	
                 			<p>성별</p>
+                				<div class="sex">
                 				<input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
                             	for="age-y">남</label>
                             	<input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
                             	for="age-x">여</label>
+                            	</div>
                         </div>
                         <div class="col MBTI">
                             <p>나이</p>
@@ -344,9 +346,9 @@
 						</c:if>
 						</header>
 						<% if(loginMember != null){ %>
-					<div class="col" align="right"><a href="mypage.jsp"><%= loginMember.getId()%>님</a></div>
+					<div class="col"><a href="mypage.jsp" id="topleftmenu"><i class="bi bi-house"></i><span class="d-none d-md-none d-lg-block"><%= loginMember.getId()%>님</span></a></div>
 					<%}%>
-					<div class="col" align="right"><a href="LogoutCon">로그아웃</a></div>
+					<div class="col"><a href="LogoutCon" id="topleftmenu"><i class="bi bi-box-arrow-right"></i> <span class="d-none d-md-none d-lg-block">로그아웃</span></a></div>
 					</c:otherwise>
 				</c:choose>
                   </div>
@@ -399,16 +401,16 @@
                 <input type="radio" name="slider" id="s8">
                 <input type="radio" name="slider" id="s9">
                 <input type="radio" name="slider" id="s10">
-                <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s6" id="slide6"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s7" id="slide7"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s8" id="slide8"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s9" id="slide9"><img src="https://via.placeholder.com/200x275" alt=""></label>
-                <label for="s10" id="slide10"><img src="https://via.placeholder.com/200x275" alt=""></label>
+                <label for="s1" id="slide1"><img src="https://via.placeholder.com/200x275" alt="">1</label>
+                <label for="s2" id="slide2"><img src="https://via.placeholder.com/200x275" alt="">2</label>
+                <label for="s3" id="slide3"><img src="https://via.placeholder.com/200x275" alt="">3</label>
+                <label for="s4" id="slide4"><img src="https://via.placeholder.com/200x275" alt="">4</label>
+                <label for="s5" id="slide5"><img src="https://via.placeholder.com/200x275" alt="">5</label>
+                <label for="s6" id="slide6"><img src="https://via.placeholder.com/200x275" alt="">6</label>
+                <label for="s7" id="slide7"><img src="https://via.placeholder.com/200x275" alt="">7</label>
+                <label for="s8" id="slide8"><img src="https://via.placeholder.com/200x275" alt="">8</label>
+                <label for="s9" id="slide9"><img src="https://via.placeholder.com/200x275" alt="">9</label>
+                <label for="s10" id="slide10"><img src="https://via.placeholder.com/200x275" alt="">10</label>
                 <div>
                     <img onclick="btns()" class="slider-btn" id="prev-btn" src="./images/common/left-arrow.png"></img>
                     <img onclick="btns()" class="slider-btn" id="next-btn" src="./images/common/right-arrow.png"></img>

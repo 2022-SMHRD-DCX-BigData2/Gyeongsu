@@ -1,9 +1,9 @@
-<script src="./assets/js/test.js">
+<!-- <script src="./assets/js/test.js">
     $('.window .close').click(function (e) {
         //Cancel the link behavior
         e.preventDefault();
     });
-</script>
+</script> -->
 <script>
     // íë§¤ë´ ë§í¬ì´ë
     $(function () {
