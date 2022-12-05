@@ -1,9 +1,15 @@
 .board{
     width: 100%;
 }
+.board p{
+    margin-bottom: 0;
+}
+.board>tbody>tr{
+	height: 45px;
+}
 .board>tbody>tr>td{
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(117, 117, 117);
     text-align: center;
 
 }
@@ -23,6 +29,7 @@
 }
 .board>tr{
     width: 100%;
+    
 }
 .button-tr{
     border: hidden;

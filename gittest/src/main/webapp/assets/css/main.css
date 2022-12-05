@@ -4,6 +4,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 *{
   font-family: 'MICEGothic Bold';
 
@@ -53,7 +54,7 @@ width:100%;
   max-height: 200px;
   min-height: 150px;
   /* background-color: rgb(255, 255, 255); */
-  color:#8ec810;
+  color:#797979;
   margin-bottom: 100px
 }
 
@@ -188,7 +189,7 @@ input[type=text],input[type=password] {
 }
 
 .menuLink {
-  /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+  /* 상위 메뉴의 글씨색 설정 */
   color: rgb(0, 0, 0);
   padding-bottom: 10px;
 
@@ -302,7 +303,7 @@ input[type=text],input[type=password] {
 
 .tabsmenu li {
   background-color: var(--tabcolor);
-  color: #2d2d2d;
+  color: #848484;
   width: 10%;
   text-align: center;
 
@@ -555,6 +556,13 @@ input[type=text],input[type=password] {
 .main-item{
 	position: relative;
 }
+.main-item p{
+  color: #999;
+  font-weight:200;
+  font-size: 12px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 #main-like{
 	width: 100%;
 	transform: translate(-50%,0%);
@@ -568,9 +576,10 @@ input[type=text],input[type=password] {
     border-radius: 3px */
 }
 #main-like img{
-	width: 25px;
-  height: 25px;
+	width: 20px;
+  height: 20px;
   padding: 0;
+  margin-right: 10px
 }
 .like-bottom{
 	height: 25px;
@@ -607,6 +616,8 @@ input[type=text],input[type=password] {
 .tabname{
   margin-bottom: 10px;
   color: black;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .tabtext{
   display: flex;

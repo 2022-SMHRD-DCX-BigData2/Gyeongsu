@@ -400,9 +400,10 @@
     			<div class="hashtag-box">미정</div>
     			<%}%>
     			<div class="col-9"></div>
-    			<div class="col align-self-end">
+    			<div class="col align-self-end " id="like">
     			<c:if test="${loginMember == null}">
-					<a href="#" onclick="alert('로그인후 이용가능합니다!')" id="like"><img src="./images/common/love.png"></a>
+					<a href="#" onclick="alert('로그인후 이용가능합니다!')"><img src="./images/common/love.png"></a>
+					<p>좋아요</p>
 				</c:if>
 				<c:if test="${loginMember != null}">
     			<%if(loginMember!=null){ %>
