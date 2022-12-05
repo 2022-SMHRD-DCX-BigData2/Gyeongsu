@@ -58,6 +58,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+        <script src="./assets/js/test.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/contentlist.css">
@@ -455,31 +456,31 @@
     			<%} %>
     			
     			<%if(saveheart==1){ %>
-    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a><p>좋아요</p>
     			<%}else if(loginFavor == null){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getActivity_no() != loginActivity.getActivity_no()){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getUser_no() != loginMember.getUser_no()){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getFavor()==1){ %>
-    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getFavor()==0){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%} %>
     			
     			<%}else{ %>
     			
     			<%if(loginFavor == null){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getActivity_no() != loginActivity.getActivity_no()){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getUser_no() != loginMember.getUser_no()){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getFavor()==1){ %>
-    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a>
+    			<a href="FavorCon?favor=0" ><img src="./images/common/heart.png"></a><p>좋아요</p>
     			<%}else if(loginFavor.getFavor()==0){ %>
-    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a>
+    			<a href="FavorCon?favor=1" ><img src="./images/common/love.png"></a><p>좋아요</p>
     			<%} %>
     			
     			<%} %>
@@ -525,11 +526,63 @@
             			<div class="">#<%=loginActivity.getKey_no4() %></div>
             			<div class="">#<%=loginActivity.getKey_no5() %></div>
                 	</div>
-                	<div class="mt-2"></div>
+                	
+                	<%for(RatioMember m:RatioMemberList){ %>
+                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1){ %>
+                                <%arrList.add(m.getMbti()); %>
+                                <%} %>
+                                <%} %>
+            					
+             					<%int a = 0; %>
+            					<%String as = ""; %>
+            					<%int b = 0; %>
+            					<%String bs = ""; %>
+            					<%int c = 0; %>
+            					<%String cs = ""; %>
+            					<%int space = 0; %>
+            					<%String spaces = ""; %>
+            					<%int space2 = 0; %>
+            					<%String spaces2 = ""; %>
+            					
+            					 <% Set<String> set = new HashSet<String>(arrList);%>
+            					 <% for (String str : set) {%>
+            					 <% int countmbti = Collections.frequency(arrList, str);%>
+            					 <%if(countmbti > a){ %>
+            					 
+            					 <%spaces = as; %>
+            					 <%space = a; %>
+            					 <%spaces2 = bs; %>
+            					 <%space2 = b; %>
+            					 
+            					 <%as = str; %>
+            					 <%a = countmbti; %>
+            					 <%bs = spaces; %>
+            					 <%b = space; %>
+            					 <%cs = spaces2; %>
+            					 <%c = space2; %>
+            					 
+            					 <%}else if(countmbti <= a && countmbti > b){ %>
+            					 
+            					 <%spaces2 = bs; %>
+            					 <%space2 = b; %>
+            					 
+            					 <%bs = str; %>
+            					 <%b = countmbti; %>
+            					 <%cs = spaces2; %>
+            					 <%c = space2; %>
+            					 
+            					 <%}else if(countmbti <= b){ %>
+            					 
+            					 <%cs = str; %>
+            					 <%c = countmbti; %>
+            					 
+							     <%}%>
+							     <%}%>
+						<div class="mt-2"></div>
                 		<div class="row">
-                		<div class="hashtag-box">IMFP</div>
-            			<div class="hashtag-box"></div>
-            			<div class="hashtag-box"></div>
+                		<div class="hashtag-box"><%=as %></div>
+            			<div class="hashtag-box"><%=bs %></div>
+            			<div class="hashtag-box"><%=cs %></div>
             			
                 	</div>
                 	
@@ -592,60 +645,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-
-                                
-                                
-                                <%for(RatioMember m:RatioMemberList){ %>
-                                <%if(m.getActivity_no()==loginActivity.getActivity_no() && m.getFavor()==1){ %>
-                                <%arrList.add(m.getMbti()); %>
-                                <%} %>
-                                <%} %>
-            					
-             					<%int a = 0; %>
-            					<%String as = ""; %>
-            					<%int b = 0; %>
-            					<%String bs = ""; %>
-            					<%int c = 0; %>
-            					<%String cs = ""; %>
-            					<%int space = 0; %>
-            					<%String spaces = ""; %>
-            					<%int space2 = 0; %>
-            					<%String spaces2 = ""; %>
-            					
-            					 <% Set<String> set = new HashSet<String>(arrList);%>
-            					 <% for (String str : set) {%>
-            					 <% int countmbti = Collections.frequency(arrList, str);%>
-            					 <%if(countmbti > a){ %>
-            					 
-            					 <%spaces = as; %>
-            					 <%space = a; %>
-            					 <%spaces2 = bs; %>
-            					 <%space2 = b; %>
-            					 
-            					 <%as = str; %>
-            					 <%a = countmbti; %>
-            					 <%bs = spaces; %>
-            					 <%b = space; %>
-            					 <%cs = spaces2; %>
-            					 <%c = space2; %>
-            					 
-            					 <%}else if(countmbti <= a && countmbti > b){ %>
-            					 
-            					 <%spaces2 = bs; %>
-            					 <%space2 = b; %>
-            					 
-            					 <%bs = str; %>
-            					 <%b = countmbti; %>
-            					 <%cs = spaces2; %>
-            					 <%c = space2; %>
-            					 
-            					 <%}else if(countmbti <= b){ %>
-            					 
-            					 <%cs = str; %>
-            					 <%c = countmbti; %>
-            					 
-							     <%}%>
-							     <%}%>
+                    
 						            <%-- <% out.println(as + " : " + a);%>
 						            <% out.println(bs + " : " + b);%>
 						            <% out.println(cs + " : " + c);%> --%>
@@ -766,12 +766,8 @@
 
     </footer>
     </div>
-    <script src="./assets/js/test.js">
-        $('.window .close').click(function (e) {
-            //Cancel the link behavior
-            e.preventDefault();
-        });
-    </script>
+<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/script.jsp"></jsp:include>
 </body>
 
 </html>

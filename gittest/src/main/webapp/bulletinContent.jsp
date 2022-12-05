@@ -42,6 +42,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+        <script src="./assets/js/test.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/mypage.css">
@@ -498,36 +499,8 @@
 
     </footer>
     </div>
-    <script src="./assets/js/test.js">
-        $('.window .close').click(function (e) {
-            //Cancel the link behavior
-            e.preventDefault();
-        });
-    </script>
-    <script>
-        // 텝매뉴 링크이동
-        $(function () {
-            if (location.hash == "#tab11") {
-                $('.tabsmenu').find('li').eq(0).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab11').addClass('active').siblings().removeClass('active');
-            } else if (location.hash == "#tab12") {
-                $('.tabsmenu').find('li').eq(1).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab12').addClass('active').siblings().removeClass('active');
-            } else if (location.hash == "#tab13") {
-                $('.tabsmenu').find('li').eq(2).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab13').addClass('active').siblings().removeClass('active');
-            } else if (location.hash == "#tab14") {
-                $('.tabsmenu').find('li').eq(3).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab14').addClass('active').siblings().removeClass('active');
-            } else if (location.hash == "#tab15") {
-                $('.tabsmenu').find('li').eq(4).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab15').addClass('active').siblings().removeClass('active');
-            } else if (location.hash == "#tab16") {
-                $('.tabsmenu').find('li').eq(5).addClass('active').siblings().removeClass();
-                $('.tabselements').find('#tab16').addClass('active').siblings().removeClass('active');
-            }
-        })
-    </script>
+<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/script.jsp"></jsp:include>
 </body>
 
 </html>
