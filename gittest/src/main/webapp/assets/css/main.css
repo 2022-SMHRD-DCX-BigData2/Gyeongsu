@@ -99,7 +99,7 @@ ul li {
   justify-content: space-around;
   align-items: center;
 }
-.bi-box-arrow-in-right,.bi-person-plus{
+.bi-box-arrow-in-right,.bi-person-plus,.bi-house,.bi-box-arrow-right{
   font-size: 1.5rem;
   margin-right: 10px;
 }
