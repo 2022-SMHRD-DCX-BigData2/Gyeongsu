@@ -313,10 +313,10 @@
                         <a href="main2.jsp"><img src="./images/common/logo.png"></a>
                     </div>
                     <div class="col-6 align-self-center">
-                        <form action="" method="post">
+                        <form action="SearchCon" method="post">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="검색"
-                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    aria-label="Recipient's username" aria-describedby="button-addon2" name="searchcontent">
                                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                         class="bi bi-search"></i></button>
 
@@ -414,7 +414,7 @@
                     <img onclick="btns()" class="slider-btn" id="next-btn" src="./images/common/right-arrow.png"></img>
                 </div>
               </section>
-      <h1>경남/부산</h1>
+      <h1>전남/광주</h1>
             <div class="tabscontainer">
                 <ul class="tabsmenu">
                     <li class="active">
@@ -441,7 +441,7 @@
                     <section id="tab11" class="active">
                             <div class="grid tab-grid">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==1){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -471,7 +471,7 @@
               <section id="tab12" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==2){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==2){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -499,7 +499,7 @@
               <section id="tab13" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==3){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==3){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -528,7 +528,7 @@
               <section id="tab14" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==4){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==4){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -557,7 +557,7 @@
               <section id="tab15" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==5){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==5){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -586,7 +586,7 @@
               <section id="tab16" >
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==6){ %>
+                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==6){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -615,7 +615,7 @@
           </div>
       </div>
 		
-      <h1>전남/광주</h1>
+      <h1>경남/부산</h1>
             <div class="tabscontainer">
                 <ul class="tabsmenu">
                     <li class="active">
@@ -642,7 +642,7 @@
               <section id="tab21" class="active">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==1){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==1){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -673,7 +673,7 @@
               <section id="tab22">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==2){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==2){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -702,7 +702,7 @@
               <section id="tab23">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==3){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==3){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -731,7 +731,7 @@
               <section id="tab24">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==4){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==4){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -760,7 +760,7 @@
               <section id="tab25">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==5){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==5){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
@@ -789,7 +789,7 @@
               <section id="tab26">
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
-                  		<%if(m.getRegion_type()==100 && m.getActivity_type()==6){ %>
+                  		<%if(m.getRegion_type()==200 && m.getActivity_type()==6){ %>
                                 <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img

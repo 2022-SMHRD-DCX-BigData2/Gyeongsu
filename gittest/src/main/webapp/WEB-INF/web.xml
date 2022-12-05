@@ -112,6 +112,12 @@
   	<description></description>
   	<servlet-class>project.controller.InsertRatioCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchCon</servlet-name>
+  	<display-name>SearchCon</display-name>
+  	<description></description>
+  	<servlet-class>project.controller.SearchCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -183,5 +189,9 @@
   <servlet-mapping>
   	<servlet-name>InsertRatioCon</servlet-name>
   	<url-pattern>/InsertRatioCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchCon</servlet-name>
+  	<url-pattern>/SearchCon</url-pattern>
   </servlet-mapping>
 </web-app>

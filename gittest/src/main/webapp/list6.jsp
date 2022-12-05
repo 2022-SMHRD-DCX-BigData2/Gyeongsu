@@ -391,7 +391,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==1){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -402,7 +402,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -415,7 +421,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==2){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -426,7 +432,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -437,7 +449,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==3){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -448,7 +460,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -459,7 +477,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==4){ %>
-                                <div class="grid-item ">
+                               <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -470,7 +488,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -481,7 +505,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==5){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -492,7 +516,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
@@ -503,7 +533,7 @@
                             <div class="grid tab-grid ">
                         <%for(ActivityMember m:actmemberList){ %>
                   		<%if(m.getActivity_type()==6){ %>
-                                <div class="grid-item ">
+                                <div class="grid-item main-item">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
@@ -514,7 +544,13 @@
                                           <!-- <p>서울</p> -->
                                           <p><%=m.getActivity_place() %></p>
                                       </div>
-
+                                      <div id="main-like">
+                                      		<img src="./images/common/heart.png">
+                                      		<div><%=m.getFavor_add() %></div>
+                                      </div>
+                                      <div class="like-bottom">
+                                      	
+                                      </div>
                               </a>
                       </div>
                       <%} %>
