@@ -453,11 +453,6 @@
 	                                    </td>
 			                        </tr>
 								</c:if>                          
-                                <tr>
-                                    <td colspan="6" class="button-tr">
-                                        
-                                    </td>
-                                </tr>
                             </table>
                         </div>
                 </div>

@@ -9,7 +9,7 @@
 }
 .board>tbody>tr>td{
     border-top: 1px solid black;
-    border-bottom: 1px solid rgb(117, 117, 117);
+    
     text-align: center;
 
 }
@@ -17,16 +17,12 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-.board>tbody>tr>td:not(:first-child){
+/* .board>tbody>tr>td:not(:first-child){
     border-bottom: 1px solid black;
     text-align: center;
 
-}
-.board>tbody>tr>td:last-child{
-    border-bottom: 1px solid black;
-    
+} */
 
-}
 .board>tr{
     width: 100%;
     
@@ -45,6 +41,14 @@
     margin-right: 3%;
     margin-top:1%;
     margin-bottom: 1%;
+    background-color: rgb(255, 255, 255);
+    border: #A8C595 solid 2px;
+    color:#739e56;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-radius: 20px;
 }
 .bulletinContent-text{
     width: 95%;
