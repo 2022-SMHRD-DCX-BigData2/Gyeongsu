@@ -402,7 +402,7 @@
     			<div class="col-9"></div>
     			<div class="col align-self-end">
     			<c:if test="${loginMember == null}">
-					<a href="#" onclick="alert('로그인후 이용가능합니다!')"><img src="./images/common/love.png"></a>
+					<a href="#" onclick="alert('로그인후 이용가능합니다!')" id="like"><img src="./images/common/love.png"></a>
 				</c:if>
 				<c:if test="${loginMember != null}">
     			<%if(loginMember!=null){ %>

@@ -102,6 +102,9 @@ padding: 10%;
 .comment-text{
   margin: 1%;
 }
+.comment-text p{
+  word-wrap: break-word;
+}
 .col-2>img{
   width: 100%;
 
@@ -110,6 +113,10 @@ padding: 10%;
   width: 100%;
   
   margin-top: 4%;
+}
+#like img{
+  width: 25px;
+  height: auto;
 }
 .like{
   justify-content: center;
