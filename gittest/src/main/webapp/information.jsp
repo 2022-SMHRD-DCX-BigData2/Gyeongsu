@@ -695,7 +695,7 @@
                 		<P class="time"><%=m.getReview_time() %></P>
                 	</div>
                     
-                    <P><%=m.getReview() %></P>
+                    <P><%=m.getReview()%></P>
                     
                 </div>
                 <%} %>
@@ -707,7 +707,7 @@
                 
 
     </main>
-    <footer class="">
+    <!-- <footer class="">
         <div>
             <div class="footer_bottom_holder">
                 <div class="container">
@@ -764,7 +764,7 @@
                 </div>
             </div>
 
-    </footer>
+    </footer> -->
     </div>
 <jsp:include page="/include/footer.jsp"></jsp:include>
 <jsp:include page="/include/script.jsp"></jsp:include>

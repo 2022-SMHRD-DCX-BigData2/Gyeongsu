@@ -23,5 +23,6 @@
     <mapper resource="project/database/ActivityMapper.xml"/>
     <mapper resource="project/database/ReviewMapper.xml"/>
     <mapper resource="project/database/RatioMapper.xml"/>
+    <mapper resource="project/database/RecoMapper.xml"/>
   </mappers>
 </configuration>

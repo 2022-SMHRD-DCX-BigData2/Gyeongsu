@@ -643,9 +643,16 @@
                         <div class="mypage-crystal">
                     		<button type="submit">수정</button>
                     	</div>
-                        </div>
-                                    </form>
                     	
+                        </div>
+                        </form>
+                        <div class="row">
+                    	<form action="DeleteCon" method="post">
+                    		<div class="mypage-crystal-right">
+                    			<button type="submit"  >회원탈퇴</button>
+                    		</div>
+                    	</form>
+                    	</div>
                     </section>
 
 

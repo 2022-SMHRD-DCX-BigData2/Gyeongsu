@@ -24,7 +24,7 @@
 		select * from user_info
 	</select>
 	
-	<delete id="deleteMember" parameterType="String">
-		delete from user_info where id=#{id}
+	<delete id="deleteMember" parameterType="int">
+		delete from user_info where user_no=#{user_no}
 	</delete>
 </mapper>

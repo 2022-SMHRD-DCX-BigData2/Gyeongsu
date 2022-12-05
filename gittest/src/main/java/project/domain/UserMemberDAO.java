@@ -120,12 +120,12 @@ public class UserMemberDAO {
 			return MemberList;
 		}// 회원 전체 검색 끝!
 		
-		// 관리자 - 회원삭제 기능구현
-		public int deleteMember(String id) {
+		// 회원삭제 기능구현
+		public int deleteMember(int user_no) {
 			int cnt = 0;
 			try {
 				// mapper.xml의 id값
-				cnt = sqlSession.delete("deleteMember", id);
+				cnt = sqlSession.delete("deleteMember", user_no);
 				
 				if(cnt > 0) {
 					// 만약에 내가 원하는 일을 했으면 DB에 반영

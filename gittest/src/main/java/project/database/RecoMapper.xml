@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace속성 : id를 그룹화하기 위한 속성 
+  		mapper의 경로를 작성-->
+<mapper namespace="project.database.RecoMapper">
+<!-- id: 중복불가, 해당태그의 고유한 식별자 
+		세미콜론 적지 않는다, ?바인드 변수와 같은 기능을 하는 것 #{컬럼명=객체의 필드명}
+-->	
+	<select id="selectReco" parameterType="project.domain.RecoMember" resultType="project.domain.RecoMember">
+		select * from recommend where user_no = #{user_no}
+	</select>
+	
+</mapper>
