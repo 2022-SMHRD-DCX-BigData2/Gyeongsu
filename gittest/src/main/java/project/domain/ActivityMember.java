@@ -27,7 +27,18 @@ public class ActivityMember {
 	private String key_no5;
 	private String activity_age;
 	
+	private String searchcontent;
+	
 	// getter, setter
+	
+	
+	public String getSearchcontent() {
+		return searchcontent;
+	}
+	
+	public void setSearchcontent(String searchcontent) {
+		this.searchcontent = searchcontent;
+	}
 	
 	public int getActivity_no() {
 		return activity_no;
@@ -191,6 +202,10 @@ public class ActivityMember {
 	
 	// 생성자
 	
+	public ActivityMember(String searchcontent) {
+		super();
+		this.searchcontent = searchcontent;
+	}
 	
 	// 암것두
 	public ActivityMember() {

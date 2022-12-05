@@ -93,4 +93,27 @@ public class ActivityMemberDAO {
 		
 		return cnt;
 	} // 전체좋아요정보 수정 끝!!
+	
+	
+	public List<ActivityMember> searchTitle(ActivityMember searchcontent) {
+        
+        List<ActivityMember> result = null;
+        
+        try {
+           result = sqlSession.selectList("searchTitle", searchcontent);
+           
+           if (result != null) {
+              System.out.println("DAO : 제목찾기 성공!!");
+           } else {
+           }
+           
+        } catch (Exception e) {
+           e.printStackTrace();
+        } finally {
+           sqlSession.close();
+        }
+        
+        return result;
+        
+     }
 }
