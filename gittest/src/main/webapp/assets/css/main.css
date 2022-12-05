@@ -85,7 +85,9 @@ ul li {
   list-style-type: disc;
   list-style-type: none;
 }
-
+.flex{
+	display: flex;
+}
 .top {
   margin-top: 3%;
 }
@@ -765,6 +767,9 @@ select{
   margin: 3px;
   align-items: center;
 }
+.comment textarea{
+  border-radius: 15px 0px 0px 15px !important;
+}
 .comment .btn{
   --bs-btn-bg:#A8C595;
   color: #fff;
@@ -942,6 +947,14 @@ select{
 #s7:checked ~ #slide4, #s8:checked ~ #slide5,
 #s9:checked ~ #slide6, #s10:checked ~ #slide7 {
   transform: translate3d(120%,0,-300px);
+}
+.information-img{
+  width: 25%;
+}
+.information-text .hashtag-box{
+  background-color: #ffffff;
+  color: #8ec810;
+  border: solid 3px #8ec810;
 }
 
 

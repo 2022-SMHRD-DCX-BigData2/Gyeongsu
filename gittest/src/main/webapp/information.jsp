@@ -387,14 +387,14 @@
             	String nowdate = df.format(nowTime);
             %>
             <%if(startdate.compareTo(nowdate)>=1){%>
-            	<div class="hashtag-box">예정중</div>
+            	<div class="hashtag-box" id="Coming-soon">예정중</div>
             	<%-- <% out.print(startdate.compareTo(nowdate));%> --%>
             <%}else if(startdate.compareTo(nowdate)<=0 && finishdate.compareTo(nowdate)>=0){%>
-            	<div class="hashtag-box">진행중</div>
+            	<div class="hashtag-box" id="Proceeding">진행중</div>
             	<%-- <% out.print(startdate.compareTo(nowdate));%>
             	<% out.print(finishdate.compareTo(nowdate));%> --%>
     		<%}else if(finishdate.compareTo(nowdate)<=-1){%>
-    			<div class="hashtag-box">완료</div>
+    			<div class="hashtag-box" id="End-Event">완료</div>
     			<%-- <% out.print(finishdate.compareTo(nowdate));%> --%>
     		<%}else{%>
     			<div class="hashtag-box">미정</div>
@@ -447,25 +447,14 @@
     			
                     </div>
             <div class = "mt-3"></div>
-            <div class="hashtag-box">#<%=loginActivity.getKey_no1() %></div>
-            <div class="hashtag-box">#<%=loginActivity.getKey_no2() %></div>
-            <div class="hashtag-box">#<%=loginActivity.getKey_no3() %></div>
-            <div class="hashtag-box">#<%=loginActivity.getKey_no4() %></div>
-            <div class="hashtag-box">#<%=loginActivity.getKey_no5() %></div>
+            
             
         </div>
-        <div class = "mt-3"></div>
         <div class="row align-items-center">
             <div class="col-2 information-img" ><img src="<%=loginActivity.getActivity_pic() %>" alt="" ></div>
             <div class="col-8">
                 <dl class="information-text">
-                	<div class="row">
-                		<div class="hashtag-box">IMFP</div>
-            			<div class="hashtag-box"></div>
-            			<div class="hashtag-box"></div>
-            			
-                	</div>
-                	<div class="mt-4"></div>
+                	
                     <dt>기간 : </dt>
                     <dd>
                     <%if(startdate.compareTo(nowdate)>=1){%>
@@ -486,6 +475,24 @@
                     <dd><%=loginActivity.getActivity_age()%></dd>
                     <dt>예매 링크 : </dt>
                     <dd><div class="hashtag-box"><a href="<%=loginActivity.getActivity_ad()%>">바로가기</a></div></dd>
+                    
+                    <div class="mt-4"></div>
+                    <h5>추천 성향</h5>
+                    <div class="mini-hashtag">
+                		<div class="">#<%=loginActivity.getKey_no1() %></div>
+            			<div class="">#<%=loginActivity.getKey_no2() %></div>
+            			<div class="">#<%=loginActivity.getKey_no3() %></div>
+            			<div class="">#<%=loginActivity.getKey_no4() %></div>
+            			<div class="">#<%=loginActivity.getKey_no5() %></div>
+                	</div>
+                	<div class="mt-2"></div>
+                		<div class="row">
+                		<div class="hashtag-box">IMFP</div>
+            			<div class="hashtag-box"></div>
+            			<div class="hashtag-box"></div>
+            			
+                	</div>
+                	
                 </dl>
             </div>
             <div class="contentmid">
@@ -643,9 +650,13 @@
                     <%if(m.getReview()!=null) {%>
               	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1){ %>
                 <div class="form-control comment-text">
-                    <p><%=m.getId() %></p>
+                	<div class="flex">
+                		<p><%=m.getId() %></p>
+                		<P class="time"><%=m.getReview_time() %></P>
+                	</div>
+                    
                     <P><%=m.getReview() %></P>
-                    <P><%=m.getReview_time() %></P>
+                    
                 </div>
                 <%} %>
                     <%} %>
