@@ -961,4 +961,7 @@ select{
   .bi-person-plus{
     font-size: 2rem;
   }
+  #magin-like{
+  width:8.33333333%;
+  }
 }

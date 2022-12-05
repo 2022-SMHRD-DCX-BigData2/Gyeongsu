@@ -399,7 +399,7 @@
     		<%}else{%>
     			<div class="hashtag-box">미정</div>
     			<%}%>
-    			<div class="col-9"></div>
+    			<div class="col-9" id="magin-like"></div>
     			<div class="col align-self-end " id="like">
     			<c:if test="${loginMember == null}">
 					<a href="#" onclick="alert('로그인후 이용가능합니다!')"><img src="./images/common/love.png"></a>
@@ -447,8 +447,6 @@
     			
                     </div>
             <div class = "mt-3"></div>
-    
-            <div col></div>
             <div class="hashtag-box">#<%=loginActivity.getKey_no1() %></div>
             <div class="hashtag-box">#<%=loginActivity.getKey_no2() %></div>
             <div class="hashtag-box">#<%=loginActivity.getKey_no3() %></div>
@@ -458,9 +456,16 @@
         </div>
         <div class = "mt-3"></div>
         <div class="row align-items-center">
-            <div class="col-2"><img src="<%=loginActivity.getActivity_pic() %>" alt=""></div>
+            <div class="col-2 information-img" ><img src="<%=loginActivity.getActivity_pic() %>" alt="" ></div>
             <div class="col-8">
                 <dl class="information-text">
+                	<div class="row">
+                		<div class="hashtag-box">IMFP</div>
+            			<div class="hashtag-box"></div>
+            			<div class="hashtag-box"></div>
+            			
+                	</div>
+                	<div class="mt-4"></div>
                     <dt>기간 : </dt>
                     <dd>
                     <%if(startdate.compareTo(nowdate)>=1){%>
