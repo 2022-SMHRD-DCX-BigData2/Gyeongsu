@@ -36,6 +36,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(1)){ %>
@@ -45,6 +46,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(2)){ %>
@@ -54,6 +56,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(3)){ %>
@@ -63,6 +66,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(4)){ %>
@@ -72,6 +76,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(5)){ %>
@@ -81,6 +86,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(6)){ %>
@@ -90,6 +96,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(7)){ %>
@@ -99,6 +106,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(8)){ %>
@@ -108,6 +116,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>
 <%}else if(m.getActivity_no()==nolists.get(9)){ %>
@@ -117,6 +126,7 @@
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
                                       </div>
+                                      <p class="tabname sdname"><%=m.getActivity_title() %></p>
                               </a>
                       </label>                    
 <%} %>

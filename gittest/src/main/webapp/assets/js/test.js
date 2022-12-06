@@ -30,7 +30,7 @@ setInterval(function () {
   if (counter >= 11) {
     counter = 1;
   }
-}, 2000);
+}, 5000);
 
 
 
@@ -56,8 +56,8 @@ function OnlyMember() {
 }
 
 
-$(document).ready(function btns() {
-  $(".slider-btn").on('click', function (e) {
+// $(document).ready(function btns() {
+  $(".slider-btn").on('click', function btns (e) {
     if (e.target.id === 'prev-btn') {
       // 1번 버튼을 클릭했을 때 구현하고 싶은 코드
       var currentNumber = $("input[name='slider']:checked").attr('id');
@@ -89,9 +89,11 @@ $(document).ready(function btns() {
           if (currentNumber == "s11") {
             currentNumber = 's' + 1;
             counter = 1;
+          }else{
+            counter = i + 1;
           }
           document.getElementById(currentNumber).checked = true;
-          counter = i + 1;
+          
           return false;
 
         }
@@ -101,7 +103,7 @@ $(document).ready(function btns() {
     OnlyMember();
 
   });
-});
+// });
 function OnlyMember() {
 
   return false;
