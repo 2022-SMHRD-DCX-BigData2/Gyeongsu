@@ -459,34 +459,34 @@
                   					String second = savembti.substring(1,2);
                   					String third = savembti.substring(2,3);
                   					String forth = savembti.substring(3);
-                  				
-                  				%>
+                  					
+                  				%>		
                                     <dt>MBTI</dt>
                                     <dd>
                                         <div class=" row row-cols-4 ">
                                             <!-- <h4>MBTI</h4> -->
                                             <div class="box-radio-input MBTI">
-                                                <input type="radio" name="mbti-1" value="E" class="box-radio-input" 
+                                                <input type="radio" name="mbti_1" value="E" class="box-radio-input" 
                                                 	id="mbti-e-change" <%if(first.equals("E")){%> checked="checked" <%} %>><label for="mbti-e-change">E</label>
-                                                <input type="radio" name="mbti-1" value="I" class="box-radio-input"
+                                                <input type="radio" name="mbti_1" value="I" class="box-radio-input"
                                                     id="mbti-i-change" <%if(first.equals("I")){%> checked="checked" <%} %>><label for="mbti-i-change">I</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
-                                                <input type="radio" name="mbti-2" value="S" class="box-radio-input"
+                                                <input type="radio" name="mbti_2" value="S" class="box-radio-input"
                                                     id="mbti-s-change" <%if(second.equals("S")){%> checked="checked" <%} %>><label for="mbti-s-change">S</label>
-                                                <input type="radio" name="mbti-2" value="N" class="box-radio-input"
+                                                <input type="radio" name="mbti_2" value="N" class="box-radio-input"
                                                     id="mbti-n-change" <%if(second.equals("N")){%> checked="checked" <%} %>><label for="mbti-n-change">N</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
-                                                <input type="radio" name="mbti-3" value="T" class="box-radio-input"
+                                                <input type="radio" name="mbti_3" value="T" class="box-radio-input"
                                                     id="mbti-t-change" <%if(third.equals("T")){%> checked="checked" <%} %>><label for="mbti-t-change">T</label>
-                                                <input type="radio" name="mbti-3" value="F" class="box-radio-input"
+                                                <input type="radio" name="mbti_3" value="F" class="box-radio-input"
                                                     id="mbti-f-change" <%if(third.equals("F")){%> checked="checked" <%} %>><label for="mbti-f-change">F</label>
                                             </div>
                                             <div class="box-radio-input MBTI">
-                                                <input type="radio" name="mbti-4" value="P" class="box-radio-input"
+                                                <input type="radio" name="mbti_4" value="P" class="box-radio-input"
                                                      id="mbti-p-change" <%if(forth.equals("P")){%> checked="checked" <%} %>><label for="mbti-p-change">P</label>
-                                                <input type="radio" name="mbti-4" value="J" class="box-radio-input"
+                                                <input type="radio" name="mbti_4" value="J" class="box-radio-input"
                                                      id="mbti-j-change" <%if(forth.equals("J")){%> checked="checked" <%} %>><label for="mbti-j-change">J</label>
                                             </div>
                                         </div>

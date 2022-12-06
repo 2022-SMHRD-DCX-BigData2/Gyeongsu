@@ -50,6 +50,8 @@ public class UpdateCon extends HttpServlet {
 		
 		String mbti = mbti_1 + mbti_2 + mbti_3 + mbti_4;
 		
+		System.out.println(mbti);
+		
 		// 받아온 데이터를 Member객체에 담아주기
 		UserMember update = new UserMember(user_no, id, pw, name, mbti, key_no1, key_no2, key_no3, key_no4, gender, age);
 		

@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import project.domain.UserMember;
 import project.domain.UserMemberDAO;
@@ -57,6 +58,9 @@ public class JoinCon extends HttpServlet {
 		// 4. DAO의 명령 후 처리
 		if(cnt >0) {
 			// 성공했으면 -> 성공페이지로 이동O
+			 response.setCharacterEncoding("utf-8");
+	         HttpSession session = request.getSession();
+	         session.setAttribute("join","joined");
 			response.sendRedirect("main2.jsp");
 			
 		} else {
