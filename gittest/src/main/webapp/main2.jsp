@@ -350,8 +350,8 @@
 						</header>
 						<% if(loginMember != null){ %>
 					<div class="col" align="right"><a href="mypage.jsp"><i class="bi bi-house"></i><span><%= loginMember.getId()%>님</span></a></div>
-					<%}%>
 					<div class="col" align="right"><a href="LogoutCon"><i class="bi bi-box-arrow-right"></i><span>로그아웃</span></a></div>
+					<%}%>
 					</c:otherwise>
 				</c:choose>
                   </div>

@@ -72,10 +72,12 @@
                 	<div class="col MBTI">
                 	
                 			<p>성별</p>
+                				<div class="sex">
                 				<input type="radio" name="gender" value="남" class="box-radio-input" id="age-y"><label
                             	for="age-y">남</label>
                             	<input type="radio" name="gender" value="여" class="box-radio-input" id="age-x"><label
                             	for="age-x">여</label>
+                            	</div>
                         </div>
                         <div class="col MBTI">
                             <p>나이</p>
@@ -279,7 +281,6 @@
                            
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <input class="btn btn-primary" data-bs-toggle="modal" type="submit" value="가입">
                 </div>
             </div>
@@ -307,7 +308,6 @@
             <input type="password" placeholder="비밀번호" name="pw" />
         </div>
         <div class="modal-footer">
-          <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="CLose">
           <input type="submit" class="btn btn-primary" value="다음">
         </div>
         </form>
@@ -354,9 +354,9 @@
 						</c:if>
 						</header>
 						<% if(loginMember != null){ %>
-					<div class="col" align="right"><a href="mypage.jsp"><%= loginMember.getId()%>님</a></div>
+					<div class="col" align="right"><a href="mypage.jsp"><i class="bi bi-house"></i><span><%= loginMember.getId()%>님</span></a></div>
+					<div class="col" align="right"><a href="LogoutCon"><i class="bi bi-box-arrow-right"></i><span>로그아웃</span></a></div>
 					<%}%>
-					<div class="col" align="right"><a href="LogoutCon">로그아웃</a></div>
 					</c:otherwise>
 				</c:choose>
                   </div>
