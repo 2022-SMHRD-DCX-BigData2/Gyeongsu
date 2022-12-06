@@ -688,11 +688,14 @@
               <div>
               	<%for(ReviewMember m:revMemberList){ %>
                     <%if(m.getReview()!=null) {%>
-              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1){ %>
+              	<% if(m.getActivity_no()==loginActivity.getActivity_no() && m.getReview_type()==1){ 
+              		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+              		String temp = formatter.format(m.getReview_time());
+              	%>
                 <div class="form-control comment-text">
                 	<div class="flex">
                 		<p><%=m.getId() %></p>
-                		<P class="time"><%=m.getReview_time() %></P>
+                		<P class="time"><%=temp %></P>
                 	</div>
                     
                     <P><%=m.getReview()%></P>

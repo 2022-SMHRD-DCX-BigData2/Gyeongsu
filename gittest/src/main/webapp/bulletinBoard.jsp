@@ -429,12 +429,14 @@
                                 <%int cnt1 = 0;%>
                                 <%for(ReviewMember m:revMemberList){ %>
 					            <% if(m.getReview_type()==3){ %>
+					            <% SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");%>
+								<% String temp = formatter.format(m.getReview_time());%>
                                 <%cnt1++; %>
 								<tr>
 										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt1%></p></a></td>
 					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
 					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle() %></P></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=temp%></P></a></td>
 								</tr>
 					                <%} %>
 					                <%} %>                       
@@ -469,12 +471,14 @@
                                 <%int cnt2 = 0;%>
                                 <%for(ReviewMember m:revMemberList){ %>
 					            <% if(m.getReview_type()==2){ %>
+					            <% SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");%>
+								<% String temp = formatter.format(m.getReview_time());%>
                                 <%cnt2++; %>
 									<tr>
 										<td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=cnt2%></p></a></td>
 					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><p><%=m.getId() %></p></a></td>
 					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getTitle() %></P></a></td>
-					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=m.getReview_time()%></P></a></td>
+					                    <td><a href="SelectReview?review_no=<%=m.getReview_no() %>"><P><%=temp%></P></a></td>
 									</tr>
 					                <%} %>
 					                <%} %>                          

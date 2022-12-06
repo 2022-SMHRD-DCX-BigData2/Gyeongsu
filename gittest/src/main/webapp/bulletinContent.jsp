@@ -418,8 +418,10 @@
                             <p class="post-name"><%=loginReview.getTitle() %></p>
                             
                         </div>
+                        <% SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");%>
+						<% String temp = formatter.format(loginReview.getReview_time());%>
                         <div class="col-5">
-                            <p class="post-day"><%=loginReview.getReview_time() %></p>
+                            <p class="post-day"><%=temp %></p>
                         </div>
                         <div class="mt-3"></div>
                         <div class="input-group mb-3 comment post-text">

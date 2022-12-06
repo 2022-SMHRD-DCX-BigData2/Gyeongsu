@@ -30,215 +30,95 @@
 
 <%for(ActivityMember m:actmemberList){ %>
 <%if(m.getActivity_no()==nolists.get(0)){ %>
-				<label for="s1" id="slide1"><div class="grid-item main-item">
+				<label for="s1" id="slide1">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(1)){ %>
-                <label for="s2" id="slide2"><div class="grid-item main-item">
+                <label for="s2" id="slide2">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(2)){ %>
-                <label for="s3" id="slide3"><div class="grid-item main-item">
+                <label for="s3" id="slide3">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(3)){ %>
-                <label for="s4" id="slide4"><div class="grid-item main-item">
+                <label for="s4" id="slide4">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(4)){ %>
-                <label for="s5" id="slide5"><div class="grid-item main-item">
+                <label for="s5" id="slide5">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(5)){ %>
-                <label for="s6" id="slide6"><div class="grid-item main-item">
+                <label for="s6" id="slide6">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(6)){ %>
-                <label for="s7" id="slide7"><div class="grid-item main-item">
+                <label for="s7" id="slide7">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(7)){ %>
-                <label for="s8" id="slide8"><div class="grid-item main-item">
+                <label for="s8" id="slide8">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(8)){ %>
-                <label for="s9" id="slide9"><div class="grid-item main-item">
+                <label for="s9" id="slide9">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>
 <%}else if(m.getActivity_no()==nolists.get(9)){ %>
-                <label for="s10" id="slide10"><div class="grid-item main-item">
+                <label for="s10" id="slide10">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>                      
+                      </label>                    
 <%} %>
 <%} %>
 
@@ -246,215 +126,95 @@
 
 <%for(ActivityMember m:actmemberList){ %>
                 <%if(m.getActivity_no()==loginReco.getActivity_no1()){ %>
-                <label for="s1" id="slide1"><div class="grid-item main-item">
+                <label for="s1" id="slide1">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no2()){ %>
-                <label for="s2" id="slide2"><div class="grid-item main-item">
+                <label for="s2" id="slide2">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no3()){ %>
-                <label for="s3" id="slide3"><div class="grid-item main-item">
+                <label for="s3" id="slide3">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no4()){ %>
-                <label for="s4" id="slide4"><div class="grid-item main-item">
+                <label for="s4" id="slide4">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no5()){ %>
-                <label for="s5" id="slide5"><div class="grid-item main-item">
+                <label for="s5" id="slide5">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no6()){ %>
-                <label for="s6" id="slide6"><div class="grid-item main-item">
+                <label for="s6" id="slide6">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no7()){ %>
-                <label for="s7" id="slide7"><div class="grid-item main-item">
+                <label for="s7" id="slide7">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no8()){ %>
-                <label for="s8" id="slide8"><div class="grid-item main-item">
+                <label for="s8" id="slide8">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no9()){ %>
-                <label for="s9" id="slide9"><div class="grid-item main-item">
+                <label for="s9" id="slide9">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%}else if(m.getActivity_no()==loginReco.getActivity_no10()){ %>
-                <label for="s10" id="slide10"><div class="grid-item main-item">
+                <label for="s10" id="slide10">
                                 <a href="SelectOneCon?activity_no=<%=m.getActivity_no() %>">
-                                  <div><img
+                                   <div><img
                                           src="<%=m.getActivity_pic() %>"
                                           alt="">
-                                      <p><h3 class="tabname"><%=m.getActivity_title() %></h3></p></div>
-                                      <p><%=m.getStart_date() %>~<%=m.getFinish_date() %></p>
-                                      <div class="d-none d-md-block">
-                                          <!-- <p>서울</p> -->
-                                          <p><%=m.getActivity_place() %></p>
-                                      </div>
-                                      <div id="main-like">
-                                      		<img src="./images/common/heart.png">
-                                      		<div><%=m.getFavor_add() %></div>
-                                      </div>
-                                      <div class="like-bottom">
-                                      	
                                       </div>
                               </a>
-                      </div></label>
+                      </label>  
                 <%} %>
                 <%} %>
                 <%} %>

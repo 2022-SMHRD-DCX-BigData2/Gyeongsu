@@ -413,7 +413,7 @@
                 	<%} %>
                 	<input type="hidden" name="favor" value="0">
                 	<input type="hidden" name="review_time" value="0">
-                	<textarea class="form-control" placeholder="로그인후 이용가능합니다" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
+                	<textarea class="form-control" placeholder="내용을 입력해주세요" aria-label="Recipient's username" aria-describedby="button-addon2" name="review"></textarea>
                 </div>
                 <div class="input-group mb-3 comment"></div>
                      <c:if test="${loginMember == null}">
