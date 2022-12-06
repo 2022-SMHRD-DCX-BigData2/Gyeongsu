@@ -558,6 +558,12 @@ input[type=text],input[type=password] {
 .main-item{
 	position: relative;
 }
+.main-item a img{
+	transition: all 0.2s linear;
+}
+.main-item:hover a img{
+	transform: scale(1.1);
+}
 .main-item p{
   color: #999;
   font-weight:200;

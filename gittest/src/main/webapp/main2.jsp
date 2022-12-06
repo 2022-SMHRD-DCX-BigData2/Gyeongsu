@@ -303,7 +303,7 @@
             <input type="password" placeholder="비밀번호" name="pw" />
         </div>
         <div class="modal-footer">
-          <input type="submit" class="btn btn-primary" value="다음">
+          <input type="submit" class="btn btn-primary" value="로그인">
         </div>
         </form>
             </div>
