@@ -817,6 +817,16 @@
   </main>
   <jsp:include page="/include/footer.jsp"></jsp:include>
   <jsp:include page="/include/script.jsp"></jsp:include>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <script type="text/javascript">
+    var joined = "<%=(String) session.getAttribute("join")%>";
+    console.log(joined)
+    if(joined=='joined'){
+       var pop = window.open('http://172.30.1.84:5001/', 'join', 'width=200px,height=100px,scrollbars=yes');
+       <%session.removeAttribute("join");%>
+       pop.close();
+    }
+ </script>
 
 </body>
 
